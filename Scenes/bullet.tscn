@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://lb1f05hdx26"]
+
+[ext_resource type="Script" uid="uid://dykfbrnshfvbk" path="res://Scripts/bullet.gd" id="1_xjght"]
+
+[node name="Bullet" type="Area2D" unique_id=836502698]
+collision_layer = 2
+script = ExtResource("1_xjght")

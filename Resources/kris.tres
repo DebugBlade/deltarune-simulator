@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharacterInfo" format=3 uid="uid://bcoid4hxfxun0"]
+
+[ext_resource type="Script" uid="uid://bddb12n6jcse8" path="res://Scripts/character_info.gd" id="1_wgo2t"]
+
+[resource]
+script = ExtResource("1_wgo2t")
+id = 1
+name = "Kris"
+color = Color(0, 1, 1, 1)
+metadata/_custom_type_script = "uid://bddb12n6jcse8"

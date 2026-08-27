@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dob2bw60lxpye"]
+
+[ext_resource type="Script" uid="uid://belhruolwvger" path="res://Scripts/basic_bullet.gd" id="2_f5hya"]
+[ext_resource type="Texture2D" uid="uid://tcrpnir1nrni" path="res://Bosses/Jevil/Jevil.png" id="2_jq20f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khhxn"]
+atlas = ExtResource("2_jq20f")
+region = Rect2(52, 443, 33, 32)
+filter_clip = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khhxn"]
+size = Vector2(14, 4)
+
+[node name="DiamondBullet" type="Area2D" unique_id=1172669552]
+collision_layer = 2
+script = ExtResource("2_f5hya")
+speed = 240.0
+graze_points = 5.0
+metadata/_custom_type_script = "uid://belhruolwvger"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=567906714]
+texture = SubResource("AtlasTexture_khhxn")
+centered = false
+offset = Vector2(-16, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1408279045]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_khhxn")

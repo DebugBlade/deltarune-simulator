@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://cigcaiw474ud8"
+path="res://.godot/imported/hp_numbers.png-8cf97debbbd57f78075553b9bffee490.fontdata"
+
+[deps]
+
+source_file="res://Assets/UI/Battle/hp_numbers.png"
+dest_files=["res://.godot/imported/hp_numbers.png-8cf97debbbd57f78075553b9bffee490.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("\'0\'-\'9\'", "\'-\'", "\' \'")
+kerning_pairs=PackedStringArray()
+columns=12
+rows=1
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(0, 0, 0, 0)
+ascent=0
+descent=0
+fallbacks=[]
+compress=true
+scaling_mode=2

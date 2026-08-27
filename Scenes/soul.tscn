@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bjwjsr7dt6wri"]
+
+[ext_resource type="Script" uid="uid://boy3u8uc07udu" path="res://soul.gd" id="1_dmpwr"]
+[ext_resource type="Texture2D" uid="uid://b28giqx42grev" path="res://Assets/Soul.png" id="2_ey5r1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7yo3"]
+atlas = ExtResource("2_ey5r1")
+region = Rect2(1, 15, 20, 20)
+filter_clip = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dmpwr"]
+load_path = "res://.godot/imported/Soul.png-ffd7326ec7912f457802720cc1ecdcb7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey5r1"]
+atlas = SubResource("CompressedTexture2D_dmpwr")
+region = Rect2(22, 15, 20, 20)
+filter_clip = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1fef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7yo3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7yo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey5r1")
+}],
+"loop": 1,
+"name": &"hurt",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmpwr"]
+atlas = ExtResource("2_ey5r1")
+region = Rect2(1, 71, 50, 50)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjqw3"]
+atlas = ExtResource("2_ey5r1")
+region = Rect2(154, 71, 50, 50)
+filter_clip = true
+
+[node name="Soul" type="CharacterBody2D" unique_id=879883315]
+collision_mask = 6
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("1_dmpwr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1701453869]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_s1fef")
+animation = &"hurt"
+autoplay = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1924250351]
+visible = false
+polygon = PackedVector2Array(-8, -6, -7, -6, -7, -7, -6, -7, -6, -8, -3, -8, -3, -7, -2, -7, -2, -6, -1, -6, -1, -4, 1, -4, 1, -6, 2, -6, 2, -7, 3, -7, 3, -8, 6, -8, 6, -7, 7, -7, 7, -6, 8, -6, 8, 2, 6, 2, 6, 4, 4, 4, 4, 6, 2, 6, 2, 8, -2, 8, -2, 6, -4, 6, -4, 4, -6, 4, -6, 2, -8, 2)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=346898873]
+unique_name_in_owner = true
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox" unique_id=1125475735]
+visible = false
+polygon = PackedVector2Array(-8, -6, -7, -6, -7, -7, -6, -7, -6, -8, -3, -8, -3, -7, -2, -7, -2, -6, -1, -6, -1, -4, 1, -4, 1, -6, 2, -6, 2, -7, 3, -7, 3, -8, 6, -8, 6, -7, 7, -7, 7, -6, 8, -6, 8, 2, 6, 2, 6, 4, 4, 4, 4, 6, 2, 6, 2, 8, -2, 8, -2, 6, -4, 6, -4, 4, -6, 4, -6, 2, -8, 2)
+
+[node name="Graze" type="Area2D" parent="." unique_id=1695103180]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Graze" unique_id=185622226]
+visible = false
+polygon = PackedVector2Array(-6, 25, 6, 25, 6, 24, 7, 24, 7, 23, 8, 23, 8, 22, 9, 22, 9, 21, 10, 21, 10, 20, 11, 20, 11, 19, 12, 19, 12, 18, 13, 18, 13, 17, 14, 17, 14, 16, 15, 16, 15, 15, 16, 15, 16, 14, 17, 14, 17, 13, 18, 13, 18, 12, 19, 12, 19, 11, 20, 11, 20, 10, 21, 10, 21, 9, 22, 9, 22, 8, 23, 8, 23, 7, 24, 7, 24, 6, 25, 6, 25, -17, 24, -17, 24, -18, 23, -18, 23, -19, 22, -19, 22, -20, 21, -20, 21, -21, 20, -21, 20, -22, 19, -22, 19, -23, 18, -23, 18, -24, 17, -24, 17, -25, 5, -25, 5, -24, 3, -24, 3, -23, 2, -23, 2, -22, -2, -22, -2, -23, -4, -23, -4, -24, -5, -24, -5, -25, -17, -25, -17, -24, -18, -24, -18, -23, -19, -23, -19, -22, -20, -22, -20, -21, -21, -21, -21, -20, -22, -20, -22, -19, -23, -19, -23, -18, -24, -18, -24, -17, -25, -17, -25, 6, -24, 6, -24, 7, -23, 7, -23, 8, -22, 8, -22, 9, -21, 9, -21, 10, -20, 10, -20, 11, -19, 11, -19, 12, -18, 12, -18, 13, -17, 13, -17, 14, -16, 14, -16, 15, -15, 15, -15, 16, -14, 16, -14, 17, -13, 17, -13, 18, -12, 18, -12, 19, -11, 19, -11, 20, -10, 20, -10, 21, -9, 21, -9, 22, -8, 22, -8, 23, -7, 23, -7, 24, -6, 24)
+
+[node name="Dark" type="Sprite2D" parent="Graze" unique_id=1523305175]
+texture = SubResource("AtlasTexture_dmpwr")
+
+[node name="White" type="Sprite2D" parent="Graze" unique_id=72762753]
+texture = SubResource("AtlasTexture_rjqw3")

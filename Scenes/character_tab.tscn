@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://d2r7lkujy7hml"]
+
+[ext_resource type="Texture2D" uid="uid://b5cbnivig5eq8" path="res://Assets/Square.png" id="1_lvs6x"]
+[ext_resource type="Texture2D" uid="uid://bij4k60ra2k1q" path="res://Assets/UI/Battle/Kris/kris_normal.png" id="2_upn41"]
+[ext_resource type="Script" uid="uid://522oqyadulh4" path="res://Scripts/character_tab.gd" id="2_xorho"]
+[ext_resource type="Texture2D" uid="uid://85xkxflbxeij" path="res://Assets/UI/Battle/Kris/kris_name.png" id="3_ryy6n"]
+[ext_resource type="Texture2D" uid="uid://ckakx1ll5yt07" path="res://Assets/UI/Battle/HP.png" id="4_6kiww"]
+[ext_resource type="Texture2D" uid="uid://cdtb11h25ncfc" path="res://Assets/UI/Battle/HP_Slash.png" id="5_qaw6v"]
+[ext_resource type="FontFile" uid="uid://cigcaiw474ud8" path="res://Assets/UI/Battle/hp_numbers.png" id="6_eu80j"]
+[ext_resource type="Texture2D" uid="uid://c6autmdlngqlf" path="res://Assets/UI/Battle/Actions/FightHover.png" id="7_6kiww"]
+[ext_resource type="Script" uid="uid://onquynnkqx5e" path="res://Scripts/action_button.gd" id="8_qaw6v"]
+[ext_resource type="Texture2D" uid="uid://bov72anjdgqdb" path="res://Assets/UI/Battle/Actions/Fight.png" id="9_eu80j"]
+[ext_resource type="Texture2D" uid="uid://d27scsroj6pup" path="res://Assets/UI/Battle/Actions/Act.png" id="10_uk2y8"]
+[ext_resource type="Texture2D" uid="uid://dn8rejbp6p7yh" path="res://Assets/UI/Battle/Actions/ActHover.png" id="11_xorho"]
+[ext_resource type="Texture2D" uid="uid://k1b25oc55m1f" path="res://Assets/UI/Battle/Actions/Item.png" id="12_mkgli"]
+[ext_resource type="Texture2D" uid="uid://b3jwjnp08ce42" path="res://Assets/UI/Battle/Actions/ItemHover.png" id="13_cmk1t"]
+[ext_resource type="Texture2D" uid="uid://dyx0d8hdbkacc" path="res://Assets/UI/Battle/Actions/Spare.png" id="14_6kq2v"]
+[ext_resource type="Texture2D" uid="uid://bijfbw651ocy3" path="res://Assets/UI/Battle/Actions/SpareHover.png" id="15_25cjm"]
+[ext_resource type="Texture2D" uid="uid://2p86rs0hkybk" path="res://Assets/UI/Battle/Actions/SpareReady.png" id="16_kfjhi"]
+[ext_resource type="Texture2D" uid="uid://bjspgeyon56k4" path="res://Assets/UI/Battle/Actions/Defend.png" id="17_6lr0h"]
+[ext_resource type="Texture2D" uid="uid://cvav7s00q8hyi" path="res://Assets/UI/Battle/Actions/DefendHover.png" id="18_hc6i6"]
+[ext_resource type="Texture2D" uid="uid://c4lg0nqrddwbo" path="res://Assets/Battle Reference.png" id="19_rqtnl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqk4g"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjh24"]
+bg_color = Color(0.5019608, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5jl5"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="CharacterTab" type="TextureRect" unique_id=146632236]
+self_modulate = Color(0, 0, 0, 1)
+offset_right = 213.0
+offset_bottom = 68.0
+texture = ExtResource("1_lvs6x")
+script = ExtResource("2_xorho")
+
+[node name="Cover" type="Panel" parent="." unique_id=1166014645]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 0
+offset_right = 213.0
+offset_bottom = 36.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqk4g")
+
+[node name="Icon" type="TextureRect" parent="Cover" unique_id=120993334]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 45.0
+offset_bottom = 34.0
+texture = ExtResource("2_upn41")
+
+[node name="Name" type="TextureRect" parent="Cover" unique_id=55872239]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 13.0
+offset_right = 94.0
+offset_bottom = 28.0
+texture = ExtResource("3_ryy6n")
+
+[node name="HP" type="TextureRect" parent="Cover" unique_id=63739597]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 21.0
+offset_right = 125.0
+offset_bottom = 32.0
+texture = ExtResource("4_6kiww")
+
+[node name="HPSlash" type="TextureRect" parent="Cover" unique_id=420001883]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 6.0
+offset_right = 174.0
+offset_bottom = 20.0
+texture = ExtResource("5_qaw6v")
+
+[node name="HPBar" type="ProgressBar" parent="Cover" unique_id=117520919]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 21.0
+offset_right = 204.0
+offset_bottom = 30.0
+theme_override_styles/background = SubResource("StyleBoxFlat_sjh24")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k5jl5")
+step = 0.0
+value = 50.0
+show_percentage = false
+
+[node name="HPText" type="Label" parent="Cover" unique_id=1944995665]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 7.0
+offset_right = 219.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("6_eu80j")
+theme_override_font_sizes/font_size = 10
+text = "090"
+
+[node name="MaxHPText" type="Label" parent="Cover" unique_id=921432748]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 7.0
+offset_right = 264.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("6_eu80j")
+theme_override_font_sizes/font_size = 10
+text = "090"
+
+[node name="Actions" type="Panel" parent="." unique_id=1238235646]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 0
+offset_top = 36.0
+offset_right = 213.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqk4g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Actions" unique_id=282515283]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 3.0
+offset_right = 81.0
+offset_bottom = 35.0
+
+[node name="Fight" type="TextureRect" parent="Actions/HBoxContainer" unique_id=2054822459]
+layout_mode = 2
+texture = ExtResource("9_eu80j")
+script = ExtResource("8_qaw6v")
+default_texture = ExtResource("9_eu80j")
+hover_texture = ExtResource("7_6kiww")
+metadata/_custom_type_script = "uid://onquynnkqx5e"
+
+[node name="Act" type="TextureRect" parent="Actions/HBoxContainer" unique_id=989432471]
+layout_mode = 2
+texture = ExtResource("10_uk2y8")
+script = ExtResource("8_qaw6v")
+default_texture = ExtResource("10_uk2y8")
+hover_texture = ExtResource("11_xorho")
+metadata/_custom_type_script = "uid://onquynnkqx5e"
+
+[node name="Item" type="TextureRect" parent="Actions/HBoxContainer" unique_id=2079899258]
+layout_mode = 2
+texture = ExtResource("12_mkgli")
+script = ExtResource("8_qaw6v")
+default_texture = ExtResource("12_mkgli")
+hover_texture = ExtResource("13_cmk1t")
+metadata/_custom_type_script = "uid://onquynnkqx5e"
+
+[node name="Spare" type="TextureRect" parent="Actions/HBoxContainer" unique_id=1932080005]
+layout_mode = 2
+texture = ExtResource("14_6kq2v")
+script = ExtResource("8_qaw6v")
+default_texture = ExtResource("14_6kq2v")
+hover_texture = ExtResource("15_25cjm")
+ready_texture = ExtResource("16_kfjhi")
+metadata/_custom_type_script = "uid://onquynnkqx5e"
+
+[node name="Defend" type="TextureRect" parent="Actions/HBoxContainer" unique_id=2010310871]
+layout_mode = 2
+texture = ExtResource("17_6lr0h")
+script = ExtResource("8_qaw6v")
+default_texture = ExtResource("17_6lr0h")
+hover_texture = ExtResource("18_hc6i6")
+metadata/_custom_type_script = "uid://onquynnkqx5e"
+
+[node name="Reference" type="CanvasLayer" parent="." unique_id=148741148]
+
+[node name="REFERENCE" type="Sprite2D" parent="Reference" unique_id=1477146708]
+modulate = Color(1, 1, 1, 0.27058825)
+position = Vector2(0, -294)
+texture = ExtResource("19_rqtnl")
+centered = false
+metadata/_edit_lock_ = true
