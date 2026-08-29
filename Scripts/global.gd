@@ -3,7 +3,9 @@ extends Node
 var chapter: int = 1
 
 func _ready() -> void:
-	pass 
+	var monitor_size := Vector2(DisplayServer.screen_get_size() - Vector2i(200,200))
+	get_window().size *= floor(min((monitor_size.x / get_window().size.x),
+	(monitor_size.y / get_window().size.y)))
 
 func _process(delta: float) -> void:
 	pass

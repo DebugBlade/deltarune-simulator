@@ -5,9 +5,20 @@ extends TextureRect
 @export var hover_texture: Texture2D
 @export var ready_texture: Texture2D
 
+@export var type: Hero.Action
+
+@export var previous_button: ActionButton
+@export var next_button: ActionButton
+
+var hero: Hero
+
+func setup(p_hero: Hero) ->void:
+	hero = p_hero
+	hero.buttons.set(type, self)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

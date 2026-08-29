@@ -12,6 +12,7 @@ var hp: int = 100
 var invincibility_time: float = 1.333
 var invincibility_timer: float = 0.0
 var graze_timer: float = 0.0
+var enabled: bool
 
 var oldpos: Vector2
 
@@ -24,8 +25,14 @@ var oldpos: Vector2
 func _ready() -> void:
 	hitbox.area_entered.connect(_on_hitbox_area_entered)
 	Soul.current = self
+	
+	hide()
+	graze_dark.modulate.a = 0
+	graze_white.modulate.a = 0
 
 func _physics_process(delta: float) -> void:
+	if not enabled:
+		return
 	handle_movement(delta)
 	handle_graze(delta)
 	
@@ -98,6 +105,19 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 			invincibility_timer = invincibility_time
 			animated_sprite_2d.play("hurt")
 			SoundManager.create_audio(preload("uid://c4pg4iqvx3ofl"))
+
+
+func disable() -> void:
+	enabled = false
+	hide()
+
+func enable() -> void:
+	enabled = true
+	show()
+
+
+
+
 
 
 

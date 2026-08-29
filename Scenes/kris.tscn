@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://jbm8k4kxsooq"]
 
-[ext_resource type="Script" uid="uid://dqcfauq5ac1y4" path="res://Scripts/character.gd" id="1_8xblb"]
 [ext_resource type="Texture2D" uid="uid://do4ams84wi7n3" path="res://Assets/Battle/Kris/ACTs/spr_krisb_act_0.png" id="1_50e35"]
 [ext_resource type="Texture2D" uid="uid://ci7ay2snh7y0n" path="res://Assets/Battle/Kris/Defend/spr_krisb_defend_0.png" id="1_lxwr4"]
 [ext_resource type="Texture2D" uid="uid://cojl5ki8svh1m" path="res://Assets/Battle/Kris/ACTs/spr_krisb_actready_0.png" id="1_m2p8a"]
@@ -71,6 +70,7 @@
 [ext_resource type="Texture2D" uid="uid://da3lin0ym2bmg" path="res://Assets/Battle/Kris/Victory/spr_krisb_victory_6.png" id="68_iy8n8"]
 [ext_resource type="Texture2D" uid="uid://dmp857fhdnwd1" path="res://Assets/Battle/Kris/Victory/spr_krisb_victory_7.png" id="69_l5ruf"]
 [ext_resource type="Texture2D" uid="uid://chvrkijvlgit1" path="res://Assets/Battle/Kris/Victory/spr_krisb_victory_8.png" id="70_hx535"]
+[ext_resource type="Script" uid="uid://clisitchkxafw" path="res://Scripts/hero.gd" id="71_ncc2w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x6cgy"]
 animations = [{
@@ -713,7 +713,7 @@ _data = {
 &"victory": SubResource("Animation_653f6")
 }
 
-[node name="Kris" type="AnimatedSprite2D" unique_id=1934790852]
+[node name="Kris" type="AnimatedSprite2D" unique_id=1947875210]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_x6cgy")
 animation = &"defend"
@@ -721,8 +721,8 @@ autoplay = "idle"
 frame = 5
 frame_progress = 1.0
 offset = Vector2(6, -19)
-script = ExtResource("1_8xblb")
-metadata/_custom_type_script = "uid://dqcfauq5ac1y4"
+script = ExtResource("71_ncc2w")
+metadata/_custom_type_script = "uid://clisitchkxafw"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1093915370]
 libraries/ = SubResource("AnimationLibrary_4rk4a")

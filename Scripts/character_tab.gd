@@ -3,49 +3,34 @@ extends TextureRect
 
 signal finished
 
-var character: Character
+var hero: Hero
 var selected: ActionButton
 var saved_selected: ActionButton
 
 @onready var battle: Battle = Battle.current
 @onready var action_container: HBoxContainer = $Actions/HBoxContainer
 
-# Called when the node enters the scene tree for the first time.
+
+func setup(p_hero: Hero) -> void:
+	hero = p_hero
+	for action: ActionButton in action_container.get_children():
+		action.setup(hero)
+
+
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
+
 
 func undo() -> void:
 	pass
 
-func _unhandled_key_input(event: InputEvent) -> void:
-	if battle.focus_tab != self:
-		return
-	
-	if event.is_action_pressed("Accept"):
-		accept()
-	elif event.is_action_pressed("Cancel"):
-		cancel()
-	elif event.is_action_pressed("Left"):
-		selected = action_container.get_children()[1]
-		
-func accept() -> void:
-	pass
 
-func cancel() -> void:
-	pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func handle_input(input: UI.Inputs) -> void:
+	match input:
+		UI.Inputs.CONFIRM:
+			hero.play_animation("xddd")
+		UI.Inputs.CANCEL:
+			pass
+		UI.Inputs.CONFIRM:
+			selected = action_container.get_children()[1]
 #
