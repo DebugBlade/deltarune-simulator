@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjwjsr7dt6wri"]
 
-[ext_resource type="Script" uid="uid://boy3u8uc07udu" path="res://soul.gd" id="1_dmpwr"]
+[ext_resource type="Script" uid="uid://boy3u8uc07udu" path="res://Scripts/soul.gd" id="1_dmpwr"]
 [ext_resource type="Texture2D" uid="uid://b28giqx42grev" path="res://Assets/Soul.png" id="2_ey5r1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q7yo3"]

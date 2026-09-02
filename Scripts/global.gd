@@ -3,9 +3,17 @@ extends Node
 var chapter: int = 1
 
 func _ready() -> void:
-	var monitor_size := Vector2(DisplayServer.screen_get_size() - Vector2i(200,200))
-	get_window().size *= floor(min((monitor_size.x / get_window().size.x),
-	(monitor_size.y / get_window().size.y)))
+	#window integer scaling
+	var margin := Vector2(200,200)
+	var screen_size := Vector2(DisplayServer.screen_get_size())
+	var target_size := (screen_size - margin)
+	
+	get_window().size *= floor(min(
+	(target_size.x / get_window().size.x),
+	(target_size.y / get_window().size.y))
+	)
+	
+	get_window().move_to_center()
 
 func _process(delta: float) -> void:
 	pass

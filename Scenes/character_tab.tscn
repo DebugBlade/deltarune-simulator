@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c4lg0nqrddwbo" path="res://Assets/Battle Reference.png" id="19_rqtnl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqk4g"]
+resource_local_to_scene = true
 draw_center = false
 border_width_left = 2
 border_width_top = 2
@@ -32,6 +33,7 @@ border_color = Color(1, 1, 1, 1)
 bg_color = Color(0.5019608, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5jl5"]
+resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 
 [node name="CharacterTab" type="TextureRect" unique_id=146632236]
@@ -97,8 +99,8 @@ show_percentage = false
 layout_mode = 0
 offset_left = 136.0
 offset_top = 7.0
-offset_right = 219.0
-offset_bottom = 27.0
+offset_right = 163.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("6_eu80j")
 theme_override_font_sizes/font_size = 10
 text = "090"
@@ -107,8 +109,8 @@ text = "090"
 layout_mode = 0
 offset_left = 181.0
 offset_top = 7.0
-offset_right = 264.0
-offset_bottom = 27.0
+offset_right = 205.0
+offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("6_eu80j")
 theme_override_font_sizes/font_size = 10
 text = "090"
@@ -121,11 +123,35 @@ offset_right = 213.0
 offset_bottom = 68.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nqk4g")
 
+[node name="LineSpawnLeft" type="Control" parent="Actions" unique_id=1702394037]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
+anchor_left = 0.0050000004
+anchor_top = 0.559
+anchor_right = 0.0050000004
+anchor_bottom = 0.559
+offset_left = -0.06500006
+offset_top = -15.8880005
+offset_right = -0.06500006
+offset_bottom = -15.8880005
+
+[node name="LineSpawnRight" type="Control" parent="Actions" unique_id=1234524201]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
+anchor_left = 0.99500006
+anchor_top = 0.559
+anchor_right = 0.99500006
+anchor_bottom = 0.559
+offset_left = 0.06498718
+offset_top = -15.8880005
+offset_right = 0.06498718
+offset_bottom = -15.8880005
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Actions" unique_id=282515283]
 layout_mode = 0
-offset_left = 15.0
+offset_left = 20.0
 offset_top = 3.0
-offset_right = 81.0
+offset_right = 191.0
 offset_bottom = 35.0
 
 [node name="Fight" type="TextureRect" parent="Actions/HBoxContainer" unique_id=2054822459 node_paths=PackedStringArray("previous_button", "next_button")]

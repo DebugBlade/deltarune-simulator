@@ -4,78 +4,139 @@ extends CanvasLayer
 enum Context {
 	DISABLED,
 	ACTIONS,
-	MAGICS,
-	MONSTERS,
 	ALLIES,
+	MONSTERS,
 	ACTS,
-}
-
-enum Inputs {
-	NONE,
-	CONFIRM,
-	CANCEL,
-	MENU,
-	LEFT,
-	RIGHT,
-	UP,
-	DOWN,
+	ITEMS,
+	MAGICS,
 }
 
 enum BottomPanel {
 	TEXT,
 	ALLIES,
 	MONSTERS,
+	ACTS,
+	ITEMS,
 }
 
+const MENU_MOVE = preload("uid://b38k0k8dyd7wa")
+const MENU_SELECT = preload("uid://cu888mwskmipd")
+
+var previous_context := Context.DISABLED
 var context := Context.DISABLED:
 	set(new_context):
 		if new_context == Context.ACTIONS:
-			if not selected_button:
-				selected_button = battle.heroes[0].buttons.get(Hero.Action.FIGHT)
-		if new_context == Context.MONSTERS:
+			change_panel(BottomPanel.TEXT)
+			if not selected_hero:
+				selected_hero = battle.first_hero_alive()
+		
+		elif new_context == Context.ALLIES:
+			change_panel(BottomPanel.ALLIES)
+		elif new_context == Context.MONSTERS:
 			change_panel(BottomPanel.MONSTERS)
+		elif new_context == Context.ACTS:
+			change_panel(BottomPanel.ACTS)
+		elif new_context == Context.ITEMS:
+			change_panel(BottomPanel.ITEMS)
+		elif new_context == Context.MAGICS:
+			change_panel(BottomPanel.ACTS)
+		previous_context = context
 		context = new_context
+
+var selected_hero: Hero:
+	set(new_hero):
+		if new_hero:
+			selected_button = new_hero.buttons.get(Hero.ActionType.FIGHT)
+		else:
+			selected_button = null
+		selected_hero = new_hero
 
 var selected_button: ActionButton:
 	set(new_button):
 		if selected_button:
 			selected_button.texture = selected_button.default_texture
+		if new_button:
+			new_button.texture = new_button.hover_texture
 		selected_button = new_button
-		new_button.texture = new_button.hover_texture
-var selected_hero: Hero
 
 @onready var battle: Battle = Battle.current
 @onready var bottom_panel: Control = $BattleMenu/BottomPanel
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
-	var input: Inputs = Inputs.NONE
+	if battle.context != Battle.Context.MENU:
+		return
+		
+	get_viewport().set_input_as_handled()
 	if event.is_action_pressed("Confirm"):
 		if context == Context.ACTIONS:
-			if selected_button.type == Hero.Action.FIGHT:
+			if selected_button.type == Hero.ActionType.FIGHT:
+				SoundManager.create_audio(MENU_SELECT)
 				context = Context.MONSTERS
+			elif selected_button.type == Hero.ActionType.ACT:
+				SoundManager.create_audio(MENU_SELECT)
+				context = Context.ACTS
+			elif selected_button.type == Hero.ActionType.ITEM:
+				SoundManager.create_audio(MENU_SELECT)
+				context = Context.ITEMS
+			elif selected_button.type == Hero.ActionType.SPARE:
+				SoundManager.create_audio(MENU_SELECT)
+				context = Context.MONSTERS
+			elif selected_button.type == Hero.ActionType.DEFEND:
+				SoundManager.create_audio(MENU_SELECT)
+				selected_hero.play_animation("defend")
+				selected_hero.char_tab.icon = CharacterTab.Icon.DEFEND
+				next_hero()
 	elif event.is_action_pressed("Cancel"):
-		input = Inputs.CANCEL
+		if context == Context.ACTIONS:
+			previous_hero()
+		elif previous_context:
+			context = previous_context
+			SoundManager.create_audio(MENU_MOVE)
 	elif event.is_action_pressed("Menu"):
-		input = Inputs.MENU
+		pass
 	elif event.is_action_pressed("Left"):
 		if context == Context.ACTIONS:
+			SoundManager.create_audio(MENU_MOVE)
 			selected_button = selected_button.previous_button
 	elif event.is_action_pressed("Right"):
 		if context == Context.ACTIONS:
 			selected_button = selected_button.next_button
+			SoundManager.create_audio(MENU_MOVE)
 	elif event.is_action_pressed("Up"):
-		input = Inputs.UP
+		pass
 	elif event.is_action_pressed("Down"):
-		input = Inputs.DOWN
+		pass
 	else:
 		return
 
-	get_viewport().set_input_as_handled()
 
-	if Battle.current.focus_tab:
-		Battle.current.focus_tab.handle_input(input)
+func previous_hero() -> void:
+	if selected_hero == battle.first_hero_alive():
+		return
+	var new_hero: Hero = battle.heroes.get(selected_hero.slot-1)
+	if not new_hero:
+		return
+	if new_hero.hp <= 0:
+		selected_hero = new_hero
+		return previous_hero()
+	selected_hero.action.reset()
+	new_hero.play_animation("idle")
+	selected_hero = new_hero
 
+func next_hero() -> void:
+	if selected_hero == battle.last_hero_alive():
+		return finish_menu()
+	var new_hero: Hero = battle.heroes.get(selected_hero.slot+1)
+	if new_hero.hp <= 0:
+		return next_hero()
+	selected_hero = new_hero
+
+func finish_menu() -> void:
+	context = Context.DISABLED
+	battle.context = Battle.Context.ACTIONS
+	selected_hero = null
+	selected_button = null
 
 func change_panel(panel_id: BottomPanel) -> void:
 	for panel: Control in bottom_panel.get_children():

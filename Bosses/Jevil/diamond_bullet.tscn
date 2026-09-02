@@ -15,6 +15,7 @@ size = Vector2(14, 4)
 collision_layer = 2
 script = ExtResource("2_f5hya")
 speed = 240.0
+damage = 40
 graze_points = 5.0
 metadata/_custom_type_script = "uid://belhruolwvger"
 

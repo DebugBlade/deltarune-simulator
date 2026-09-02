@@ -5,7 +5,7 @@ extends TextureRect
 @export var hover_texture: Texture2D
 @export var ready_texture: Texture2D
 
-@export var type: Hero.Action
+@export var type: Hero.ActionType
 
 @export var previous_button: ActionButton
 @export var next_button: ActionButton

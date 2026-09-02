@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" format=3 uid="uid://x0owqcj0o2vg"]
+
+[ext_resource type="FontFile" uid="uid://ceylgek8hhbi4" path="res://Fonts/___8bitoperator_jve.ttf" id="1_nqvn3"]
+
+[resource]
+base_font = ExtResource("1_nqvn3")

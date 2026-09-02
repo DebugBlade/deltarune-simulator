@@ -1,0 +1,667 @@
+[gd_scene format=3 uid="uid://bqye07crvblhg"]
+
+[ext_resource type="Script" uid="uid://dpnco17mbdpup" path="res://Scripts/battle.gd" id="1_usdrq"]
+[ext_resource type="Script" uid="uid://cfknqffvef72j" path="res://Scripts/battle_box.gd" id="2_hpycx"]
+[ext_resource type="Texture2D" uid="uid://bo8bocetotbvp" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0019.png" id="3_kohgt"]
+[ext_resource type="Texture2D" uid="uid://ctcfrtyvd0h4h" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0020.png" id="4_64d33"]
+[ext_resource type="Texture2D" uid="uid://djtkkh77g2qhh" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0021.png" id="5_1nwq2"]
+[ext_resource type="Texture2D" uid="uid://c5hlwthgho33k" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0022.png" id="6_4d7pg"]
+[ext_resource type="Texture2D" uid="uid://cnooffioxiw6p" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0023.png" id="7_uy5dy"]
+[ext_resource type="Texture2D" uid="uid://cd6bpuh0a36ba" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0024.png" id="8_eocge"]
+[ext_resource type="Texture2D" uid="uid://bjrgqk84a5uge" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0025.png" id="9_53bu2"]
+[ext_resource type="Texture2D" uid="uid://bjbmiq832as8e" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0026.png" id="10_omjb2"]
+[ext_resource type="Texture2D" uid="uid://b6h2qjse2nrxn" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0027.png" id="11_0d2cg"]
+[ext_resource type="Texture2D" uid="uid://setx4nq3xi73" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0028.png" id="12_kvdnx"]
+[ext_resource type="Texture2D" uid="uid://b8q18ydxs1g8k" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0029.png" id="13_rsafu"]
+[ext_resource type="Texture2D" uid="uid://jxuaqhomr502" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0030.png" id="14_bx31s"]
+[ext_resource type="Texture2D" uid="uid://6k4cpnoir6ee" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0031.png" id="15_20a18"]
+[ext_resource type="Texture2D" uid="uid://dy0fj48kcn0vy" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0032.png" id="16_t744f"]
+[ext_resource type="Texture2D" uid="uid://bhalgbaidincq" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0033.png" id="17_5xnoi"]
+[ext_resource type="Texture2D" uid="uid://b5xa5fjb8nn65" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0034.png" id="18_vx6ye"]
+[ext_resource type="Texture2D" uid="uid://ciqegkrtl6uk2" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0035.png" id="19_vor3a"]
+[ext_resource type="Texture2D" uid="uid://b77cr50ihfogi" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0036.png" id="20_iic0o"]
+[ext_resource type="Texture2D" uid="uid://cq4lqvqwwh2" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0037.png" id="21_41b1p"]
+[ext_resource type="Texture2D" uid="uid://c5d1nmh0fhrua" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0038.png" id="22_nadxh"]
+[ext_resource type="Texture2D" uid="uid://bk7jnkqkl5irj" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0039.png" id="23_hn1mh"]
+[ext_resource type="Texture2D" uid="uid://dhludtxhcjfnf" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0040.png" id="24_k512f"]
+[ext_resource type="Texture2D" uid="uid://dntjbd0ngug4w" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0041.png" id="25_8piqj"]
+[ext_resource type="Texture2D" uid="uid://comkwpgoepwb7" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0042.png" id="26_q6il4"]
+[ext_resource type="Texture2D" uid="uid://8ets5hg82n51" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0043.png" id="27_ipmqe"]
+[ext_resource type="Texture2D" uid="uid://78v70dc8f6t3" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0044.png" id="28_08wrf"]
+[ext_resource type="Texture2D" uid="uid://c5ywwbjn54hsk" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0045.png" id="29_amf3c"]
+[ext_resource type="Texture2D" uid="uid://dogsro2kc1mhu" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0046.png" id="30_jbbyd"]
+[ext_resource type="Texture2D" uid="uid://d3uk67iwe7ie6" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0001.png" id="31_18ii7"]
+[ext_resource type="Texture2D" uid="uid://b1mjpcgb1i6uj" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0002.png" id="32_l7yrc"]
+[ext_resource type="Texture2D" uid="uid://dfpnimlos6ovg" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0003.png" id="33_3dvqw"]
+[ext_resource type="Texture2D" uid="uid://uwbiwutwe5sn" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0004.png" id="34_5bsr2"]
+[ext_resource type="Texture2D" uid="uid://dtria46bjlwnh" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0005.png" id="35_fsnyo"]
+[ext_resource type="Texture2D" uid="uid://x3u1e7khkg17" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0006.png" id="36_ptuy2"]
+[ext_resource type="Texture2D" uid="uid://buggk528clo84" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0007.png" id="37_nierd"]
+[ext_resource type="Texture2D" uid="uid://cb4bx7g6bql34" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0008.png" id="38_1qpfv"]
+[ext_resource type="Texture2D" uid="uid://cry08rew1yqe8" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0009.png" id="39_va2ub"]
+[ext_resource type="Texture2D" uid="uid://byx7y8nqd2jcs" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0010.png" id="40_vnebp"]
+[ext_resource type="Texture2D" uid="uid://4nxwtrveyavv" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0011.png" id="41_fvf58"]
+[ext_resource type="Texture2D" uid="uid://dcdpw8aau0c4e" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0012.png" id="42_ywoqd"]
+[ext_resource type="Texture2D" uid="uid://blq6ef0axnb3" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0013.png" id="43_2ee04"]
+[ext_resource type="Texture2D" uid="uid://c63oog6wv756p" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0014.png" id="44_j6rpu"]
+[ext_resource type="Texture2D" uid="uid://c7r2we88y5phq" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0015.png" id="45_abo64"]
+[ext_resource type="Texture2D" uid="uid://xgmsymggf671" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0016.png" id="46_74akh"]
+[ext_resource type="Texture2D" uid="uid://bdasmm2bvxylw" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0017.png" id="47_brq08"]
+[ext_resource type="Texture2D" uid="uid://c5y558m53isyo" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0018.png" id="48_5i1ja"]
+[ext_resource type="PackedScene" uid="uid://bjwjsr7dt6wri" path="res://Scenes/soul.tscn" id="49_x65by"]
+[ext_resource type="Texture2D" uid="uid://cfmp6fqd1rsbh" path="res://Assets/Battle Menu.png" id="50_dnm5a"]
+[ext_resource type="PackedScene" uid="uid://jbm8k4kxsooq" path="res://Scenes/kris.tscn" id="51_kkibp"]
+[ext_resource type="FontFile" uid="uid://dmkl06dfd8qup" path="res://Fonts/8BitOperatorJVE.ttf" id="52_6mwnj"]
+[ext_resource type="Script" uid="uid://xhkvwohw6qx7" path="res://Scripts/ui.gd" id="53_85eg2"]
+[ext_resource type="Texture2D" uid="uid://b5cbnivig5eq8" path="res://Assets/Square.png" id="54_utx0y"]
+[ext_resource type="Texture2D" uid="uid://c4lg0nqrddwbo" path="res://Assets/Battle Reference.png" id="55_35dos"]
+[ext_resource type="FontVariation" uid="uid://c45x28nfc7gll" path="res://Fonts/BottomPanel.tres" id="55_64d33"]
+[ext_resource type="FontVariation" uid="uid://c08ehsg20tsnh" path="res://Fonts/MainBig.tres" id="56_64d33"]
+[ext_resource type="FontVariation" uid="uid://x0owqcj0o2vg" path="res://Fonts/Main_maybe.tres" id="57_1nwq2"]
+[ext_resource type="Texture2D" uid="uid://22xco6q68kdk" path="res://Reference5.png" id="59_kohgt"]
+[ext_resource type="Texture2D" uid="uid://d0iv4outlth2d" path="res://Reference Heroes.png" id="60_1nwq2"]
+[ext_resource type="Texture2D" uid="uid://p86ippsnq7di" path="res://Reference Monsters.png" id="60_64d33"]
+[ext_resource type="Texture2D" uid="uid://baae2eb5qyjlu" path="res://Reference Items.png" id="62_4d7pg"]
+[ext_resource type="Texture2D" uid="uid://bf7nerqb1i6ey" path="res://Reference Text.png" id="63_uy5dy"]
+[ext_resource type="Texture2D" uid="uid://b381ordb5p5t8" path="res://Reference Spells.png" id="64_eocge"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1fef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kohgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_64d33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1nwq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4d7pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uy5dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eocge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_53bu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_omjb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0d2cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kvdnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rsafu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bx31s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_20a18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_t744f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5xnoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vx6ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vor3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_iic0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_41b1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nadxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_hn1mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_k512f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8piqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_q6il4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ipmqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_08wrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_amf3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jbbyd")
+}],
+"loop": 0,
+"name": &"End",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_18ii7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_l7yrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_3dvqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5bsr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_fsnyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ptuy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_nierd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_1qpfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_va2ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vnebp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_fvf58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ywoqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_2ee04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_j6rpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_abo64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_74akh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_brq08")
+}],
+"loop": 0,
+"name": &"Start",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_5i1ja")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcvim"]
+size = Vector2(4, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnkle"]
+size = Vector2(4, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1fef"]
+size = Vector2(150, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wr3wg"]
+size = Vector2(150, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt7mg"]
+atlas = ExtResource("50_dnm5a")
+region = Rect2(1208, 62, 25, 196)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_titue"]
+atlas = ExtResource("50_dnm5a")
+region = Rect2(1182, 62, 25, 196)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htg8p"]
+atlas = ExtResource("50_dnm5a")
+region = Rect2(1312, 67, 25, 187)
+filter_clip = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6jpx"]
+bg_color = Color(0.5019608, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1fef"]
+bg_color = Color(0, 1, 0, 1)
+
+[node name="Battle" type="Node2D" unique_id=885557738]
+script = ExtResource("1_usdrq")
+
+[node name="BattleBox" type="StaticBody2D" parent="." unique_id=88610371]
+position = Vector2(320, 170)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("2_hpycx")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BattleBox" unique_id=1538494617]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_s1fef")
+autoplay = "Start"
+offset = Vector2(0, 140)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BattleBox" unique_id=614067175]
+visible = false
+position = Vector2(-72, 1)
+shape = SubResource("RectangleShape2D_jcvim")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BattleBox" unique_id=137310302]
+visible = false
+position = Vector2(74, 1)
+shape = SubResource("RectangleShape2D_fnkle")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BattleBox" unique_id=1670962498]
+visible = false
+position = Vector2(1, 74)
+shape = SubResource("RectangleShape2D_s1fef")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="BattleBox" unique_id=2036741998]
+visible = false
+position = Vector2(1, -72)
+shape = SubResource("RectangleShape2D_wr3wg")
+
+[node name="TopLeft" type="Node2D" parent="BattleBox" unique_id=467859468]
+position = Vector2(-74, -74)
+
+[node name="BottomRight" type="Node2D" parent="BattleBox" unique_id=836018015]
+position = Vector2(76, 76)
+
+[node name="Soul" parent="." unique_id=879883315 instance=ExtResource("49_x65by")]
+position = Vector2(323, 169)
+
+[node name="TPBar" type="TextureProgressBar" parent="." unique_id=261330286]
+offset_left = 38.0
+offset_top = 40.0
+offset_right = 63.0
+offset_bottom = 236.0
+max_value = 1.0
+step = 0.0
+value = 0.75
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_tt7mg")
+texture_over = SubResource("AtlasTexture_titue")
+texture_progress = SubResource("AtlasTexture_htg8p")
+texture_progress_offset = Vector2(0, 5)
+
+[node name="AllyMarker" type="Node2D" parent="." unique_id=1474938775]
+position = Vector2(99, 177)
+
+[node name="Kris" parent="AllyMarker" unique_id=1934790852 instance=ExtResource("51_kkibp")]
+position = Vector2(-1, -1)
+frame = 0
+frame_progress = 0.0
+
+[node name="Kris2" parent="AllyMarker" unique_id=1947875210 instance=ExtResource("51_kkibp")]
+position = Vector2(19, 43)
+frame = 0
+frame_progress = 0.0
+color = Color(0.8961183, 0.20567146, 0.99999994, 1)
+
+[node name="FPS" type="Label" parent="." unique_id=729624591]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("52_6mwnj")
+text = "FPS: 60"
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1479119219]
+script = ExtResource("53_85eg2")
+
+[node name="BattleMenu" type="TextureRect" parent="UI" unique_id=1363628455]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_top = 0.61300004
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.24002075
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("54_utx0y")
+
+[node name="Characters" type="HBoxContainer" parent="UI/BattleMenu" unique_id=371403668]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 68.0
+theme_override_constants/separation = 0
+
+[node name="BottomPanel" type="Control" parent="UI/BattleMenu" unique_id=1303856169]
+anchors_preset = 0
+offset_top = 71.0
+offset_right = 640.0
+offset_bottom = 186.0
+
+[node name="Text" type="RichTextLabel" parent="UI/BattleMenu/BottomPanel" unique_id=847544441]
+visible = false
+layout_mode = 0
+offset_left = 30.0
+offset_top = 10.0
+offset_right = 568.0
+offset_bottom = 116.0
+theme_override_fonts/normal_font = ExtResource("55_64d33")
+theme_override_font_sizes/normal_font_size = 32
+text = "* LET THE GAMES BEGIN"
+autowrap_mode = 2
+
+[node name="Allies" type="VBoxContainer" parent="UI/BattleMenu/BottomPanel" unique_id=1367637865]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 9.0
+offset_right = 517.0
+offset_bottom = 35.0
+
+[node name="1" type="Control" parent="UI/BattleMenu/BottomPanel/Allies" unique_id=575004951]
+custom_minimum_size = Vector2(437, 26)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/BattleMenu/BottomPanel/Allies/1" unique_id=1433774240]
+layout_mode = 0
+offset_right = 223.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("56_64d33")
+theme_override_font_sizes/font_size = 32
+text = "Kris"
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/BattleMenu/BottomPanel/Allies/1" unique_id=303035147]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 6.0
+offset_right = 421.0
+offset_bottom = 22.0
+theme_override_styles/background = SubResource("StyleBoxFlat_x6jpx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s1fef")
+step = 0.0
+value = 75.0
+show_percentage = false
+
+[node name="Monsters" type="Control" parent="UI/BattleMenu/BottomPanel" unique_id=1360271484]
+visible = false
+custom_minimum_size = Vector2(529, 109)
+propagate_maximum_size = true
+anchors_preset = 0
+offset_left = 80.0
+offset_right = 609.0
+offset_bottom = 109.0
+
+[node name="HP" type="Label" parent="UI/BattleMenu/BottomPanel/Monsters" unique_id=82137226]
+layout_mode = 0
+offset_left = 344.0
+offset_top = -1.0
+offset_right = 358.0
+offset_bottom = 15.0
+scale = Vector2(2, 1)
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 16
+text = "HP"
+
+[node name="MERCY" type="Label" parent="UI/BattleMenu/BottomPanel/Monsters" unique_id=901455154]
+layout_mode = 0
+offset_left = 444.0
+offset_top = -1.0
+offset_right = 480.0
+offset_bottom = 15.0
+scale = Vector2(2, 1)
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 16
+text = "MERCY"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/BattleMenu/BottomPanel/Monsters" unique_id=1534518590]
+layout_mode = 0
+offset_left = -58.0
+offset_top = -7.0
+offset_right = -18.0
+offset_bottom = 53.0
+theme_override_constants/separation = 30
+
+[node name="1" type="Control" parent="UI/BattleMenu/BottomPanel/Monsters/VBoxContainer" unique_id=1289762293]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="UI/BattleMenu/BottomPanel/Monsters/VBoxContainer/1" unique_id=711800257]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 17.0
+offset_right = 121.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("52_6mwnj")
+theme_override_font_sizes/font_size = 32
+text = "Pippins"
+
+[node name="HPBar" type="ProgressBar" parent="UI/BattleMenu/BottomPanel/Monsters/VBoxContainer/1" unique_id=299904793]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 22.0
+offset_right = 479.0
+offset_bottom = 38.0
+theme_override_styles/background = SubResource("StyleBoxFlat_x6jpx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s1fef")
+step = 0.0
+value = 75.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="UI/BattleMenu/BottomPanel/Monsters/VBoxContainer/1/HPBar" unique_id=915891410]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_right = 102.0
+offset_bottom = 32.0
+scale = Vector2(2, 1)
+theme_override_fonts/font = ExtResource("52_6mwnj")
+theme_override_font_sizes/font_size = 16
+text = "100%"
+
+[node name="MercyBar" type="ProgressBar" parent="UI/BattleMenu/BottomPanel/Monsters/VBoxContainer/1" unique_id=1154224287]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 22.0
+offset_right = 579.0
+offset_bottom = 38.0
+theme_override_styles/background = SubResource("StyleBoxFlat_x6jpx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s1fef")
+step = 0.0
+value = 75.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="UI/BattleMenu/BottomPanel/Monsters/VBoxContainer/1/MercyBar" unique_id=1833470274]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_right = 102.0
+offset_bottom = 32.0
+scale = Vector2(2, 1)
+theme_override_fonts/font = ExtResource("52_6mwnj")
+theme_override_font_sizes/font_size = 16
+text = "0%"
+
+[node name="ACTs" type="Control" parent="UI/BattleMenu/BottomPanel" unique_id=1776010888]
+visible = false
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 50.0
+
+[node name="Description" type="RichTextLabel" parent="UI/BattleMenu/BottomPanel/ACTs" unique_id=323284750]
+layout_mode = 0
+offset_left = 470.0
+offset_right = 554.0
+offset_bottom = 96.0
+theme_override_fonts/normal_font = ExtResource("57_1nwq2")
+theme_override_font_sizes/normal_font_size = 32
+text = "Heal Ally 32% TP"
+scroll_active = false
+
+[node name="GridContainer" type="GridContainer" parent="UI/BattleMenu/BottomPanel/ACTs" unique_id=1766394302]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/v_separation = -2
+columns = 2
+
+[node name="Label" type="Label" parent="UI/BattleMenu/BottomPanel/ACTs/GridContainer" unique_id=691727877]
+custom_minimum_size = Vector2(226, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "R-Action"
+
+[node name="Label2" type="Label" parent="UI/BattleMenu/BottomPanel/ACTs/GridContainer" unique_id=510649387]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "Pacify"
+
+[node name="Label3" type="Label" parent="UI/BattleMenu/BottomPanel/ACTs/GridContainer" unique_id=1042746192]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "Heal Prayer"
+
+[node name="Items" type="Control" parent="UI/BattleMenu/BottomPanel" unique_id=1419744890]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 50.0
+
+[node name="Description" type="RichTextLabel" parent="UI/BattleMenu/BottomPanel/Items" unique_id=1286943855]
+layout_mode = 0
+offset_left = 470.0
+offset_right = 554.0
+offset_bottom = 96.0
+theme_override_fonts/normal_font = ExtResource("57_1nwq2")
+theme_override_font_sizes/normal_font_size = 32
+text = "Raises
+TP
+32%"
+scroll_active = false
+
+[node name="GridContainer" type="GridContainer" parent="UI/BattleMenu/BottomPanel/Items" unique_id=1791364859]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/v_separation = -2
+columns = 2
+
+[node name="Label" type="Label" parent="UI/BattleMenu/BottomPanel/Items/GridContainer" unique_id=2083818739]
+custom_minimum_size = Vector2(226, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "TensionBit"
+
+[node name="Label2" type="Label" parent="UI/BattleMenu/BottomPanel/Items/GridContainer" unique_id=1776117559]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "ReviveMint"
+
+[node name="Label3" type="Label" parent="UI/BattleMenu/BottomPanel/Items/GridContainer" unique_id=1188421863]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "SpagettiCode"
+
+[node name="Label4" type="Label" parent="UI/BattleMenu/BottomPanel/Items/GridContainer" unique_id=1851614070]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "CD Bagel"
+
+[node name="Label5" type="Label" parent="UI/BattleMenu/BottomPanel/Items/GridContainer" unique_id=1332198340]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "ReviveMint"
+
+[node name="Label6" type="Label" parent="UI/BattleMenu/BottomPanel/Items/GridContainer" unique_id=1535400901]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("57_1nwq2")
+theme_override_font_sizes/font_size = 32
+text = "TVDinner"
+
+[node name="Reference" type="CanvasLayer" parent="." unique_id=121419541]
+
+[node name="REFERENCE" type="Sprite2D" parent="Reference" unique_id=1580637164]
+modulate = Color(1, 1, 1, 0.27058825)
+texture = ExtResource("55_35dos")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Reference5" type="Sprite2D" parent="Reference" unique_id=965343292]
+visible = false
+modulate = Color(1, 1, 1, 0.27058825)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("59_kohgt")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Text" type="Sprite2D" parent="Reference" unique_id=1268999433]
+visible = false
+modulate = Color(1, 1, 1, 0.27058825)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("63_uy5dy")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Heroes" type="Sprite2D" parent="Reference" unique_id=1871998230]
+visible = false
+modulate = Color(1, 1, 1, 0.27058825)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("60_1nwq2")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Monsters" type="Sprite2D" parent="Reference" unique_id=1989176328]
+visible = false
+modulate = Color(1, 1, 1, 0.27058825)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("60_64d33")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ACTs" type="Sprite2D" parent="Reference" unique_id=1278807541]
+visible = false
+modulate = Color(1, 1, 1, 0.27058825)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("64_eocge")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Items" type="Sprite2D" parent="Reference" unique_id=506792648]
+visible = false
+modulate = Color(1, 1, 1, 0.27058825)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("62_4d7pg")
+centered = false
+metadata/_edit_lock_ = true
