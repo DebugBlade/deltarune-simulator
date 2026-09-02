@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://3s42ti3txeme"]
-
-[ext_resource type="FontFile" uid="uid://cigcaiw474ud8" path="res://Assets/UI/Battle/hp_numbers.png" id="1_y38sv"]
-
-[node name="Label" type="Label" unique_id=1555733747]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("1_y38sv")
-text = "0123456789-"

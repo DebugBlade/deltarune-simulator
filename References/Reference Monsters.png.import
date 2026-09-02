@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baae2eb5qyjlu"
-path="res://.godot/imported/Reference Items.png-93b6e74611a61388efdbc95ac9d80ab7.ctex"
+uid="uid://p86ippsnq7di"
+path="res://.godot/imported/Reference Monsters.png-c1c0a26bf44d759973ccc7e66bb76154.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reference Items.png"
-dest_files=["res://.godot/imported/Reference Items.png-93b6e74611a61388efdbc95ac9d80ab7.ctex"]
+source_file="res://References/Reference Monsters.png"
+dest_files=["res://.godot/imported/Reference Monsters.png-c1c0a26bf44d759973ccc7e66bb76154.ctex"]
 
 [params]
 

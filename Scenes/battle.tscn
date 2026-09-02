@@ -54,16 +54,14 @@
 [ext_resource type="FontFile" uid="uid://dmkl06dfd8qup" path="res://Fonts/8BitOperatorJVE.ttf" id="52_6mwnj"]
 [ext_resource type="Script" uid="uid://xhkvwohw6qx7" path="res://Scripts/ui.gd" id="53_85eg2"]
 [ext_resource type="Texture2D" uid="uid://b5cbnivig5eq8" path="res://Assets/Square.png" id="54_utx0y"]
-[ext_resource type="Texture2D" uid="uid://c4lg0nqrddwbo" path="res://Assets/Battle Reference.png" id="55_35dos"]
 [ext_resource type="FontVariation" uid="uid://c45x28nfc7gll" path="res://Fonts/BottomPanel.tres" id="55_64d33"]
 [ext_resource type="FontVariation" uid="uid://c08ehsg20tsnh" path="res://Fonts/MainBig.tres" id="56_64d33"]
 [ext_resource type="FontVariation" uid="uid://x0owqcj0o2vg" path="res://Fonts/Main_maybe.tres" id="57_1nwq2"]
-[ext_resource type="Texture2D" uid="uid://22xco6q68kdk" path="res://Reference5.png" id="59_kohgt"]
-[ext_resource type="Texture2D" uid="uid://d0iv4outlth2d" path="res://Reference Heroes.png" id="60_1nwq2"]
-[ext_resource type="Texture2D" uid="uid://p86ippsnq7di" path="res://Reference Monsters.png" id="60_64d33"]
-[ext_resource type="Texture2D" uid="uid://baae2eb5qyjlu" path="res://Reference Items.png" id="62_4d7pg"]
-[ext_resource type="Texture2D" uid="uid://bf7nerqb1i6ey" path="res://Reference Text.png" id="63_uy5dy"]
-[ext_resource type="Texture2D" uid="uid://b381ordb5p5t8" path="res://Reference Spells.png" id="64_eocge"]
+[ext_resource type="Texture2D" uid="uid://d0iv4outlth2d" path="res://References/Reference Heroes.png" id="60_1nwq2"]
+[ext_resource type="Texture2D" uid="uid://p86ippsnq7di" path="res://References/Reference Monsters.png" id="60_64d33"]
+[ext_resource type="Texture2D" uid="uid://baae2eb5qyjlu" path="res://References/Reference Items.png" id="62_4d7pg"]
+[ext_resource type="Texture2D" uid="uid://bf7nerqb1i6ey" path="res://References/Reference Text.png" id="63_uy5dy"]
+[ext_resource type="Texture2D" uid="uid://b381ordb5p5t8" path="res://References/Reference Spells.png" id="64_eocge"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s1fef"]
 animations = [{
@@ -383,7 +381,7 @@ offset_right = 568.0
 offset_bottom = 116.0
 theme_override_fonts/normal_font = ExtResource("55_64d33")
 theme_override_font_sizes/normal_font_size = 32
-text = "* LET THE GAMES BEGIN"
+text = "* LET THE GAMES BEGIN!"
 autowrap_mode = 2
 
 [node name="Allies" type="VBoxContainer" parent="UI/BattleMenu/BottomPanel" unique_id=1367637865]
@@ -625,21 +623,6 @@ theme_override_font_sizes/font_size = 32
 text = "TVDinner"
 
 [node name="Reference" type="CanvasLayer" parent="." unique_id=121419541]
-visible = false
-
-[node name="REFERENCE" type="Sprite2D" parent="Reference" unique_id=1580637164]
-modulate = Color(1, 1, 1, 0.27058825)
-texture = ExtResource("55_35dos")
-centered = false
-metadata/_edit_lock_ = true
-
-[node name="Reference5" type="Sprite2D" parent="Reference" unique_id=965343292]
-visible = false
-modulate = Color(1, 1, 1, 0.27058825)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("59_kohgt")
-centered = false
-metadata/_edit_lock_ = true
 
 [node name="Text" type="Sprite2D" parent="Reference" unique_id=1268999433]
 visible = false

@@ -1,3 +1,4 @@
+##unused resource 
 class_name CharacterInfo
 extends Resource
 

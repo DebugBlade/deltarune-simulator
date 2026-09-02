@@ -1,6 +1,8 @@
 class_name Hero
 extends Character
 
+enum ID {NONE, KRIS, SUSIE, RALSEI, NOELLE}
+
 enum ActionType {
 	NONE,
 	FIGHT,
@@ -10,6 +12,7 @@ enum ActionType {
 	DEFEND,
 }
 
+@export var id: ID
 @export var color: Color = Color.WHITE
 @export var icon_list: Dictionary[CharacterTab.Icon, Texture2D] = {
 	CharacterTab.Icon.NORMAL: null,

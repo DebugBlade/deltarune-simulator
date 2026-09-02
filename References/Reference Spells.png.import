@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0iv4outlth2d"
-path="res://.godot/imported/Reference Heroes.png-f3b2f1c2db0214e531a2e26b658da79d.ctex"
+uid="uid://b381ordb5p5t8"
+path="res://.godot/imported/Reference Spells.png-55a32472b3973b72136c569c3e05adc5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reference Heroes.png"
-dest_files=["res://.godot/imported/Reference Heroes.png-f3b2f1c2db0214e531a2e26b658da79d.ctex"]
+source_file="res://References/Reference Spells.png"
+dest_files=["res://.godot/imported/Reference Spells.png-55a32472b3973b72136c569c3e05adc5.ctex"]
 
 [params]
 

@@ -730,6 +730,7 @@ frame = 5
 frame_progress = 1.0
 offset = Vector2(6, -19)
 script = ExtResource("71_ncc2w")
+id = 1
 color = Color(0, 1, 1, 1)
 icon_list = Dictionary[int, Texture2D]({
 0: ExtResource("72_7ex5k"),
