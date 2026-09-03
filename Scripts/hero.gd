@@ -42,7 +42,26 @@ func set_hp(new_hp: int) -> void:
 		char_tab.update_hp()
 
 func take_damage(damage: int) -> void:
+	if Global.chapter == 1:
+		damage = ceili(damage - (defense * 3))
+	else:
+		var hp_threshold_1: float = max_hp / 5.0
+		var hp_threshold_2: float = max_hp / 8.0
+		for df_point in defense:
+			if damage > hp_threshold_1:
+				damage -= 3
+			elif damage > hp_threshold_2:
+				damage -= 2
+			else:
+				damage -= 1
+	if defending:
+		damage = ceili((2 * damage) / 3.0)
+	#calculate elemental reduction from:
+	#tdamage = ceil(tdamage * scr_element_damage_reduction(__element, global.char[target]));
+	
+	damage = maxi(damage, 1)
 	hp -= damage
+
 	if char_tab.icon == CharacterTab.Icon.NORMAL:
 		char_tab.icon = CharacterTab.Icon.HURT
 		wait_hurt_timer()
@@ -68,7 +87,7 @@ func reset() -> void:
 class Action:
 	var type: ActionType
 	var targets: Array[Character]
-	
+
 	func reset() -> void:
 		type = ActionType.NONE
 		targets = []

@@ -6,7 +6,9 @@ extends AnimatedSprite2D
 
 var slot: int = -1
 var hp: int = 75: set = set_hp
-
+var attack: int = 6
+var defense: int = 4
+ 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:

@@ -48,7 +48,6 @@ var targets: Array[Character]
 func _init() -> void:
 	Battle.current = self
 
-
 func _ready() -> void:
 	@warning_ignore("unsafe_method_access")
 	$Reference.hide()
