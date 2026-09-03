@@ -49,6 +49,8 @@ func take_damage(damage: int) -> void:
 	if hp <= 0:
 		play_animation("defeated")
 		hp = round(-max_hp/2.0)
+		if Battle.current.first_hero_alive() == null:
+			Global.restart() #gameover
 
 func wait_hurt_timer() -> void:
 	await get_tree().create_timer(0.5).timeout
