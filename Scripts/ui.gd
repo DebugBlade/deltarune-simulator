@@ -25,28 +25,30 @@ const MENU_SELECT = preload("uid://cu888mwskmipd")
 var previous_context := Context.DISABLED
 var context := Context.DISABLED:
 	set(new_context):
-		if new_context == Context.ACTIONS:
-			change_panel(BottomPanel.TEXT)
-			if not selected_hero:
-				selected_hero = battle.first_hero_alive()
-		
-		elif new_context == Context.ALLIES:
-			change_panel(BottomPanel.ALLIES)
-		elif new_context == Context.MONSTERS:
-			change_panel(BottomPanel.MONSTERS)
-		elif new_context == Context.ACTS:
-			change_panel(BottomPanel.ACTS)
-		elif new_context == Context.ITEMS:
-			change_panel(BottomPanel.ITEMS)
-		elif new_context == Context.MAGICS:
-			change_panel(BottomPanel.ACTS)
 		previous_context = context
+		match new_context:
+			Context.ACTIONS:
+				change_panel(BottomPanel.TEXT)
+				if not selected_hero:
+					selected_hero = battle.first_hero_alive()
+			Context.ALLIES:
+				change_panel(BottomPanel.ALLIES)
+			Context.MONSTERS:
+				change_panel(BottomPanel.MONSTERS)
+			Context.ACTS:
+				change_panel(BottomPanel.ACTS)
+			Context.MAGICS:
+				change_panel(BottomPanel.ACTS)
+			Context.ITEMS:
+				change_panel(BottomPanel.ITEMS)
 		context = new_context
 
 var selected_hero: Hero:
 	set(new_hero):
+		if selected_hero:
+			selected_hero.memory[ActionButton] = selected_button
 		if new_hero:
-			selected_button = new_hero.buttons.get(Hero.ActionType.FIGHT)
+			selected_button = new_hero.memory.get(ActionButton, new_hero.buttons.get(Hero.ActionType.FIGHT))
 		else:
 			selected_button = null
 		selected_hero = new_hero
@@ -112,25 +114,26 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 
 func previous_hero() -> void:
-	if selected_hero == battle.first_hero_alive():
-		return
-	var new_hero: Hero = battle.heroes.get(selected_hero.slot-1)
-	if not new_hero:
-		return
-	if new_hero.hp <= 0:
-		selected_hero = new_hero
-		return previous_hero()
-	selected_hero.action.reset()
-	new_hero.play_animation("idle")
-	selected_hero = new_hero
+	var slot: int = selected_hero.slot
+	while slot > battle.first_hero_alive().slot:
+		slot -= 1
+		var new_hero: Hero = battle.heroes.get(slot)
+		if new_hero and new_hero.hp > 0:
+			selected_hero.action.reset()
+			new_hero.play_animation("idle")
+			selected_hero = new_hero
+			break
 
 func next_hero() -> void:
 	if selected_hero == battle.last_hero_alive():
 		return finish_menu()
-	var new_hero: Hero = battle.heroes.get(selected_hero.slot+1)
-	if new_hero.hp <= 0:
-		return next_hero()
-	selected_hero = new_hero
+	var slot: int = selected_hero.slot
+	while slot < battle.last_hero_alive().slot:
+		slot += 1
+		var new_hero: Hero = battle.heroes.get(slot)
+		if new_hero and new_hero.hp > 0:
+			selected_hero = new_hero
+			break
 
 func finish_menu() -> void:
 	context = Context.DISABLED

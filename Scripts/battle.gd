@@ -21,17 +21,16 @@ var context: Context:
 			Soul.current.disable()
 			for hero in heroes:
 				hero.reset()
-			
-		if new_context == Context.ACTIONS:
-			context = new_context
-			execute_actions()
-			return
-		elif new_context == Context.MENU:
-			ui.context = ui.Context.ACTIONS
-		elif new_context == Context.SOUL_MODE:
-			BattleBox.current.appear()
-			Soul.current.enable()
-			Soul.current.global_position = BattleBox.current.global_position
+		
+		match new_context:
+			Context.ACTIONS:
+				execute_actions.call_deferred()
+			Context.MENU:
+				ui.context = ui.Context.ACTIONS
+			Context.SOUL_MODE:
+				BattleBox.current.appear()
+				Soul.current.enable()
+				Soul.current.global_position = BattleBox.current.global_position
 		context = new_context
 
 var tp: float = 0.0
@@ -49,8 +48,7 @@ func _init() -> void:
 	Battle.current = self
 
 func _ready() -> void:
-	@warning_ignore("unsafe_method_access")
-	$Reference.hide()
+	($Reference as CanvasLayer).hide()
 	BattleBox.current.hide()
 	
 	var i := 0
@@ -71,8 +69,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	tp_bar.value = tp / MAX_TP
-	@warning_ignore("unsafe_property_access")
-	$FPS.text = "FPS: " + str(Engine.get_frames_per_second())
+	($FPS as Label).text = "FPS: " + str(Engine.get_frames_per_second())
 
 func _physics_process(delta: float) -> void:
 	if context == Context.SOUL_MODE:
@@ -91,7 +88,8 @@ func _input(event: InputEvent) -> void:
 func execute_actions() -> void:
 	var hero_actions: Dictionary[Hero, Hero.Action]
 	for hero in heroes:
-		hero_actions.set(hero, hero.action)
+		hero_actions[hero] = hero.action
+		hero.memory.clear()
 	#acts/spells
 	for hero in hero_actions:
 		var action: Hero.Action = hero_actions[hero]
@@ -122,9 +120,8 @@ func first_hero_alive() -> Hero:
 
 func last_hero_alive() -> Hero:
 	var last_alive: Hero = null
-	var heroes_reversed: Array[Hero] = heroes.duplicate()
-	heroes_reversed.reverse()
-	for hero in heroes_reversed:
+	for i in range(heroes.size() - 1, -1, -1):
+		var hero := heroes[i]
 		if hero and hero.hp > 0:
 			last_alive = hero
 			break

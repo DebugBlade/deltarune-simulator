@@ -64,17 +64,14 @@ func take_damage(damage: int) -> void:
 
 	if char_tab.icon == CharacterTab.Icon.NORMAL:
 		char_tab.icon = CharacterTab.Icon.HURT
-		wait_hurt_timer()
+		get_tree().create_timer(0.5).timeout.connect(func() -> void:
+			if char_tab.icon == CharacterTab.Icon.HURT:
+				char_tab.icon = CharacterTab.Icon.NORMAL)
 	if hp <= 0:
 		play_animation("defeated")
 		hp = round(-max_hp/2.0)
 		if Battle.current.first_hero_alive() == null:
 			Global.restart() #gameover
-
-func wait_hurt_timer() -> void:
-	await get_tree().create_timer(0.5).timeout
-	if Battle.current.context == Battle.Context.SOUL_MODE:
-		char_tab.icon = CharacterTab.Icon.HURT
 
 func reset() -> void:
 	memory.clear()

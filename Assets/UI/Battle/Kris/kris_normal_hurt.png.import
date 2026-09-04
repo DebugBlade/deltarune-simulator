@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq1y031cdlb4m"
-path="res://.godot/imported/kris_magic.png-816698b9158ec95c83807876b441677f.ctex"
+uid="uid://bij4k60ra2k1q"
+path="res://.godot/imported/kris_normal_hurt.png-f468b47e2ef4888f230e60dce24aa2c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/Battle/Kris/kris_magic.png"
-dest_files=["res://.godot/imported/kris_magic.png-816698b9158ec95c83807876b441677f.ctex"]
+source_file="res://Assets/UI/Battle/Kris/kris_normal_hurt.png"
+dest_files=["res://.godot/imported/kris_normal_hurt.png-f468b47e2ef4888f230e60dce24aa2c9.ctex"]
 
 [params]
 

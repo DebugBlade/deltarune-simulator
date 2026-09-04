@@ -14,7 +14,7 @@ var hero: Hero
 
 func setup(p_hero: Hero) ->void:
 	hero = p_hero
-	hero.buttons.set(type, self)
+	hero.buttons[type] = self
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
