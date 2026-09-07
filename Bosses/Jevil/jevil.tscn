@@ -1,0 +1,357 @@
+[gd_scene format=3 uid="uid://ppwr1xasyxgt"]
+
+[ext_resource type="Script" uid="uid://brwwd3xuygn8w" path="res://Bosses/Jevil/jevil.gd" id="1_7xd73"]
+[ext_resource type="Texture2D" uid="uid://bseco5a2436bn" path="res://Bosses/Jevil/Assets/Jevil_Dance/spr_joker_dance_0.png" id="2_bgrye"]
+[ext_resource type="Texture2D" uid="uid://cc66of6p0dwin" path="res://Bosses/Jevil/Assets/Jevil_Dance/spr_joker_dance_1.png" id="3_jqcto"]
+[ext_resource type="Texture2D" uid="uid://c04hgkovaxu5t" path="res://Bosses/Jevil/Assets/Jevil_Dance/spr_joker_dance_2.png" id="4_cxuqp"]
+[ext_resource type="Texture2D" uid="uid://v7ykcx4tf0n3" path="res://Bosses/Jevil/Assets/Jevil_Dance/spr_joker_dance_3.png" id="5_kk2nf"]
+[ext_resource type="Texture2D" uid="uid://c2hg88rh8um2c" path="res://Bosses/Jevil/Assets/Jevil_Dance/spr_joker_dance_4.png" id="6_llxtv"]
+[ext_resource type="Texture2D" uid="uid://b3noxbpa68n6a" path="res://Bosses/Jevil/Assets/Jevil_Dance/spr_joker_dance_5.png" id="7_i7gd8"]
+[ext_resource type="Texture2D" uid="uid://bndke7rckeiuj" path="res://Bosses/Jevil/Assets/Jevil_Dance/spr_joker_dance_6.png" id="8_j0urd"]
+[ext_resource type="Texture2D" uid="uid://bpqh6ut1s8jv1" path="res://Bosses/Jevil/Assets/Jevil_Dance/spr_joker_dance_7.png" id="9_c8drd"]
+[ext_resource type="Texture2D" uid="uid://bjjaw4afi1idr" path="res://Bosses/Jevil/Assets/Jevil_Idle+Laugh/spr_joker_main_0.png" id="10_xu4af"]
+[ext_resource type="Texture2D" uid="uid://dgvuhmtysspdq" path="res://Bosses/Jevil/Assets/Jevil_Idle+Laugh/spr_joker_main_1.png" id="11_7jct6"]
+[ext_resource type="Texture2D" uid="uid://dl56a70h8vesd" path="res://Bosses/Jevil/Assets/Jevil_Teleport/spr_joker_teleport_0.png" id="12_yh572"]
+[ext_resource type="Texture2D" uid="uid://dhd1em15sfpwy" path="res://Bosses/Jevil/Assets/Jevil_Teleport/spr_joker_teleport_1.png" id="13_r53xq"]
+[ext_resource type="Texture2D" uid="uid://dff42t07jqie4" path="res://Bosses/Jevil/Assets/Jevil_Teleport/spr_joker_teleport_r_0.png" id="14_wojb8"]
+[ext_resource type="Texture2D" uid="uid://b8jgeq5w74d2j" path="res://Bosses/Jevil/Assets/Jevil_Teleport/spr_joker_teleport_r_1.png" id="15_yc8s5"]
+[ext_resource type="Texture2D" uid="uid://m1awpyvxgdlx" path="res://Bosses/Jevil/Assets/Jevil_Tired/spr_joker_tired_0.png" id="16_bsl7g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1fef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bgrye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jqcto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cxuqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kk2nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_llxtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i7gd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j0urd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c8drd")
+}],
+"loop": 1,
+"name": &"dance",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_xu4af")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_xu4af")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7jct6")
+}],
+"loop": 1,
+"name": &"laugh",
+"speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_xu4af")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7jct6")
+}],
+"loop": 1,
+"name": &"laugh_fast",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_yh572")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_r53xq")
+}],
+"loop": 0,
+"name": &"teleport_l",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_wojb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yc8s5")
+}],
+"loop": 0,
+"name": &"teleport_r",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_bsl7g")
+}],
+"loop": 1,
+"name": &"tired",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_lmlqq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -41)]
+}
+
+[sub_resource type="Animation" id="Animation_7xd73"]
+resource_name = "dance"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"dance"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -48)]
+}
+
+[sub_resource type="Animation" id="Animation_80y0a"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -41)]
+}
+
+[sub_resource type="Animation" id="Animation_bgrye"]
+resource_name = "laugh"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"laugh"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -41)]
+}
+
+[sub_resource type="Animation" id="Animation_jqcto"]
+resource_name = "laugh_fast"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"laugh_fast"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -41)]
+}
+
+[sub_resource type="Animation" id="Animation_cxuqp"]
+resource_name = "teleport_l"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teleport_l"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -41)]
+}
+
+[sub_resource type="Animation" id="Animation_kk2nf"]
+resource_name = "teleport_r"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teleport_r"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-19, -41)]
+}
+
+[sub_resource type="Animation" id="Animation_llxtv"]
+resource_name = "tired"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"tired"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -41)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gfs56"]
+_data = {
+&"RESET": SubResource("Animation_lmlqq"),
+&"dance": SubResource("Animation_7xd73"),
+&"idle": SubResource("Animation_80y0a"),
+&"laugh": SubResource("Animation_bgrye"),
+&"laugh_fast": SubResource("Animation_jqcto"),
+&"teleport_l": SubResource("Animation_cxuqp"),
+&"teleport_r": SubResource("Animation_kk2nf"),
+&"tired": SubResource("Animation_llxtv")
+}
+
+[node name="Jevil" type="Node2D" unique_id=1621472958]
+scale = Vector2(2, 2)
+script = ExtResource("1_7xd73")
+id = 1
+char_name = "Jevil"
+max_hp = 3500
+metadata/_custom_type_script = "uid://clisitchkxafw"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=115150100]
+sprite_frames = SubResource("SpriteFrames_s1fef")
+animation = &"idle"
+autoplay = "idle"
+centered = false
+offset = Vector2(-23, -41)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=937548938]
+libraries/ = SubResource("AnimationLibrary_gfs56")
+autoplay = &"idle"

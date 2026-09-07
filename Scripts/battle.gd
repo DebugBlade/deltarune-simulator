@@ -39,7 +39,7 @@ var heroes: Array[Hero] = []
 var monsters: Array[Monster] = []
 var targets: Array[Character]
 
-@onready var tp_bar: TextureProgressBar = $TPBar
+@onready var tp_bar: TextureProgressBar = $UI/TPBar
 @onready var ui: UI = $UI
 @onready var character_tab_holder: HBoxContainer = $UI/BattleMenu/Characters
 
@@ -69,7 +69,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	tp_bar.value = tp / MAX_TP
-	($FPS as Label).text = "FPS: " + str(Engine.get_frames_per_second())
+	($UI/FPS as Label).text = "FPS: " + str(Engine.get_frames_per_second())
 
 func _physics_process(delta: float) -> void:
 	if context == Context.SOUL_MODE:

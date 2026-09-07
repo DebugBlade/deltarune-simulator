@@ -93,333 +93,6 @@
 [ext_resource type="Texture2D" uid="uid://c4gv710e7q1kj" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_15.png" id="87_xfxbw"]
 [ext_resource type="Texture2D" uid="uid://docb4duwb17fx" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_16.png" id="88_olpvf"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x6cgy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_bavam")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_wot5l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_eivjd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_q64do")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_tj1ew")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_bq5vr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_uukoc")
-}],
-"loop": 0,
-"name": &"act",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_ibqyf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_vtwp7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_p3s0w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_0hph3")
-}],
-"loop": 0,
-"name": &"act_finish",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_vtwp7")
-}],
-"loop": 1,
-"name": &"act_ready",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_p3s0w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_0hph3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_sw6dw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_7dhjh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_ymopn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_g3lkr")
-}],
-"loop": 0,
-"name": &"attack",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_pbof7")
-}],
-"loop": 0,
-"name": &"attack_ready",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("20_xvg6f")
-}],
-"loop": 1,
-"name": &"defeated",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("21_cdayr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_2svnj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_wb468")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_25uwh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_fib7u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_2bckd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_ap5r0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_3xch8")
-}],
-"loop": 0,
-"name": &"defend",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("29_sw6dw")
-}],
-"loop": 0,
-"name": &"hurt",
-"speed": 1.76
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("30_7dhjh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_ymopn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_g3lkr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_pbof7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_xvg6f")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("35_cdayr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_2svnj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_wb468")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_25uwh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_fib7u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_2bckd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_ap5r0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_3xch8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_dn4dm")
-}],
-"loop": 0,
-"name": &"intro",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("44_3pdm6")
-}],
-"loop": 1,
-"name": &"iteam_ready",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("45_jm7b1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_jpm7p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_6t4yl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_dpoyv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_p8gql")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_vah4s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_c25wo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_3jhd8")
-}],
-"loop": 0,
-"name": &"item",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("53_uukoc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_ibqyf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_vtwp7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_p3s0w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("57_0hph3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("58_sw6dw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_7dhjh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_ymopn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("61_g3lkr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("62_pbof7")
-}],
-"loop": 0,
-"name": &"spell",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("68_aup0l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_2awwi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_rcduq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("71_3ttpp")
-}],
-"loop": 1,
-"name": &"spell_ready",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("72_yrolq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("73_jui2e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("74_p6cnx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("75_4tvtm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_r8bhk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("77_7wlef")
-}, {
-"duration": 1.0,
-"texture": ExtResource("78_rbhfv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("79_r261o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("80_hxu4l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("81_0e7jc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("82_8g04d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("83_icarb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("84_vlyoi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("85_t63jw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("86_ue1tb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("87_xfxbw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("88_olpvf")
-}],
-"loop": 0,
-"name": &"victory",
-"speed": 10.0
-}]
-
 [sub_resource type="Animation" id="Animation_pkwaf"]
 length = 0.001
 tracks/0/type = "value"
@@ -872,13 +545,334 @@ _data = {
 &"victory": SubResource("Animation_653f6")
 }
 
-[node name="Ralsei" type="AnimatedSprite2D" unique_id=1947875210]
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_x6cgy")
-animation = &"idle"
-autoplay = "idle"
-centered = false
-offset = Vector2(-20, -45)
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6cgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bavam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wot5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eivjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q64do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tj1ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bq5vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uukoc")
+}],
+"loop": 0,
+"name": &"act",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ibqyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vtwp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p3s0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0hph3")
+}],
+"loop": 0,
+"name": &"act_finish",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_vtwp7")
+}],
+"loop": 1,
+"name": &"act_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_p3s0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0hph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sw6dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7dhjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ymopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_g3lkr")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_pbof7")
+}],
+"loop": 0,
+"name": &"attack_ready",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_xvg6f")
+}],
+"loop": 1,
+"name": &"defeated",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_cdayr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_2svnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wb468")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_25uwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fib7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_2bckd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ap5r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3xch8")
+}],
+"loop": 0,
+"name": &"defend",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_sw6dw")
+}],
+"loop": 0,
+"name": &"hurt",
+"speed": 1.76
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_7dhjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ymopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_g3lkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_pbof7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_xvg6f")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_cdayr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2svnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_wb468")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_25uwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_fib7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_2bckd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ap5r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_3xch8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dn4dm")
+}],
+"loop": 0,
+"name": &"intro",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_3pdm6")
+}],
+"loop": 1,
+"name": &"iteam_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_jm7b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_jpm7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_6t4yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_dpoyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_p8gql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_vah4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_c25wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_3jhd8")
+}],
+"loop": 0,
+"name": &"item",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_uukoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ibqyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_vtwp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_p3s0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_0hph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_sw6dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_7dhjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ymopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_g3lkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_pbof7")
+}],
+"loop": 0,
+"name": &"spell",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_aup0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_2awwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_rcduq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_3ttpp")
+}],
+"loop": 1,
+"name": &"spell_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("72_yrolq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_jui2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_p6cnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_4tvtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_r8bhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_7wlef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_rbhfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_r261o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_hxu4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_0e7jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_8g04d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_icarb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_vlyoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_t63jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_ue1tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_xfxbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_olpvf")
+}],
+"loop": 0,
+"name": &"victory",
+"speed": 10.0
+}]
+
+[node name="Ralsei" type="Node2D" unique_id=1447970183]
 script = ExtResource("78_r7hov")
 id = 3
 color = Color(0, 1, 0, 1)
@@ -892,10 +886,19 @@ icon_list = Dictionary[int, Texture2D]({
 6: ExtResource("85_uukoc"),
 7: ExtResource("86_ibqyf")
 })
-char_name = "Susie"
+char_name = "Ralsei"
 max_hp = 70
 metadata/_custom_type_script = "uid://clisitchkxafw"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1093915370]
+root_node = NodePath("../Sprite")
 libraries/ = SubResource("AnimationLibrary_4rk4a")
 autoplay = &"idle"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=229786631]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_x6cgy")
+animation = &"idle"
+autoplay = "idle"
+centered = false
+offset = Vector2(-20, -45)

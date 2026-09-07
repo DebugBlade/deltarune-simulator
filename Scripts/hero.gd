@@ -1,3 +1,4 @@
+@icon ("res://Assets/EditorIcons/human.svg")
 class_name Hero
 extends Character
 
@@ -33,6 +34,7 @@ var action := Action.new()
 var char_tab: CharacterTab
 var buttons: Dictionary[Hero.ActionType, ActionButton]
 var memory: Dictionary
+var pos_tween: Tween
 
 func _init() -> void:
 	add_to_group("Heroes")
@@ -59,6 +61,14 @@ func take_damage(damage: int) -> void:
 		damage = ceili((2 * damage) / 3.0)
 	#calculate elemental reduction from:
 	#tdamage = ceil(tdamage * scr_element_damage_reduction(__element, global.char[target]));
+	
+	ShakeCamera.current.shake()
+	if pos_tween:
+		pos_tween.kill()
+	pos_tween = create_tween()
+	var saved_x := position.x
+	position.x -= 20
+	pos_tween.tween_property(self, "position:x", saved_x, 0.1333)
 	
 	damage = maxi(damage, 1)
 	hp -= damage

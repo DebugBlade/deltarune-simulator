@@ -66,280 +66,6 @@
 [ext_resource type="Texture2D" uid="uid://ree2opj38ssl" path="res://Assets/UI/Battle/Kris/kris_spare.png" id="77_varmq"]
 [ext_resource type="Texture2D" uid="uid://4dtna0lh260a" path="res://Assets/UI/Battle/Kris/kris_defend.png" id="78_c2bx8"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x6cgy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_50e35")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_jnes4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_bv6bi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_23i7m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_ytru2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_qopei")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_kmpkf")
-}],
-"loop": 0,
-"name": &"act",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_qhfks")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_j8s87")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_vuga2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_1x4i3")
-}],
-"loop": 0,
-"name": &"act_finish",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_m2p8a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_ud354")
-}],
-"loop": 1,
-"name": &"act_ready",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_ncc2w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_3fdvm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_7x7ak")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_ekfxa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_in50r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_qd555")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_ci7cr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_vvmcy")
-}],
-"loop": 0,
-"name": &"attack",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_ncc2w")
-}],
-"loop": 0,
-"name": &"attack_ready",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("22_7ex5k")
-}],
-"loop": 1,
-"name": &"defeated",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_lxwr4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_o1tl7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_m2p8a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ud354")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_pkwaf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_7nsck")
-}],
-"loop": 0,
-"name": &"defend",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("29_653f6")
-}],
-"loop": 0,
-"name": &"hurt",
-"speed": 1.76
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_nvdpi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_thgep")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_owtcm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ik88e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_om6r3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_83gku")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_ncc2w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_3fdvm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_7x7ak")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_ekfxa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_in50r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_qd555")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_ci7cr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_vvmcy")
-}],
-"loop": 0,
-"name": &"intro",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("48_523dd")
-}],
-"loop": 1,
-"name": &"iteam_ready",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("49_ps0yf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_qdh3g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_hp1d4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_8q7yr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_oap51")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_e7w1o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_oujww")
-}],
-"loop": 0,
-"name": &"item",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("26_1rsxs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_t1c80")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_q4kgb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_plljs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_yftx2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_neb4x")
-}],
-"loop": 1,
-"name": &"pirouette",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("62_6bxos")
-}, {
-"duration": 1.0,
-"texture": ExtResource("63_2llur")
-}, {
-"duration": 1.0,
-"texture": ExtResource("64_se0v3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("65_85sug")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_cte3x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_xlp21")
-}, {
-"duration": 1.0,
-"texture": ExtResource("68_iy8n8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_l5ruf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_hx535")
-}],
-"loop": 0,
-"name": &"victory",
-"speed": 10.0
-}]
-
 [sub_resource type="Animation" id="Animation_pkwaf"]
 length = 0.001
 tracks/0/type = "value"
@@ -764,12 +490,281 @@ _data = {
 &"victory": SubResource("Animation_653f6")
 }
 
-[node name="Kris" type="AnimatedSprite2D" unique_id=1947875210]
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_x6cgy")
-animation = &"idle"
-autoplay = "idle"
-offset = Vector2(6, -19)
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6cgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_50e35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jnes4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bv6bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_23i7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ytru2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qopei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kmpkf")
+}],
+"loop": 0,
+"name": &"act",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_qhfks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j8s87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vuga2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1x4i3")
+}],
+"loop": 0,
+"name": &"act_finish",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m2p8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ud354")
+}],
+"loop": 1,
+"name": &"act_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ncc2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3fdvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7x7ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ekfxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_in50r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qd555")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ci7cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vvmcy")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ncc2w")
+}],
+"loop": 0,
+"name": &"attack_ready",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_7ex5k")
+}],
+"loop": 1,
+"name": &"defeated",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lxwr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_o1tl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m2p8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ud354")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pkwaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7nsck")
+}],
+"loop": 0,
+"name": &"defend",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_653f6")
+}],
+"loop": 0,
+"name": &"hurt",
+"speed": 1.76
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nvdpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_thgep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_owtcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ik88e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_om6r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_83gku")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ncc2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3fdvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7x7ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ekfxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_in50r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qd555")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ci7cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vvmcy")
+}],
+"loop": 0,
+"name": &"intro",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_523dd")
+}],
+"loop": 1,
+"name": &"iteam_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_ps0yf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_qdh3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_hp1d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8q7yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_oap51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_e7w1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_oujww")
+}],
+"loop": 0,
+"name": &"item",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_1rsxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_t1c80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_q4kgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_plljs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yftx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_neb4x")
+}],
+"loop": 1,
+"name": &"pirouette",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_6bxos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_2llur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_se0v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_85sug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_cte3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_xlp21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_iy8n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_l5ruf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_hx535")
+}],
+"loop": 0,
+"name": &"victory",
+"speed": 10.0
+}]
+
+[node name="Kris" type="Node2D" unique_id=1419149841]
 script = ExtResource("71_ncc2w")
 id = 1
 color = Color(0, 1, 1, 1)
@@ -789,5 +784,13 @@ max_hp = 90
 metadata/_custom_type_script = "uid://clisitchkxafw"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1093915370]
+root_node = NodePath("../Sprite")
 libraries/ = SubResource("AnimationLibrary_4rk4a")
 autoplay = &"idle"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1684145832]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_x6cgy")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(6, -19)

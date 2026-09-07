@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dpnco17mbdpup" path="res://Scripts/battle.gd" id="1_usdrq"]
 [ext_resource type="Script" uid="uid://cfknqffvef72j" path="res://Scripts/battle_box.gd" id="2_hpycx"]
+[ext_resource type="Script" uid="uid://b182827atpgme" path="res://Scripts/shake_camera.gd" id="2_omjb2"]
 [ext_resource type="Texture2D" uid="uid://bo8bocetotbvp" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0019.png" id="3_kohgt"]
 [ext_resource type="Texture2D" uid="uid://ctcfrtyvd0h4h" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0020.png" id="4_64d33"]
 [ext_resource type="Texture2D" uid="uid://djtkkh77g2qhh" path="res://Assets/BATTLE BOX SEQUENCE/BBS_0021.png" id="5_1nwq2"]
@@ -55,6 +56,7 @@
 [ext_resource type="PackedScene" uid="uid://dscxvay4utv1f" path="res://Scenes/susie.tscn" id="52_uy5dy"]
 [ext_resource type="Script" uid="uid://xhkvwohw6qx7" path="res://Scripts/ui.gd" id="53_85eg2"]
 [ext_resource type="PackedScene" uid="uid://c2ibxpnvbudjd" path="res://Scenes/ralsei.tscn" id="53_eocge"]
+[ext_resource type="PackedScene" uid="uid://ppwr1xasyxgt" path="res://Bosses/Jevil/jevil.tscn" id="54_53bu2"]
 [ext_resource type="Texture2D" uid="uid://b5cbnivig5eq8" path="res://Assets/Square.png" id="54_utx0y"]
 [ext_resource type="FontVariation" uid="uid://c45x28nfc7gll" path="res://Fonts/BottomPanel.tres" id="55_64d33"]
 [ext_resource type="FontVariation" uid="uid://c08ehsg20tsnh" path="res://Fonts/MainBig.tres" id="56_64d33"]
@@ -233,6 +235,18 @@ size = Vector2(150, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr3wg"]
 size = Vector2(150, 4)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bowr3"]
+draw_center = false
+border_width_top = 2
+border_width_bottom = 3
+border_color = Color(0.2, 0.1254902, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6jpx"]
+bg_color = Color(0.5019608, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1fef"]
+bg_color = Color(0, 1, 0, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tt7mg"]
 atlas = ExtResource("50_dnm5a")
 region = Rect2(1208, 62, 25, 196)
@@ -248,20 +262,12 @@ atlas = ExtResource("50_dnm5a")
 region = Rect2(1312, 67, 25, 187)
 filter_clip = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bowr3"]
-draw_center = false
-border_width_top = 2
-border_width_bottom = 3
-border_color = Color(0.2, 0.1254902, 0.2, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6jpx"]
-bg_color = Color(0.5019608, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1fef"]
-bg_color = Color(0, 1, 0, 1)
-
 [node name="Battle" type="Node2D" unique_id=885557738]
 script = ExtResource("1_usdrq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2102539869]
+position = Vector2(320, 240)
+script = ExtResource("2_omjb2")
 
 [node name="BattleBox" type="StaticBody2D" parent="." unique_id=88610371]
 position = Vector2(320, 170)
@@ -306,42 +312,28 @@ position = Vector2(76, 76)
 [node name="Soul" parent="." unique_id=879883315 instance=ExtResource("49_x65by")]
 position = Vector2(323, 169)
 
-[node name="TPBar" type="TextureProgressBar" parent="." unique_id=261330286]
-offset_left = 38.0
-offset_top = 40.0
-offset_right = 63.0
-offset_bottom = 236.0
-max_value = 1.0
-step = 0.0
-value = 0.75
-fill_mode = 3
-texture_under = SubResource("AtlasTexture_tt7mg")
-texture_over = SubResource("AtlasTexture_titue")
-texture_progress = SubResource("AtlasTexture_htg8p")
-texture_progress_offset = Vector2(0, 5)
+[node name="Markers" type="Node2D" parent="." unique_id=1996894597]
+position = Vector2(320, 170)
 
-[node name="HeroMarker" type="Marker2D" parent="." unique_id=355851527]
-position = Vector2(98, 176)
+[node name="HeroMarker" type="Marker2D" parent="Markers" unique_id=355851527]
+position = Vector2(-222, 6)
 
-[node name="Kris" parent="HeroMarker" unique_id=1934790852 instance=ExtResource("51_kkibp")]
+[node name="Kris" parent="Markers/HeroMarker" unique_id=1934790852 instance=ExtResource("51_kkibp")]
 
-[node name="HeroMarker2" type="Marker2D" parent="." unique_id=42586567]
-position = Vector2(124, 238)
+[node name="HeroMarker2" type="Marker2D" parent="Markers" unique_id=42586567]
+position = Vector2(-196, 68)
 
-[node name="Susie" parent="HeroMarker2" unique_id=1947875210 instance=ExtResource("52_uy5dy")]
-frame = 1
+[node name="Susie" parent="Markers/HeroMarker2" unique_id=1947875210 instance=ExtResource("52_uy5dy")]
 
-[node name="HeroMarker3" type="Marker2D" parent="." unique_id=1194925332]
-position = Vector2(132, 300)
+[node name="HeroMarker3" type="Marker2D" parent="Markers" unique_id=1194925332]
+position = Vector2(-188, 130)
 
-[node name="Ralsei" parent="HeroMarker3" unique_id=1369011025 instance=ExtResource("53_eocge")]
+[node name="Ralsei" parent="Markers/HeroMarker3" unique_id=1369011025 instance=ExtResource("53_eocge")]
 
-[node name="FPS" type="Label" parent="." unique_id=729624591]
-texture_filter = 1
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("52_6mwnj")
-text = "FPS: 60"
+[node name="MonsterMarker" type="Marker2D" parent="Markers" unique_id=828723643]
+position = Vector2(204, 49)
+
+[node name="Jevil" parent="Markers/MonsterMarker" unique_id=424685211 instance=ExtResource("54_53bu2")]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1479119219]
 script = ExtResource("53_85eg2")
@@ -633,10 +625,30 @@ theme_override_fonts/font = ExtResource("57_1nwq2")
 theme_override_font_sizes/font_size = 32
 text = "TVDinner"
 
+[node name="FPS" type="Label" parent="UI" unique_id=729624591]
+texture_filter = 1
+offset_right = 49.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("52_6mwnj")
+text = "FPS: 60"
+
+[node name="TPBar" type="TextureProgressBar" parent="UI" unique_id=261330286]
+offset_left = 38.0
+offset_top = 40.0
+offset_right = 63.0
+offset_bottom = 236.0
+max_value = 1.0
+step = 0.0
+value = 0.75
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_tt7mg")
+texture_over = SubResource("AtlasTexture_titue")
+texture_progress = SubResource("AtlasTexture_htg8p")
+texture_progress_offset = Vector2(0, 5)
+
 [node name="Reference" type="CanvasLayer" parent="." unique_id=121419541]
 
 [node name="Text" type="Sprite2D" parent="Reference" unique_id=1268999433]
-visible = false
 modulate = Color(1, 1, 1, 0.27058825)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("63_uy5dy")
@@ -644,6 +656,7 @@ centered = false
 metadata/_edit_lock_ = true
 
 [node name="Heroes" type="Sprite2D" parent="Reference" unique_id=1871998230]
+visible = false
 modulate = Color(1, 1, 1, 0.27058825)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("60_1nwq2")
