@@ -248,6 +248,12 @@ atlas = ExtResource("50_dnm5a")
 region = Rect2(1312, 67, 25, 187)
 filter_clip = true
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bowr3"]
+draw_center = false
+border_width_top = 2
+border_width_bottom = 3
+border_color = Color(0.2, 0.1254902, 0.2, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6jpx"]
 bg_color = Color(0.5019608, 0, 0, 1)
 
@@ -340,16 +346,31 @@ text = "FPS: 60"
 [node name="UI" type="CanvasLayer" parent="." unique_id=1479119219]
 script = ExtResource("53_85eg2")
 
-[node name="BattleMenu" type="TextureRect" parent="UI" unique_id=1363628455]
+[node name="BattleMenu" type="Control" parent="UI" unique_id=1796570723]
 self_modulate = Color(0, 0, 0, 1)
-anchors_preset = -1
+layout_mode = 3
 anchor_top = 0.61300004
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -0.24002075
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="Background" type="TextureRect" parent="UI/BattleMenu" unique_id=884483794]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_top = 32.0
+offset_right = 640.0
+offset_bottom = 187.0
 texture = ExtResource("54_utx0y")
+
+[node name="CharactersBorders" type="Panel" parent="UI/BattleMenu" unique_id=252336276]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 640.0
+offset_bottom = 71.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bowr3")
 
 [node name="Characters" type="HBoxContainer" parent="UI/BattleMenu" unique_id=371403668]
 layout_mode = 0
@@ -615,6 +636,7 @@ text = "TVDinner"
 [node name="Reference" type="CanvasLayer" parent="." unique_id=121419541]
 
 [node name="Text" type="Sprite2D" parent="Reference" unique_id=1268999433]
+visible = false
 modulate = Color(1, 1, 1, 0.27058825)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("63_uy5dy")
@@ -622,7 +644,6 @@ centered = false
 metadata/_edit_lock_ = true
 
 [node name="Heroes" type="Sprite2D" parent="Reference" unique_id=1871998230]
-visible = false
 modulate = Color(1, 1, 1, 0.27058825)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("60_1nwq2")

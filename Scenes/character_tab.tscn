@@ -29,6 +29,13 @@ border_width_top = 2
 border_width_right = 2
 border_color = Color(1, 1, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xorho"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(0.2, 0.1254902, 0.2, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjh24"]
 bg_color = Color(0.5019608, 0, 0, 1)
 
@@ -36,94 +43,32 @@ bg_color = Color(0.5019608, 0, 0, 1)
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 
-[node name="CharacterTab" type="TextureRect" unique_id=146632236]
+[node name="CharacterTab" type="Control" unique_id=2131572586]
 self_modulate = Color(0, 0, 0, 1)
-custom_minimum_size = Vector2(213, 68)
-offset_right = 213.0
-offset_bottom = 68.0
-texture = ExtResource("1_lvs6x")
-script = ExtResource("2_xorho")
-
-[node name="Cover" type="Panel" parent="." unique_id=1166014645]
-custom_minimum_size = Vector2(0, 36)
-layout_mode = 0
+custom_minimum_size = Vector2(213, 36)
+layout_mode = 3
+anchors_preset = 0
 offset_right = 213.0
 offset_bottom = 36.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_nqk4g")
-
-[node name="Icon" type="TextureRect" parent="Cover" unique_id=120993334]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 10.0
-offset_right = 45.0
-offset_bottom = 34.0
-texture = ExtResource("2_upn41")
-
-[node name="Name" type="TextureRect" parent="Cover" unique_id=55872239]
-layout_mode = 0
-offset_left = 51.0
-offset_top = 13.0
-offset_right = 94.0
-offset_bottom = 28.0
-texture = ExtResource("3_ryy6n")
-
-[node name="HP" type="TextureRect" parent="Cover" unique_id=63739597]
-layout_mode = 0
-offset_left = 109.0
-offset_top = 21.0
-offset_right = 125.0
-offset_bottom = 32.0
-texture = ExtResource("4_6kiww")
-
-[node name="HPSlash" type="TextureRect" parent="Cover" unique_id=420001883]
-layout_mode = 0
-offset_left = 159.0
-offset_top = 6.0
-offset_right = 174.0
-offset_bottom = 20.0
-texture = ExtResource("5_qaw6v")
-
-[node name="HPBar" type="ProgressBar" parent="Cover" unique_id=117520919]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 21.0
-offset_right = 204.0
-offset_bottom = 30.0
-theme_override_styles/background = SubResource("StyleBoxFlat_sjh24")
-theme_override_styles/fill = SubResource("StyleBoxFlat_k5jl5")
-step = 0.0
-value = 50.0
-show_percentage = false
-
-[node name="HPText" type="Label" parent="Cover" unique_id=1944995665]
-layout_mode = 0
-offset_left = 136.0
-offset_top = 7.0
-offset_right = 160.0
-offset_bottom = 19.0
-theme_override_fonts/font = ExtResource("6_eu80j")
-theme_override_font_sizes/font_size = 10
-text = "090"
-horizontal_alignment = 2
-
-[node name="MaxHPText" type="Label" parent="Cover" unique_id=921432748]
-layout_mode = 0
-offset_left = 181.0
-offset_top = 7.0
-offset_right = 205.0
-offset_bottom = 19.0
-theme_override_fonts/font = ExtResource("6_eu80j")
-theme_override_font_sizes/font_size = 10
-text = "090"
-horizontal_alignment = 2
+size_flags_vertical = 8
+script = ExtResource("2_xorho")
 
 [node name="Actions" type="Panel" parent="." unique_id=1238235646]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 0
-offset_top = 36.0
+offset_top = 4.0
 offset_right = 213.0
-offset_bottom = 68.0
+offset_bottom = 36.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nqk4g")
+
+[node name="Background" type="TextureRect" parent="Actions" unique_id=1178094001]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_right = 213.0
+offset_bottom = 32.0
+texture = ExtResource("1_lvs6x")
+expand_mode = 1
 
 [node name="LineSpawnLeft" type="Control" parent="Actions" unique_id=1702394037]
 custom_maximum_size = Vector2(0, 0)
@@ -211,6 +156,102 @@ type = 5
 previous_button = NodePath("../Spare")
 next_button = NodePath("../Fight")
 metadata/_custom_type_script = "uid://onquynnkqx5e"
+
+[node name="TopBorderMask" type="Control" parent="." unique_id=507294114]
+clip_contents = true
+anchors_preset = 0
+offset_top = -32.0
+offset_right = 213.0
+
+[node name="Texture" type="Panel" parent="TopBorderMask" unique_id=1526350466]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 213.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xorho")
+
+[node name="Cover" type="Panel" parent="." unique_id=1166014645]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 0
+offset_right = 213.0
+offset_bottom = 36.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqk4g")
+
+[node name="Background" type="TextureRect" parent="Cover" unique_id=2028570350]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 211.0
+offset_bottom = 36.0
+texture = ExtResource("1_lvs6x")
+
+[node name="Icon" type="TextureRect" parent="Cover" unique_id=120993334]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 45.0
+offset_bottom = 34.0
+texture = ExtResource("2_upn41")
+
+[node name="Name" type="TextureRect" parent="Cover" unique_id=55872239]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 13.0
+offset_right = 94.0
+offset_bottom = 28.0
+texture = ExtResource("3_ryy6n")
+
+[node name="HP" type="TextureRect" parent="Cover" unique_id=63739597]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 21.0
+offset_right = 125.0
+offset_bottom = 32.0
+texture = ExtResource("4_6kiww")
+
+[node name="HPSlash" type="TextureRect" parent="Cover" unique_id=420001883]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 6.0
+offset_right = 174.0
+offset_bottom = 20.0
+texture = ExtResource("5_qaw6v")
+
+[node name="HPBar" type="ProgressBar" parent="Cover" unique_id=117520919]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 21.0
+offset_right = 204.0
+offset_bottom = 30.0
+theme_override_styles/background = SubResource("StyleBoxFlat_sjh24")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k5jl5")
+step = 0.0
+value = 50.0
+show_percentage = false
+
+[node name="HPText" type="Label" parent="Cover" unique_id=1944995665]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 7.0
+offset_right = 160.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("6_eu80j")
+theme_override_font_sizes/font_size = 10
+text = "090"
+horizontal_alignment = 2
+
+[node name="MaxHPText" type="Label" parent="Cover" unique_id=921432748]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 7.0
+offset_right = 205.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("6_eu80j")
+theme_override_font_sizes/font_size = 10
+text = "090"
+horizontal_alignment = 2
 
 [node name="Reference" type="CanvasLayer" parent="." unique_id=148741148]
 visible = false

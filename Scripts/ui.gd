@@ -46,8 +46,10 @@ var context := Context.DISABLED:
 var selected_hero: Hero:
 	set(new_hero):
 		if selected_hero:
+			selected_hero.char_tab.focused = false
 			selected_hero.memory[ActionButton] = selected_button
 		if new_hero:
+			new_hero.char_tab.focused = true
 			selected_button = new_hero.memory.get(ActionButton, new_hero.buttons.get(Hero.ActionType.FIGHT))
 		else:
 			selected_button = null
@@ -121,6 +123,8 @@ func previous_hero() -> void:
 		if new_hero and new_hero.hp > 0:
 			selected_hero.action.reset()
 			new_hero.play_animation("idle")
+			new_hero.char_tab.icon = CharacterTab.Icon.NORMAL
+			SoundManager.create_audio(MENU_MOVE)
 			selected_hero = new_hero
 			break
 
