@@ -1,0 +1,895 @@
+[gd_scene format=3 uid="uid://dscxvay4utv1f"]
+
+[ext_resource type="Texture2D" uid="uid://b3qfp1afai2b1" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_0.png" id="1_dkk7l"]
+[ext_resource type="Texture2D" uid="uid://dgbys3qwiesly" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_1.png" id="2_vmp32"]
+[ext_resource type="Texture2D" uid="uid://b15evq45dx7fn" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_2.png" id="3_c8rdn"]
+[ext_resource type="Texture2D" uid="uid://s6b52e3lw7qq" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_3.png" id="4_t4853"]
+[ext_resource type="Texture2D" uid="uid://dax4h5h73xoc8" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_4.png" id="5_tinq4"]
+[ext_resource type="Texture2D" uid="uid://f3s2miwwqoq4" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_5.png" id="6_wjyj6"]
+[ext_resource type="Texture2D" uid="uid://ciky5y1r0244w" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_6.png" id="7_thloy"]
+[ext_resource type="Texture2D" uid="uid://bsng45130hn52" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_7.png" id="8_tx3ac"]
+[ext_resource type="Texture2D" uid="uid://ce6ylfefnce3n" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_8.png" id="9_mrmyf"]
+[ext_resource type="Texture2D" uid="uid://ba4imji8jc868" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_9.png" id="10_ac7ss"]
+[ext_resource type="Texture2D" uid="uid://cfi2okx52t15p" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_10.png" id="11_tg2bk"]
+[ext_resource type="Texture2D" uid="uid://ct4opfcdg13ue" path="res://Assets/Battle/Susie/ACTs/spr_susieb_actready_0.png" id="12_qg1ct"]
+[ext_resource type="Texture2D" uid="uid://b64wbscky3ehh" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_0.png" id="13_itphc"]
+[ext_resource type="Texture2D" uid="uid://063mvyxj2oxx" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_1.png" id="14_tuvdy"]
+[ext_resource type="Texture2D" uid="uid://dm1dlml1pxqvq" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_2.png" id="15_dkk7l"]
+[ext_resource type="Texture2D" uid="uid://b7peit0rbxb8t" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_3.png" id="16_vmp32"]
+[ext_resource type="Texture2D" uid="uid://c2ue6xtv6y23m" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_4.png" id="17_c8rdn"]
+[ext_resource type="Texture2D" uid="uid://o02ayr2ign21" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_5.png" id="18_t4853"]
+[ext_resource type="Texture2D" uid="uid://64hn4pasd7tn" path="res://Assets/Battle/Susie/Attack/spr_susieb_attackready_0.png" id="19_itphc"]
+[ext_resource type="Texture2D" uid="uid://81754nnhyb0u" path="res://Assets/Battle/Susie/Defeat/spr_susieb_defeat_0.png" id="20_qg1ct"]
+[ext_resource type="Texture2D" uid="uid://c7w8dbsqne2db" path="res://Assets/Battle/Susie/Defend/spr_susieb_defend_0.png" id="21_itphc"]
+[ext_resource type="Texture2D" uid="uid://lus5nm2net55" path="res://Assets/Battle/Susie/Defend/spr_susieb_defend_1.png" id="22_tuvdy"]
+[ext_resource type="Texture2D" uid="uid://cnqie26l83l6f" path="res://Assets/Battle/Susie/Defend/spr_susieb_defend_2.png" id="23_dkk7l"]
+[ext_resource type="Texture2D" uid="uid://cou0rfttwli0m" path="res://Assets/Battle/Susie/Defend/spr_susieb_defend_3.png" id="24_vmp32"]
+[ext_resource type="Texture2D" uid="uid://br1sif2psd7g5" path="res://Assets/Battle/Susie/Defend/spr_susieb_defend_4.png" id="25_c8rdn"]
+[ext_resource type="Texture2D" uid="uid://cokpec6akehk4" path="res://Assets/Battle/Susie/Defend/spr_susieb_defend_5.png" id="26_t4853"]
+[ext_resource type="Texture2D" uid="uid://b4ke6rgwcjmb5" path="res://Assets/Battle/Susie/Hurt/spr_susieb_hurt_0.png" id="29_ssr6d"]
+[ext_resource type="Texture2D" uid="uid://dftkdahu6ncl1" path="res://Assets/Battle/Susie/Idle/spr_susieb_idle_0.png" id="30_53gc6"]
+[ext_resource type="Texture2D" uid="uid://npilkvib4bgk" path="res://Assets/Battle/Susie/Idle/spr_susieb_idle_1.png" id="31_m4fyw"]
+[ext_resource type="Texture2D" uid="uid://door1k4vyfyo8" path="res://Assets/Battle/Susie/Idle/spr_susieb_idle_2.png" id="32_iomlj"]
+[ext_resource type="Texture2D" uid="uid://bib36sjwt605v" path="res://Assets/Battle/Susie/Item/spr_susieb_itemready_0.png" id="32_tinq4"]
+[ext_resource type="Texture2D" uid="uid://dg3npdwmymxnb" path="res://Assets/Battle/Susie/Idle/spr_susieb_idle_3.png" id="33_4644y"]
+[ext_resource type="Texture2D" uid="uid://c77ykuqeeos7p" path="res://Assets/Battle/Susie/Item/spr_susieb_itemready_1.png" id="33_wjyj6"]
+[ext_resource type="Texture2D" uid="uid://pc0fwvspedve" path="res://Assets/Battle/Susie/Item/spr_susieb_item_0.png" id="34_thloy"]
+[ext_resource type="Texture2D" uid="uid://d1qlcc7kww34p" path="res://Assets/Battle/Susie/Item/spr_susieb_item_1.png" id="35_tx3ac"]
+[ext_resource type="Texture2D" uid="uid://b20kd12yrsjyt" path="res://Assets/Battle/Susie/Item/spr_susieb_item_2.png" id="36_mrmyf"]
+[ext_resource type="Texture2D" uid="uid://8hmgbc1d5qgd" path="res://Assets/Battle/Susie/Item/spr_susieb_item_3.png" id="37_ac7ss"]
+[ext_resource type="Texture2D" uid="uid://dhlhwndre0igt" path="res://Assets/Battle/Susie/Item/spr_susieb_item_4.png" id="38_tg2bk"]
+[ext_resource type="Texture2D" uid="uid://c5ls0q67ii1qg" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_0.png" id="39_hjxhb"]
+[ext_resource type="Texture2D" uid="uid://caemj5frgikef" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_1.png" id="40_tm0q8"]
+[ext_resource type="Texture2D" uid="uid://ddjce3a5631mb" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_2.png" id="41_blfru"]
+[ext_resource type="Texture2D" uid="uid://bhxv2soqhf4f7" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_3.png" id="42_jqxed"]
+[ext_resource type="Texture2D" uid="uid://kxjp7f5cqbih" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_4.png" id="43_b14m2"]
+[ext_resource type="Texture2D" uid="uid://qsnpmol6n2nl" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_5.png" id="44_ddyvx"]
+[ext_resource type="Texture2D" uid="uid://b3xpyqqj7wwfe" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_0.png" id="45_mrmyf"]
+[ext_resource type="Texture2D" uid="uid://bn0rirkpyvoql" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_6.png" id="45_wkise"]
+[ext_resource type="Texture2D" uid="uid://crg5mux7tfvyp" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_7.png" id="46_2kp4x"]
+[ext_resource type="Texture2D" uid="uid://c6uwl8phdkplc" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_1.png" id="46_ac7ss"]
+[ext_resource type="Texture2D" uid="uid://cttjyfdw7vbxh" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_2.png" id="47_tg2bk"]
+[ext_resource type="Texture2D" uid="uid://drahitvuwr1on" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_8.png" id="47_uu3bs"]
+[ext_resource type="Texture2D" uid="uid://canvrwooqkr5a" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_9.png" id="48_7iljm"]
+[ext_resource type="Texture2D" uid="uid://c4ic27owy4oee" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_3.png" id="48_ssr6d"]
+[ext_resource type="Texture2D" uid="uid://ctr4nn3dhjbeb" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_4.png" id="49_53gc6"]
+[ext_resource type="Texture2D" uid="uid://sq0sgmiupbls" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_10.png" id="49_nfc81"]
+[ext_resource type="Texture2D" uid="uid://b764sc2l8v3xw" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_5.png" id="50_m4fyw"]
+[ext_resource type="Texture2D" uid="uid://kxecl8sx6dim" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_11.png" id="50_wwjoi"]
+[ext_resource type="Texture2D" uid="uid://dgqwa6fjypdn4" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_6.png" id="51_iomlj"]
+[ext_resource type="Texture2D" uid="uid://chp1l0kb71xqp" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_12.png" id="51_ojrgq"]
+[ext_resource type="Texture2D" uid="uid://c7iu50lkjxbql" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_7.png" id="52_4644y"]
+[ext_resource type="Texture2D" uid="uid://da2a1cfxa4jtc" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_13.png" id="52_wx7fu"]
+[ext_resource type="Texture2D" uid="uid://cr6850ua145i7" path="res://Assets/Battle/Susie/ACTs/spr_susie_rudebuster_14.png" id="53_dovxx"]
+[ext_resource type="Texture2D" uid="uid://6rhxjraja31y" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_8.png" id="53_gjgb7"]
+[ext_resource type="Texture2D" uid="uid://bkq5i217i46dw" path="res://Assets/Battle/Susie/ACTs/spr_susieb_spellready_0.png" id="54_b14m2"]
+[ext_resource type="Texture2D" uid="uid://bur62gbcuglm" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_9.png" id="54_hjxhb"]
+[ext_resource type="Texture2D" uid="uid://cltmwwmlfpy81" path="res://Assets/Battle/Susie/ACTs/spr_susieb_spellready_1.png" id="55_ddyvx"]
+[ext_resource type="Texture2D" uid="uid://cbkg0ox0i6qf0" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_10.png" id="55_tm0q8"]
+[ext_resource type="Texture2D" uid="uid://bded4hv1s8md4" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_11.png" id="56_blfru"]
+[ext_resource type="Texture2D" uid="uid://val3f3irjtaf" path="res://Assets/Battle/Susie/ACTs/spr_susieb_spellready_2.png" id="56_wkise"]
+[ext_resource type="Texture2D" uid="uid://cecfpivea5uc3" path="res://Assets/Battle/Susie/ACTs/spr_susieb_spellready_3.png" id="57_2kp4x"]
+[ext_resource type="Texture2D" uid="uid://c2dyxp1u7jxox" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_12.png" id="57_jqxed"]
+[ext_resource type="Texture2D" uid="uid://dlm3nh1h3qgur" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_13.png" id="58_b14m2"]
+[ext_resource type="Texture2D" uid="uid://xpo335lyx6h8" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_14.png" id="59_ddyvx"]
+[ext_resource type="Texture2D" uid="uid://ddj3blw37txi5" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_15.png" id="60_wkise"]
+[ext_resource type="Texture2D" uid="uid://cepjirvw28ayk" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_16.png" id="61_2kp4x"]
+[ext_resource type="Texture2D" uid="uid://cmpxpgd1ltapk" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_17.png" id="62_uu3bs"]
+[ext_resource type="Texture2D" uid="uid://fj21242mtpiy" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_18.png" id="63_7iljm"]
+[ext_resource type="Texture2D" uid="uid://c3m6waffi0le" path="res://Assets/Battle/Susie/Victory/spr_susieb_victory_19.png" id="64_nfc81"]
+[ext_resource type="Script" uid="uid://clisitchkxafw" path="res://Scripts/hero.gd" id="71_g5dpo"]
+[ext_resource type="Texture2D" uid="uid://bnkhbstmuvun" path="res://Assets/UI/Battle/Susie/susie_normal.png" id="72_iomlj"]
+[ext_resource type="Texture2D" uid="uid://bj3pgemwwrhp0" path="res://Assets/UI/Battle/Susie/susie_attack.png" id="73_4644y"]
+[ext_resource type="Texture2D" uid="uid://bgfw18f12yne1" path="res://Assets/UI/Battle/Susie/susie_act.png" id="74_gjgb7"]
+[ext_resource type="Texture2D" uid="uid://cj4wqlraj7yfv" path="res://Assets/UI/Battle/Susie/susie_magic.png" id="75_hjxhb"]
+[ext_resource type="Texture2D" uid="uid://cryh2g7dyqhyu" path="res://Assets/UI/Battle/Susie/susie_item.png" id="76_tm0q8"]
+[ext_resource type="Texture2D" uid="uid://chovyxdmus4dh" path="res://Assets/UI/Battle/Susie/susie_spare.png" id="77_blfru"]
+[ext_resource type="Texture2D" uid="uid://bavxes5swr0p6" path="res://Assets/UI/Battle/Susie/susie_defend.png" id="78_jqxed"]
+[ext_resource type="Texture2D" uid="uid://bnftaf4qvidtn" path="res://Assets/UI/Battle/Susie/susie_hurt.png" id="79_b14m2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6cgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dkk7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vmp32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c8rdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t4853")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tinq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wjyj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_thloy")
+}],
+"loop": 0,
+"name": &"act",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_tx3ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mrmyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ac7ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tg2bk")
+}],
+"loop": 0,
+"name": &"act_finish",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_qg1ct")
+}],
+"loop": 1,
+"name": &"act_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_itphc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tuvdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dkk7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vmp32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c8rdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_t4853")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_itphc")
+}],
+"loop": 0,
+"name": &"attack_ready",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_qg1ct")
+}],
+"loop": 1,
+"name": &"defeated",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_itphc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_tuvdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dkk7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vmp32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_c8rdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_t4853")
+}],
+"loop": 0,
+"name": &"defend",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_ssr6d")
+}],
+"loop": 0,
+"name": &"hurt",
+"speed": 1.76
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_53gc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_m4fyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_iomlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_4644y")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_itphc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tuvdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dkk7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vmp32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c8rdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_t4853")
+}],
+"loop": 0,
+"name": &"intro",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_tinq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_wjyj6")
+}],
+"loop": 1,
+"name": &"iteam_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_thloy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tx3ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_mrmyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ac7ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_tg2bk")
+}],
+"loop": 0,
+"name": &"item",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_hjxhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_tm0q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_blfru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_jqxed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_b14m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ddyvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_wkise")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_2kp4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_uu3bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_7iljm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_nfc81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_wwjoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ojrgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_wx7fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_dovxx")
+}],
+"loop": 0,
+"name": &"rude_buster",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_b14m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ddyvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_wkise")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_2kp4x")
+}],
+"loop": 1,
+"name": &"spell_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_mrmyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ac7ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_tg2bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ssr6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_53gc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_m4fyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_iomlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_4644y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_gjgb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_hjxhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_tm0q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_blfru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_jqxed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_b14m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ddyvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_wkise")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_2kp4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_uu3bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_7iljm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_nfc81")
+}],
+"loop": 0,
+"name": &"victory",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_pkwaf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, -44)]
+}
+
+[sub_resource type="Animation" id="Animation_dhbtb"]
+resource_name = "act"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"act"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, -68)]
+}
+
+[sub_resource type="Animation" id="Animation_wkise"]
+resource_name = "act_finish"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"act_finish"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, -68)]
+}
+
+[sub_resource type="Animation" id="Animation_ncc2w"]
+resource_name = "act_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"act_ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, -68)]
+}
+
+[sub_resource type="Animation" id="Animation_3fdvm"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-32, -68)]
+}
+
+[sub_resource type="Animation" id="Animation_b14m2"]
+resource_name = "attack_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack_ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-37, -68)]
+}
+
+[sub_resource type="Animation" id="Animation_7x7ak"]
+resource_name = "defeated"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"defeated"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-34, -43)]
+}
+
+[sub_resource type="Animation" id="Animation_ekfxa"]
+resource_name = "defend"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"defend"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-33, -66)]
+}
+
+[sub_resource type="Animation" id="Animation_in50r"]
+resource_name = "hurt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"hurt"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, -44)]
+}
+
+[sub_resource type="Animation" id="Animation_7nsck"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, -44)]
+}
+
+[sub_resource type="Animation" id="Animation_qd555"]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"intro"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-32, -68)]
+}
+
+[sub_resource type="Animation" id="Animation_ci7cr"]
+resource_name = "iteam_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"iteam_ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, -44)]
+}
+
+[sub_resource type="Animation" id="Animation_vvmcy"]
+resource_name = "item"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"item"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, -44)]
+}
+
+[sub_resource type="Animation" id="Animation_7ex5k"]
+resource_name = "rude_buster"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"rude_buster"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-58, -76)]
+}
+
+[sub_resource type="Animation" id="Animation_ddyvx"]
+resource_name = "spell_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"spell_ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, -58)]
+}
+
+[sub_resource type="Animation" id="Animation_653f6"]
+resource_name = "victory"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"victory"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-42, -50)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4rk4a"]
+_data = {
+&"RESET": SubResource("Animation_pkwaf"),
+&"act": SubResource("Animation_dhbtb"),
+&"act_finish": SubResource("Animation_wkise"),
+&"act_ready": SubResource("Animation_ncc2w"),
+&"attack": SubResource("Animation_3fdvm"),
+&"attack_ready": SubResource("Animation_b14m2"),
+&"defeated": SubResource("Animation_7x7ak"),
+&"defend": SubResource("Animation_ekfxa"),
+&"hurt": SubResource("Animation_in50r"),
+&"idle": SubResource("Animation_7nsck"),
+&"intro": SubResource("Animation_qd555"),
+&"iteam_ready": SubResource("Animation_ci7cr"),
+&"item": SubResource("Animation_vvmcy"),
+&"rude_buster": SubResource("Animation_7ex5k"),
+&"spell_ready": SubResource("Animation_ddyvx"),
+&"victory": SubResource("Animation_653f6")
+}
+
+[node name="Susie" type="AnimatedSprite2D" unique_id=1947875210]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_x6cgy")
+animation = &"idle"
+autoplay = "idle"
+centered = false
+offset = Vector2(-36, -44)
+script = ExtResource("71_g5dpo")
+id = 2
+color = Color(1, 0, 1, 1)
+icon_list = Dictionary[int, Texture2D]({
+0: ExtResource("72_iomlj"),
+1: ExtResource("73_4644y"),
+2: ExtResource("74_gjgb7"),
+3: ExtResource("75_hjxhb"),
+4: ExtResource("76_tm0q8"),
+5: ExtResource("77_blfru"),
+6: ExtResource("78_jqxed"),
+7: ExtResource("79_b14m2")
+})
+char_name = "Susie"
+max_hp = 110
+metadata/_custom_type_script = "uid://clisitchkxafw"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1093915370]
+libraries/ = SubResource("AnimationLibrary_4rk4a")
+autoplay = &"idle"

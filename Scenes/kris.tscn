@@ -41,18 +41,6 @@
 [ext_resource type="Texture2D" uid="uid://p7ixrwealslm" path="res://Assets/Battle/Kris/ACTs/spr_krisb_pirouette_3.png" id="29_plljs"]
 [ext_resource type="Texture2D" uid="uid://bxbmu23r7fxml" path="res://Assets/Battle/Kris/ACTs/spr_krisb_pirouette_4.png" id="30_yftx2"]
 [ext_resource type="Texture2D" uid="uid://b37anyylh3gsi" path="res://Assets/Battle/Kris/ACTs/spr_krisb_pirouette_5.png" id="31_neb4x"]
-[ext_resource type="Texture2D" uid="uid://wyej54gw2dxm" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_0.png" id="36_e2kcw"]
-[ext_resource type="Texture2D" uid="uid://dppbbbq74jodf" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_1.png" id="37_3anyw"]
-[ext_resource type="Texture2D" uid="uid://fcfjemx7g24s" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_2.png" id="38_5hpis"]
-[ext_resource type="Texture2D" uid="uid://dcls0mjyqyxa1" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_3.png" id="39_varmq"]
-[ext_resource type="Texture2D" uid="uid://b8sbjqwkmbopy" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_4.png" id="40_c2bx8"]
-[ext_resource type="Texture2D" uid="uid://c3m572fbu07nl" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_5.png" id="41_yn55e"]
-[ext_resource type="Texture2D" uid="uid://hlq1oe73rrg1" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_6.png" id="42_38q7u"]
-[ext_resource type="Texture2D" uid="uid://b2llvibgc1u16" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_7.png" id="43_36pby"]
-[ext_resource type="Texture2D" uid="uid://bfike77j43ffr" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_8.png" id="44_l8uuw"]
-[ext_resource type="Texture2D" uid="uid://deh7elr7r1tb1" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_9.png" id="45_7isyd"]
-[ext_resource type="Texture2D" uid="uid://dre40h4ru7xfa" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_10.png" id="46_2vbon"]
-[ext_resource type="Texture2D" uid="uid://2uxhldkxgamb" path="res://Assets/Battle/Kris/Intro/spr_krisb_intro_11.png" id="47_kp7p4"]
 [ext_resource type="Texture2D" uid="uid://b0102y7qk25ul" path="res://Assets/Battle/Kris/Item/spr_krisb_itemready_0.png" id="48_523dd"]
 [ext_resource type="Texture2D" uid="uid://dkufyygm5iwk0" path="res://Assets/Battle/Kris/Item/spr_krisb_item_0.png" id="49_ps0yf"]
 [ext_resource type="Texture2D" uid="uid://darm3droc5k48" path="res://Assets/Battle/Kris/Item/spr_krisb_item_1.png" id="50_qdh3g"]
@@ -101,7 +89,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_kmpkf")
+}],
+"loop": 0,
+"name": &"act",
+"speed": 15.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("8_qhfks")
 }, {
@@ -115,8 +108,8 @@ animations = [{
 "texture": ExtResource("11_1x4i3")
 }],
 "loop": 0,
-"name": &"act",
-"speed": 6.0
+"name": &"act_finish",
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -160,6 +153,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("14_ncc2w")
+}],
+"loop": 0,
+"name": &"attack_ready",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("22_7ex5k")
 }],
 "loop": 1,
@@ -195,7 +196,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"hurt",
-"speed": 6.0
+"speed": 1.76
 }, {
 "frames": [{
 "duration": 1.0,
@@ -218,48 +219,36 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("36_e2kcw")
+"texture": ExtResource("14_ncc2w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_3anyw")
+"texture": ExtResource("15_3fdvm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_5hpis")
+"texture": ExtResource("16_7x7ak")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_varmq")
+"texture": ExtResource("17_ekfxa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_c2bx8")
+"texture": ExtResource("18_in50r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_yn55e")
+"texture": ExtResource("19_qd555")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_38q7u")
+"texture": ExtResource("20_ci7cr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_36pby")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_l8uuw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_7isyd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_2vbon")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_kp7p4")
+"texture": ExtResource("21_vvmcy")
 }],
 "loop": 0,
 "name": &"intro",
-"speed": 12.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -293,7 +282,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"item",
-"speed": 6.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -316,7 +305,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"pirouette",
-"speed": 6.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -348,7 +337,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"victory",
-"speed": 3.0
+"speed": 10.0
 }]
 
 [sub_resource type="Animation" id="Animation_pkwaf"]
@@ -363,7 +352,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"defend"]
+"values": [&"idle"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -391,6 +380,33 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"act"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(13, -21)]
+}
+
+[sub_resource type="Animation" id="Animation_5s4ur"]
+resource_name = "act_finish"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"act_finish"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -445,6 +461,33 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"attack"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(19.5, -18)]
+}
+
+[sub_resource type="Animation" id="Animation_vg0ls"]
+resource_name = "attack_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack_ready"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -669,7 +712,7 @@ tracks/1/path = NodePath(".:offset")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.033333335),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, -19)]
@@ -706,8 +749,10 @@ tracks/1/keys = {
 _data = {
 &"RESET": SubResource("Animation_pkwaf"),
 &"act": SubResource("Animation_dhbtb"),
+&"act_finish": SubResource("Animation_5s4ur"),
 &"act_ready": SubResource("Animation_ncc2w"),
 &"attack": SubResource("Animation_3fdvm"),
+&"attack_ready": SubResource("Animation_vg0ls"),
 &"defeated": SubResource("Animation_7x7ak"),
 &"defend": SubResource("Animation_ekfxa"),
 &"hurt": SubResource("Animation_in50r"),
@@ -722,10 +767,8 @@ _data = {
 [node name="Kris" type="AnimatedSprite2D" unique_id=1947875210]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_x6cgy")
-animation = &"defend"
+animation = &"idle"
 autoplay = "idle"
-frame = 5
-frame_progress = 1.0
 offset = Vector2(6, -19)
 script = ExtResource("71_ncc2w")
 id = 1
@@ -740,7 +783,9 @@ icon_list = Dictionary[int, Texture2D]({
 6: ExtResource("78_c2bx8"),
 7: ExtResource("72_7ex5k")
 })
+can_use_magic = false
 char_name = "Kris"
+max_hp = 90
 metadata/_custom_type_script = "uid://clisitchkxafw"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1093915370]

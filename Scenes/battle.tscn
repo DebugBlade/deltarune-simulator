@@ -52,7 +52,9 @@
 [ext_resource type="Texture2D" uid="uid://cfmp6fqd1rsbh" path="res://Assets/Battle Menu.png" id="50_dnm5a"]
 [ext_resource type="PackedScene" uid="uid://jbm8k4kxsooq" path="res://Scenes/kris.tscn" id="51_kkibp"]
 [ext_resource type="FontFile" uid="uid://dmkl06dfd8qup" path="res://Fonts/8BitOperatorJVE.ttf" id="52_6mwnj"]
+[ext_resource type="PackedScene" uid="uid://dscxvay4utv1f" path="res://Scenes/susie.tscn" id="52_uy5dy"]
 [ext_resource type="Script" uid="uid://xhkvwohw6qx7" path="res://Scripts/ui.gd" id="53_85eg2"]
+[ext_resource type="PackedScene" uid="uid://c2ibxpnvbudjd" path="res://Scenes/ralsei.tscn" id="53_eocge"]
 [ext_resource type="Texture2D" uid="uid://b5cbnivig5eq8" path="res://Assets/Square.png" id="54_utx0y"]
 [ext_resource type="FontVariation" uid="uid://c45x28nfc7gll" path="res://Fonts/BottomPanel.tres" id="55_64d33"]
 [ext_resource type="FontVariation" uid="uid://c08ehsg20tsnh" path="res://Fonts/MainBig.tres" id="56_64d33"]
@@ -313,32 +315,20 @@ texture_progress = SubResource("AtlasTexture_htg8p")
 texture_progress_offset = Vector2(0, 5)
 
 [node name="HeroMarker" type="Marker2D" parent="." unique_id=355851527]
-position = Vector2(99, 177)
+position = Vector2(98, 176)
 
 [node name="Kris" parent="HeroMarker" unique_id=1934790852 instance=ExtResource("51_kkibp")]
-frame = 0
-frame_progress = 0.0
-max_hp = 150
 
 [node name="HeroMarker2" type="Marker2D" parent="." unique_id=42586567]
-position = Vector2(99, 177)
+position = Vector2(124, 238)
 
-[node name="Kris2" parent="HeroMarker2" unique_id=1947875210 instance=ExtResource("51_kkibp")]
-position = Vector2(19, 43)
-frame = 0
-frame_progress = 0.0
-color = Color(1, 0, 1, 1)
-max_hp = 210
+[node name="Susie" parent="HeroMarker2" unique_id=1947875210 instance=ExtResource("52_uy5dy")]
+frame = 1
 
 [node name="HeroMarker3" type="Marker2D" parent="." unique_id=1194925332]
-position = Vector2(99, 177)
+position = Vector2(132, 300)
 
-[node name="Kris3" parent="HeroMarker3" unique_id=1046509371 instance=ExtResource("51_kkibp")]
-position = Vector2(30, 116)
-frame = 0
-frame_progress = 0.0
-color = Color(0, 1, 0, 1)
-max_hp = 110
+[node name="Ralsei" parent="HeroMarker3" unique_id=1369011025 instance=ExtResource("53_eocge")]
 
 [node name="FPS" type="Label" parent="." unique_id=729624591]
 texture_filter = 1
@@ -625,7 +615,6 @@ text = "TVDinner"
 [node name="Reference" type="CanvasLayer" parent="." unique_id=121419541]
 
 [node name="Text" type="Sprite2D" parent="Reference" unique_id=1268999433]
-visible = false
 modulate = Color(1, 1, 1, 0.27058825)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("63_uy5dy")

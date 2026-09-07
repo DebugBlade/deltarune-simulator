@@ -14,7 +14,15 @@ enum Icon {
 	HURT,
 }
 
+const NAME_TEXT: Dictionary[Hero.ID, Texture2D] = {
+	Hero.ID.KRIS: preload("uid://85xkxflbxeij"),
+	Hero.ID.SUSIE: preload("uid://qo5lo7j24yci"),
+	Hero.ID.RALSEI: preload("uid://c4i2ftanqvfr1"),
+}
+
 const LINE_EFFECT = preload("uid://dfeykbd1g1w48")
+const MAGIC = preload("uid://b2kjaolvm6h73")
+const MAGIC_HOVER = preload("uid://cj7lbby0kawbr")
 
 var hero: Hero
 var selected: ActionButton
@@ -34,6 +42,7 @@ var icon: Icon = Icon.NORMAL:
 @onready var hp_text: Label = $Cover/HPText
 @onready var max_hp_text: Label = $Cover/MaxHPText
 @onready var char_icon: TextureRect = $Cover/Icon
+@onready var name_text: TextureRect = $Cover/Name
 
 
 func setup(p_hero: Hero) -> void:
@@ -42,10 +51,28 @@ func setup(p_hero: Hero) -> void:
 	update_hp(true)
 	for action: ActionButton in action_container.get_children():
 		action.setup(hero)
-	var border_stylebox := cover.get_theme_stylebox("panel") as StyleBoxFlat
-	border_stylebox.border_color = hero.color
-	var hp_stylebox := hp_bar.get_theme_stylebox("fill") as StyleBoxFlat
-	hp_stylebox.bg_color = hero.color
+	
+	if hero.can_use_magic:
+		var magic_button: ActionButton =hero.buttons[Hero.ActionType.ACT]
+		magic_button.default_texture = MAGIC
+		magic_button.hover_texture = MAGIC_HOVER
+		magic_button.texture = MAGIC
+
+	name_text.texture = NAME_TEXT[hero.id]
+	update_borders_color(hero.color)
+	update_borders_color(Color.TRANSPARENT)
+
+func _process(delta: float) -> void:
+	line_timer += delta
+	if line_timer >= 0.5:
+		line_timer -= 0.5
+		var new_line_l: LineEffect = LINE_EFFECT.instantiate()
+		var new_line_r: LineEffect = LINE_EFFECT.instantiate()
+		new_line_r.direction = -1
+		line_spawn_left.add_child(new_line_l)
+		line_spawn_right.add_child(new_line_r)
+		new_line_l.self_modulate = hero.color
+		new_line_r.self_modulate = hero.color
 
 func update_hp(update_max := false) -> void:
 	if update_max:
@@ -61,14 +88,8 @@ func update_hp(update_max := false) -> void:
 		hp_text.modulate = Color.YELLOW
 		max_hp_text.modulate = Color.YELLOW
 
-func _process(delta: float) -> void:
-	line_timer += delta
-	if line_timer >= 0.5:
-		line_timer -= 0.5
-		var new_line_l: LineEffect = LINE_EFFECT.instantiate()
-		var new_line_r: LineEffect = LINE_EFFECT.instantiate()
-		new_line_r.direction = -1
-		line_spawn_left.add_child(new_line_l)
-		line_spawn_right.add_child(new_line_r)
-		new_line_l.self_modulate = hero.color
-		new_line_r.self_modulate = hero.color
+func update_borders_color(color: Color) -> void:
+	var border_stylebox := cover.get_theme_stylebox("panel") as StyleBoxFlat
+	var hp_stylebox := hp_bar.get_theme_stylebox("fill") as StyleBoxFlat
+	border_stylebox.border_color = color
+	hp_stylebox.bg_color = color

@@ -24,6 +24,7 @@ enum ActionType {
 	CharacterTab.Icon.DEFEND: null,
 	CharacterTab.Icon.HURT: null,
 }
+@export var can_use_magic: bool = true
 
 var defending: bool = false
 var action := Action.new()

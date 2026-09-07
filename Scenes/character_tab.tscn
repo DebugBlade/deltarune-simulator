@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://2p86rs0hkybk" path="res://Assets/UI/Battle/Actions/SpareReady.png" id="16_kfjhi"]
 [ext_resource type="Texture2D" uid="uid://bjspgeyon56k4" path="res://Assets/UI/Battle/Actions/Defend.png" id="17_6lr0h"]
 [ext_resource type="Texture2D" uid="uid://cvav7s00q8hyi" path="res://Assets/UI/Battle/Actions/DefendHover.png" id="18_hc6i6"]
-[ext_resource type="Texture2D" uid="uid://c4lg0nqrddwbo" path="res://Assets/Battle Reference.png" id="19_rqtnl"]
+[ext_resource type="Texture2D" uid="uid://p86ippsnq7di" path="res://References/Reference Monsters.png" id="20_xorho"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqk4g"]
 resource_local_to_scene = true
@@ -99,11 +99,12 @@ show_percentage = false
 layout_mode = 0
 offset_left = 136.0
 offset_top = 7.0
-offset_right = 163.0
+offset_right = 160.0
 offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("6_eu80j")
 theme_override_font_sizes/font_size = 10
 text = "090"
+horizontal_alignment = 2
 
 [node name="MaxHPText" type="Label" parent="Cover" unique_id=921432748]
 layout_mode = 0
@@ -114,6 +115,7 @@ offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("6_eu80j")
 theme_override_font_sizes/font_size = 10
 text = "090"
+horizontal_alignment = 2
 
 [node name="Actions" type="Panel" parent="." unique_id=1238235646]
 custom_minimum_size = Vector2(0, 32)
@@ -216,6 +218,7 @@ visible = false
 [node name="REFERENCE" type="Sprite2D" parent="Reference" unique_id=1477146708]
 modulate = Color(1, 1, 1, 0.27058825)
 position = Vector2(0, -294)
-texture = ExtResource("19_rqtnl")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_xorho")
 centered = false
 metadata/_edit_lock_ = true

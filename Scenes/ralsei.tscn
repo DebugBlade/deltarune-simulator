@@ -1,0 +1,901 @@
+[gd_scene format=3 uid="uid://c2ibxpnvbudjd"]
+
+[ext_resource type="Texture2D" uid="uid://d3wtj5bdcro3i" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_0.png" id="1_bavam"]
+[ext_resource type="Texture2D" uid="uid://281mumejga63" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_1.png" id="2_wot5l"]
+[ext_resource type="Texture2D" uid="uid://xrd1hpx78v0g" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_2.png" id="3_eivjd"]
+[ext_resource type="Texture2D" uid="uid://curk1qubo3jrf" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_3.png" id="4_q64do"]
+[ext_resource type="Texture2D" uid="uid://c3uotdk1gpysq" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_4.png" id="5_tj1ew"]
+[ext_resource type="Texture2D" uid="uid://secvyoarf0h8" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_5.png" id="6_bq5vr"]
+[ext_resource type="Texture2D" uid="uid://dct067uwlnewl" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_6.png" id="7_uukoc"]
+[ext_resource type="Texture2D" uid="uid://dcrp1v4v438yl" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_7.png" id="8_ibqyf"]
+[ext_resource type="Texture2D" uid="uid://clcisklxgmp2y" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_8.png" id="9_vtwp7"]
+[ext_resource type="Texture2D" uid="uid://nxnb5r5jvimi" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_9.png" id="10_p3s0w"]
+[ext_resource type="Texture2D" uid="uid://daskkiowj13xt" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_10.png" id="11_0hph3"]
+[ext_resource type="Texture2D" uid="uid://1gae5ij2nye1" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_actready_0.png" id="12_vtwp7"]
+[ext_resource type="Texture2D" uid="uid://ci0uc15iosviw" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_0.png" id="13_p3s0w"]
+[ext_resource type="Texture2D" uid="uid://bhqk8dwapjr48" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_1.png" id="14_0hph3"]
+[ext_resource type="Texture2D" uid="uid://vfj7afmaq7xd" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_2.png" id="15_sw6dw"]
+[ext_resource type="Texture2D" uid="uid://4u4j54fwm0be" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_3.png" id="16_7dhjh"]
+[ext_resource type="Texture2D" uid="uid://cgb4u7ohh6ppj" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_4.png" id="17_ymopn"]
+[ext_resource type="Texture2D" uid="uid://0swlk3qbq7ag" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_5.png" id="18_g3lkr"]
+[ext_resource type="Texture2D" uid="uid://b78wsfkcrbkij" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attackready_0.png" id="19_pbof7"]
+[ext_resource type="Texture2D" uid="uid://cwlr0x3d7pxpb" path="res://Assets/Battle/Ralsei/Defeat/spr_ralseib_defeat_0.png" id="20_xvg6f"]
+[ext_resource type="Texture2D" uid="uid://du8yj73yu73we" path="res://Assets/Battle/Ralsei/Defend/spr_ralseib_defend_0.png" id="21_cdayr"]
+[ext_resource type="Texture2D" uid="uid://lba2oxunits3" path="res://Assets/Battle/Ralsei/Defend/spr_ralseib_defend_1.png" id="22_2svnj"]
+[ext_resource type="Texture2D" uid="uid://0803t66d8gwt" path="res://Assets/Battle/Ralsei/Defend/spr_ralseib_defend_2.png" id="23_wb468"]
+[ext_resource type="Texture2D" uid="uid://c4obn5r1mg4w6" path="res://Assets/Battle/Ralsei/Defend/spr_ralseib_defend_3.png" id="24_25uwh"]
+[ext_resource type="Texture2D" uid="uid://dck03ctfe53ts" path="res://Assets/Battle/Ralsei/Defend/spr_ralseib_defend_4.png" id="25_fib7u"]
+[ext_resource type="Texture2D" uid="uid://n3lpqixdvlcx" path="res://Assets/Battle/Ralsei/Defend/spr_ralseib_defend_5.png" id="26_2bckd"]
+[ext_resource type="Texture2D" uid="uid://dkkds1ny3jea5" path="res://Assets/Battle/Ralsei/Defend/spr_ralseib_defend_6.png" id="27_ap5r0"]
+[ext_resource type="Texture2D" uid="uid://bquhise3wff71" path="res://Assets/Battle/Ralsei/Defend/spr_ralseib_defend_7.png" id="28_3xch8"]
+[ext_resource type="Texture2D" uid="uid://csljwpr4yy1kf" path="res://Assets/Battle/Ralsei/Hurt/spr_ralsei_shock_0.png" id="29_sw6dw"]
+[ext_resource type="Texture2D" uid="uid://c6eap3o3y2rh0" path="res://Assets/Battle/Ralsei/Idle/spr_ralseib_idle_0.png" id="30_7dhjh"]
+[ext_resource type="Texture2D" uid="uid://cwrm5bnjan5ob" path="res://Assets/Battle/Ralsei/Idle/spr_ralseib_idle_1.png" id="31_ymopn"]
+[ext_resource type="Texture2D" uid="uid://cpas8mc3q3osg" path="res://Assets/Battle/Ralsei/Idle/spr_ralseib_idle_2.png" id="32_g3lkr"]
+[ext_resource type="Texture2D" uid="uid://b7bdjcn00l52j" path="res://Assets/Battle/Ralsei/Idle/spr_ralseib_idle_3.png" id="33_pbof7"]
+[ext_resource type="Texture2D" uid="uid://dvnic2fetrpah" path="res://Assets/Battle/Ralsei/Idle/spr_ralseib_idle_4.png" id="34_xvg6f"]
+[ext_resource type="Texture2D" uid="uid://cu7ftya7mbmwy" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_0.png" id="35_cdayr"]
+[ext_resource type="Texture2D" uid="uid://bk7k6c5ugopro" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_1.png" id="36_2svnj"]
+[ext_resource type="Texture2D" uid="uid://cx6u8wn3ar5xp" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_2.png" id="37_wb468"]
+[ext_resource type="Texture2D" uid="uid://corq26td0ar63" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_3.png" id="38_25uwh"]
+[ext_resource type="Texture2D" uid="uid://dod7frl6y8x8a" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_4.png" id="39_fib7u"]
+[ext_resource type="Texture2D" uid="uid://b22vjuyhjwxx1" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_5.png" id="40_2bckd"]
+[ext_resource type="Texture2D" uid="uid://dbijndiyomc46" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_6.png" id="41_ap5r0"]
+[ext_resource type="Texture2D" uid="uid://bgcbbm5gxmpb4" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_7.png" id="42_3xch8"]
+[ext_resource type="Texture2D" uid="uid://bffmhtsb2rund" path="res://Assets/Battle/Ralsei/Intro/spr_ralseib_battleintro_8.png" id="43_dn4dm"]
+[ext_resource type="Texture2D" uid="uid://waij6fr0lyr" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_itemready_0.png" id="44_3pdm6"]
+[ext_resource type="Texture2D" uid="uid://dl4iu4eegwgit" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_item_0.png" id="45_jm7b1"]
+[ext_resource type="Texture2D" uid="uid://de8kj2y8chc75" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_item_1.png" id="46_jpm7p"]
+[ext_resource type="Texture2D" uid="uid://dq76d71bm4go8" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_item_2.png" id="47_6t4yl"]
+[ext_resource type="Texture2D" uid="uid://bvx1ygfhth6wn" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_item_3.png" id="48_dpoyv"]
+[ext_resource type="Texture2D" uid="uid://blluay4klwmr6" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_item_4.png" id="49_p8gql"]
+[ext_resource type="Texture2D" uid="uid://c65be7m8njic4" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_item_5.png" id="50_vah4s"]
+[ext_resource type="Texture2D" uid="uid://dnbbs5he1n23g" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_item_6.png" id="51_c25wo"]
+[ext_resource type="Texture2D" uid="uid://bd5ry54ekraua" path="res://Assets/Battle/Ralsei/Item/spr_ralseib_item_7.png" id="52_3jhd8"]
+[ext_resource type="Texture2D" uid="uid://dx05kdp3myrr" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_0.png" id="53_uukoc"]
+[ext_resource type="Texture2D" uid="uid://cofak0ufghgr4" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_1.png" id="54_ibqyf"]
+[ext_resource type="Texture2D" uid="uid://067jvb32qj85" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_2.png" id="55_vtwp7"]
+[ext_resource type="Texture2D" uid="uid://b10mi3fnx48oo" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_3.png" id="56_p3s0w"]
+[ext_resource type="Texture2D" uid="uid://b2nsjesufi2l3" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_4.png" id="57_0hph3"]
+[ext_resource type="Texture2D" uid="uid://decimkcgaixvb" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_5.png" id="58_sw6dw"]
+[ext_resource type="Texture2D" uid="uid://b1dqilolwplyc" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_6.png" id="59_7dhjh"]
+[ext_resource type="Texture2D" uid="uid://bgkrm4cqq71yx" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_7.png" id="60_ymopn"]
+[ext_resource type="Texture2D" uid="uid://c2ixiekn35frf" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_8.png" id="61_g3lkr"]
+[ext_resource type="Texture2D" uid="uid://43evc143lnw8" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spell_9.png" id="62_pbof7"]
+[ext_resource type="Texture2D" uid="uid://c2fdswoiivlnb" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spellready_0.png" id="68_aup0l"]
+[ext_resource type="Texture2D" uid="uid://s3jyru4isfy" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spellready_1.png" id="69_2awwi"]
+[ext_resource type="Texture2D" uid="uid://cnn3emddya2hb" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spellready_2.png" id="70_rcduq"]
+[ext_resource type="Texture2D" uid="uid://cqusnwk6o22ol" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_spellready_3.png" id="71_3ttpp"]
+[ext_resource type="Texture2D" uid="uid://bxmlon5q0h7ga" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_0.png" id="72_yrolq"]
+[ext_resource type="Texture2D" uid="uid://ddf8diqujltei" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_1.png" id="73_jui2e"]
+[ext_resource type="Texture2D" uid="uid://du00n7cmpi2sk" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_2.png" id="74_p6cnx"]
+[ext_resource type="Texture2D" uid="uid://1wwiehacp0cr" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_3.png" id="75_4tvtm"]
+[ext_resource type="Texture2D" uid="uid://b6s2f0huoh4ar" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_4.png" id="76_r8bhk"]
+[ext_resource type="Texture2D" uid="uid://c0eaflibh3ola" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_5.png" id="77_7wlef"]
+[ext_resource type="Script" uid="uid://clisitchkxafw" path="res://Scripts/hero.gd" id="78_r7hov"]
+[ext_resource type="Texture2D" uid="uid://bqmcgbw4v3llb" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_6.png" id="78_rbhfv"]
+[ext_resource type="Texture2D" uid="uid://bjxv5tj5hvpd3" path="res://Assets/UI/Battle/Ralsei/ralsei_normal.png" id="79_bavam"]
+[ext_resource type="Texture2D" uid="uid://so6mwkktu7u5" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_7.png" id="79_r261o"]
+[ext_resource type="Texture2D" uid="uid://dnogaucye3841" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_8.png" id="80_hxu4l"]
+[ext_resource type="Texture2D" uid="uid://bbsbtmkcbugdr" path="res://Assets/UI/Battle/Ralsei/ralsei_attack.png" id="80_wot5l"]
+[ext_resource type="Texture2D" uid="uid://dkn0aijnuqrpu" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_9.png" id="81_0e7jc"]
+[ext_resource type="Texture2D" uid="uid://t1w0mvnlx47p" path="res://Assets/UI/Battle/Ralsei/ralsei_act.png" id="81_eivjd"]
+[ext_resource type="Texture2D" uid="uid://cop7xawhwnhdf" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_10.png" id="82_8g04d"]
+[ext_resource type="Texture2D" uid="uid://dji240tgi5nlb" path="res://Assets/UI/Battle/Ralsei/ralsei_magic.png" id="82_q64do"]
+[ext_resource type="Texture2D" uid="uid://b0e8xhlvxtfmi" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_11.png" id="83_icarb"]
+[ext_resource type="Texture2D" uid="uid://6r1qko1eqp8m" path="res://Assets/UI/Battle/Ralsei/ralsei_item.png" id="83_tj1ew"]
+[ext_resource type="Texture2D" uid="uid://d1xoqivy1f02x" path="res://Assets/UI/Battle/Ralsei/ralsei_spare.png" id="84_bq5vr"]
+[ext_resource type="Texture2D" uid="uid://2fblu30f07si" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_12.png" id="84_vlyoi"]
+[ext_resource type="Texture2D" uid="uid://ddlopba1ul1wj" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_13.png" id="85_t63jw"]
+[ext_resource type="Texture2D" uid="uid://ckyvhdp4bj5o5" path="res://Assets/UI/Battle/Ralsei/ralsei_defend.png" id="85_uukoc"]
+[ext_resource type="Texture2D" uid="uid://coh0ijlavrgi8" path="res://Assets/UI/Battle/Ralsei/ralsei_hurt.png" id="86_ibqyf"]
+[ext_resource type="Texture2D" uid="uid://dnjyhyh5e0olx" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_14.png" id="86_ue1tb"]
+[ext_resource type="Texture2D" uid="uid://c4gv710e7q1kj" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_15.png" id="87_xfxbw"]
+[ext_resource type="Texture2D" uid="uid://docb4duwb17fx" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_16.png" id="88_olpvf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6cgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bavam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wot5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eivjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q64do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tj1ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bq5vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uukoc")
+}],
+"loop": 0,
+"name": &"act",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ibqyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vtwp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p3s0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0hph3")
+}],
+"loop": 0,
+"name": &"act_finish",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_vtwp7")
+}],
+"loop": 1,
+"name": &"act_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_p3s0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0hph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sw6dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7dhjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ymopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_g3lkr")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_pbof7")
+}],
+"loop": 0,
+"name": &"attack_ready",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_xvg6f")
+}],
+"loop": 1,
+"name": &"defeated",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_cdayr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_2svnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wb468")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_25uwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fib7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_2bckd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ap5r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3xch8")
+}],
+"loop": 0,
+"name": &"defend",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_sw6dw")
+}],
+"loop": 0,
+"name": &"hurt",
+"speed": 1.76
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_7dhjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ymopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_g3lkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_pbof7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_xvg6f")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_cdayr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2svnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_wb468")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_25uwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_fib7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_2bckd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ap5r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_3xch8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dn4dm")
+}],
+"loop": 0,
+"name": &"intro",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_3pdm6")
+}],
+"loop": 1,
+"name": &"iteam_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_jm7b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_jpm7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_6t4yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_dpoyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_p8gql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_vah4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_c25wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_3jhd8")
+}],
+"loop": 0,
+"name": &"item",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_uukoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ibqyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_vtwp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_p3s0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_0hph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_sw6dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_7dhjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ymopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_g3lkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_pbof7")
+}],
+"loop": 0,
+"name": &"spell",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_aup0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_2awwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_rcduq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_3ttpp")
+}],
+"loop": 1,
+"name": &"spell_ready",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("72_yrolq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_jui2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_p6cnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_4tvtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_r8bhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_7wlef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_rbhfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_r261o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_hxu4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_0e7jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_8g04d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_icarb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_vlyoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_t63jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_ue1tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_xfxbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_olpvf")
+}],
+"loop": 0,
+"name": &"victory",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_pkwaf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_dhbtb"]
+resource_name = "act"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"act"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_wkise"]
+resource_name = "act_finish"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"act_finish"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-14, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_ncc2w"]
+resource_name = "act_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"act_ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_3fdvm"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-24, -46)]
+}
+
+[sub_resource type="Animation" id="Animation_b14m2"]
+resource_name = "attack_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack_ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -46)]
+}
+
+[sub_resource type="Animation" id="Animation_7x7ak"]
+resource_name = "defeated"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"defeated"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, -43)]
+}
+
+[sub_resource type="Animation" id="Animation_ekfxa"]
+resource_name = "defend"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"defend"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_in50r"]
+resource_name = "hurt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"hurt"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-28, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_7nsck"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_qd555"]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"intro"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_ci7cr"]
+resource_name = "iteam_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"iteam_ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21, -53)]
+}
+
+[sub_resource type="Animation" id="Animation_vvmcy"]
+resource_name = "item"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"item"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21, -53)]
+}
+
+[sub_resource type="Animation" id="Animation_7ex5k"]
+resource_name = "spell"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"spell"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-25, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_ddyvx"]
+resource_name = "spell_ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"spell_ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-25, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_653f6"]
+resource_name = "victory"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"victory"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, -45)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4rk4a"]
+_data = {
+&"RESET": SubResource("Animation_pkwaf"),
+&"act": SubResource("Animation_dhbtb"),
+&"act_finish": SubResource("Animation_wkise"),
+&"act_ready": SubResource("Animation_ncc2w"),
+&"attack": SubResource("Animation_3fdvm"),
+&"attack_ready": SubResource("Animation_b14m2"),
+&"defeated": SubResource("Animation_7x7ak"),
+&"defend": SubResource("Animation_ekfxa"),
+&"hurt": SubResource("Animation_in50r"),
+&"idle": SubResource("Animation_7nsck"),
+&"intro": SubResource("Animation_qd555"),
+&"iteam_ready": SubResource("Animation_ci7cr"),
+&"item": SubResource("Animation_vvmcy"),
+&"spell": SubResource("Animation_7ex5k"),
+&"spell_ready": SubResource("Animation_ddyvx"),
+&"victory": SubResource("Animation_653f6")
+}
+
+[node name="Ralsei" type="AnimatedSprite2D" unique_id=1947875210]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_x6cgy")
+animation = &"idle"
+autoplay = "idle"
+centered = false
+offset = Vector2(-20, -45)
+script = ExtResource("78_r7hov")
+id = 3
+color = Color(0, 1, 0, 1)
+icon_list = Dictionary[int, Texture2D]({
+0: ExtResource("79_bavam"),
+1: ExtResource("80_wot5l"),
+2: ExtResource("81_eivjd"),
+3: ExtResource("82_q64do"),
+4: ExtResource("83_tj1ew"),
+5: ExtResource("84_bq5vr"),
+6: ExtResource("85_uukoc"),
+7: ExtResource("86_ibqyf")
+})
+char_name = "Susie"
+max_hp = 70
+metadata/_custom_type_script = "uid://clisitchkxafw"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1093915370]
+libraries/ = SubResource("AnimationLibrary_4rk4a")
+autoplay = &"idle"
