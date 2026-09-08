@@ -33,13 +33,16 @@ var context: Context:
 				Soul.current.global_position = BattleBox.current.global_position
 		context = new_context
 
-var tp: float = 0.0
+var tp: float = 0.0:
+	set(value):
+		if TPBar.current:
+			TPBar.current.update_bar(tp, value)
+		tp = value
 var attack_timer: float = 0.0
 var heroes: Array[Hero] = []
 var monsters: Array[Monster] = []
 var targets: Array[Character]
 
-@onready var tp_bar: TextureProgressBar = $UI/TPBar
 @onready var ui: UI = $UI
 @onready var character_tab_holder: HBoxContainer = $UI/BattleMenu/Characters
 
@@ -68,7 +71,6 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	tp_bar.value = tp / MAX_TP
 	($UI/FPS as Label).text = "FPS: " + str(Engine.get_frames_per_second())
 
 func _physics_process(delta: float) -> void:
@@ -107,8 +109,11 @@ func execute_actions() -> void:
 	context = Context.SOUL_MODE
 	attack_timer = 4.0 #TODO replace with custom attack
 
-func add_tp(plus_tp: float) -> void:
+##Adds (or subtracs if negative) TP amount and returns the TP change
+func add_tp(plus_tp: float) -> float:
+	var old_tp := tp
 	tp = clampf(tp + plus_tp, 0, MAX_TP)
+	return tp - old_tp
 
 func first_hero_alive() -> Hero:
 	var first_alive: Hero = null

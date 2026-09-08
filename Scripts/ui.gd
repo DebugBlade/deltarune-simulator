@@ -90,6 +90,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 				SoundManager.create_audio(MENU_SELECT)
 				selected_hero.play_animation("defend")
 				selected_hero.char_tab.icon = CharacterTab.Icon.DEFEND
+				selected_hero.memory["tp"] = battle.add_tp(40)
 				next_hero()
 	elif event.is_action_pressed("Cancel"):
 		if context == Context.ACTIONS:
@@ -125,6 +126,10 @@ func previous_hero() -> void:
 			new_hero.play_animation("idle")
 			new_hero.char_tab.icon = CharacterTab.Icon.NORMAL
 			SoundManager.create_audio(MENU_MOVE)
+			var tp_used: float = new_hero.memory.get("tp", null)
+			if tp_used:
+				new_hero.memory.erase("tp")
+				battle.add_tp(-tp_used)
 			selected_hero = new_hero
 			break
 

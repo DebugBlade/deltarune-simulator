@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" format=3 uid="uid://m1xa0h54gfig"]
+
+[ext_resource type="FontFile" uid="uid://ceylgek8hhbi4" path="res://Fonts/___8bitoperator_jve.ttf" id="1_vs7xc"]
+
+[resource]
+base_font = ExtResource("1_vs7xc")
+spacing_space = -2
