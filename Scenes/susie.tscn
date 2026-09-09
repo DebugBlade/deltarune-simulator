@@ -870,6 +870,7 @@ animations = [{
 script = ExtResource("71_g5dpo")
 id = 2
 color = Color(1, 0, 1, 1)
+secondary_color = Color(0.5019608, 0, 0.5019608, 1)
 icon_list = Dictionary[int, Texture2D]({
 0: ExtResource("72_iomlj"),
 1: ExtResource("73_4644y"),

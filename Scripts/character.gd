@@ -14,6 +14,7 @@ var defense: int = 4
 
 func _ready() -> void:
 	hp = roundi(max_hp * 0.75)
+	sprite.animation_changed.connect(_animation_changed)
 
 func set_hp(new_hp: int) -> void:
 	hp = new_hp
@@ -23,4 +24,6 @@ func set_hp(new_hp: int) -> void:
 func play_animation(animation_name: StringName) -> void:
 	assert(animation_player.has_animation(animation_name), "Animation '%s' not found" % animation_name)
 	animation_player.play(animation_name)
+
+func _animation_changed() -> void:
 	sprite.play()

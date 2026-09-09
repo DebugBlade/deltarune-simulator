@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dmprekd2uij8s"]
+
+[ext_resource type="Texture2D" uid="uid://dmrdjupbu1hot" path="res://Assets/UI/Battle/attack_bolt.png" id="2_noxje"]
+
+[node name="Bolt" type="Control" unique_id=1862000233]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=548867523]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -19.0
+offset_right = 5.0
+offset_bottom = 19.0
+texture = ExtResource("2_noxje")

@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://d0ctleeb86jl7"]
+
+[ext_resource type="Script" uid="uid://crp502a3u6i5y" path="res://Scripts/attack_row.gd" id="1_axgqo"]
+[ext_resource type="Texture2D" uid="uid://bij4k60ra2k1q" path="res://Assets/UI/Battle/Kris/kris_normal_hurt.png" id="1_gbnic"]
+[ext_resource type="Texture2D" uid="uid://c7dxg8kergvuh" path="res://Assets/UI/Battle/spr_pressfront_b_0.png" id="2_axgqo"]
+[ext_resource type="Texture2D" uid="uid://ci7ynl56l5ge1" path="res://Assets/UI/Battle/Kris/press_spot_kris.png" id="3_2u4ow"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khhxn"]
+resource_local_to_scene = true
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 1, 1)
+
+[node name="AttackRow" type="Control" unique_id=141242066]
+custom_minimum_size = Vector2(640, 38)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 38.0
+script = ExtResource("1_axgqo")
+metadata/_custom_type_script = "uid://crp502a3u6i5y"
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1244184496]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 41.0
+offset_bottom = 34.0
+texture = ExtResource("1_gbnic")
+
+[node name="Press" type="TextureRect" parent="." unique_id=454234158]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 77.0
+offset_bottom = 38.0
+texture = ExtResource("2_axgqo")
+
+[node name="HitArea" type="Panel" parent="." unique_id=1277553650]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 204.0
+offset_bottom = 37.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_khhxn")
+
+[node name="HitMarker" type="TextureRect" parent="." unique_id=1411788440]
+layout_mode = 0
+offset_left = 82.0
+offset_right = 92.0
+offset_bottom = 37.0
+texture = ExtResource("3_2u4ow")
+
+[node name="BoltCritMarker" type="Control" parent="." unique_id=107211915]
+anchors_preset = 0
+offset_left = 87.0
+offset_top = 19.0
+offset_right = 87.0
+offset_bottom = 19.0

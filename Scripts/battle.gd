@@ -9,6 +9,7 @@ enum Context {
 }
 
 const CHARACTER_TAB = preload("uid://d2r7lkujy7hml")
+const ATTACK_ROW = preload("uid://d0ctleeb86jl7")
 const DIAMOND_BULLET = preload("uid://dob2bw60lxpye")
 const MAX_TP := 250.0
 
@@ -31,6 +32,7 @@ var context: Context:
 				BattleBox.current.appear()
 				Soul.current.enable()
 				Soul.current.global_position = BattleBox.current.global_position
+				ui.context = UI.Context.DISABLED
 		context = new_context
 
 var tp: float = 0.0:
@@ -42,9 +44,11 @@ var attack_timer: float = 0.0
 var heroes: Array[Hero] = []
 var monsters: Array[Monster] = []
 var targets: Array[Character]
+var attackers: Array[Hero] = []
 
 @onready var ui: UI = $UI
 @onready var character_tab_holder: HBoxContainer = $UI/BattleMenu/Characters
+@onready var attack_row_holder: VBoxContainer = $UI/BattleMenu/BottomPanel/Attack/AttackRowHolder
 
 
 func _init() -> void:
@@ -62,8 +66,19 @@ func _ready() -> void:
 		var tab: CharacterTab = CHARACTER_TAB.instantiate()
 		character_tab_holder.add_child(tab)
 		tab.setup(hero)
+		var attack_row: AttackRow = ATTACK_ROW.instantiate()
+		attack_row_holder.add_child(attack_row)
+		attack_row.setup(hero)
 		i += 1
 	
+	i = 0
+	for monster: Monster in get_tree().get_nodes_in_group("Monsters"):
+		monsters.append(monster)
+		monster.slot = i
+		var new_select := MonsterSelect.create(monster)
+		ui.monster_list.add_child(new_select)
+		i += 1
+		
 	ui.context = ui.Context.ACTIONS
 	ui.selected_hero = first_hero_alive()
 	context = Context.MENU
@@ -100,6 +115,27 @@ func execute_actions() -> void:
 	#items
 	#spare
 	#attack
+	for hero in hero_actions:
+		var action: Hero.Action = hero_actions[hero]
+		if action.type == Hero.ActionType.FIGHT:
+			attackers.append(hero)
+	if attackers:
+		var order_array: Array[int] = [0]
+		var old_attackers: Array[Hero] = attackers.duplicate()
+		attackers = []
+		while old_attackers.size() > 0:
+			var attacker: Hero = old_attackers.pick_random()
+			attackers.append(attacker)
+			old_attackers.erase(attacker)
+			attacker.attack_order = [0,1,2].pick_random()
+			order_array.append(attacker.attack_order)
+		attackers[0].attack_order = 0
+		if order_array.size() >= 3 and order_array.count(0) >= 3:
+			attackers[-1].attack_order = [1,2].pick_random()
+		await ui.start_hero_attack()
+	for attacker in attackers: 
+		attacker.play_animation("idle")
+	attackers.clear()
 	#defend
 	for hero in hero_actions:
 		var action: Hero.Action = hero_actions[hero]

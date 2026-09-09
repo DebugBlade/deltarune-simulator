@@ -15,6 +15,7 @@ enum ActionType {
 
 @export var id: ID
 @export var color: Color = Color.WHITE
+@export var secondary_color: Color = Color.WHITE
 @export var icon_list: Dictionary[CharacterTab.Icon, Texture2D] = {
 	CharacterTab.Icon.NORMAL: null,
 	CharacterTab.Icon.ATTACK: null,
@@ -29,8 +30,11 @@ enum ActionType {
 
 var defending: bool = false
 var action := Action.new()
+var attack_order: int
+var attacking_frames: int
 #var targets: Array[Character]
 
+var attack_row: AttackRow
 var char_tab: CharacterTab
 var buttons: Dictionary[Hero.ActionType, ActionButton]
 var memory: Dictionary
@@ -38,6 +42,10 @@ var pos_tween: Tween
 
 func _init() -> void:
 	add_to_group("Heroes")
+
+func _ready() -> void:
+	super()
+	sprite.animation_finished.connect(_on_animation_finished)
 
 func set_hp(new_hp: int) -> void:
 	super(new_hp)
@@ -91,6 +99,13 @@ func reset() -> void:
 	if hp > 0:
 		play_animation("idle")
 		char_tab.icon = CharacterTab.Icon.NORMAL
+
+func _on_animation_finished() -> void:
+	var animation: StringName = sprite.animation
+	match animation:
+		"attack":
+			char_tab.icon = CharacterTab.Icon.NORMAL
+			#deal damage
 
 class Action:
 	var type: ActionType

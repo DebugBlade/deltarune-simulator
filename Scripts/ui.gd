@@ -1,6 +1,8 @@
 class_name UI
 extends CanvasLayer
 
+signal attack_finish
+
 enum Context {
 	DISABLED,
 	ACTIONS,
@@ -12,21 +14,29 @@ enum Context {
 }
 
 enum BottomPanel {
+	NONE = -1,
 	TEXT,
 	ALLIES,
 	MONSTERS,
 	ACTS,
 	ITEMS,
+	ATTACK,
 }
 
 const MENU_MOVE = preload("uid://b38k0k8dyd7wa")
 const MENU_SELECT = preload("uid://cu888mwskmipd")
+
+const MONSTER_SELECT = preload("uid://qa62ttsvb87g")
+
+static var soul_ui: TextureRect
 
 var previous_context := Context.DISABLED
 var context := Context.DISABLED:
 	set(new_context):
 		previous_context = context
 		match new_context:
+			Context.DISABLED:
+				change_panel(BottomPanel.NONE)
 			Context.ACTIONS:
 				change_panel(BottomPanel.TEXT)
 				if not selected_hero:
@@ -35,6 +45,7 @@ var context := Context.DISABLED:
 				change_panel(BottomPanel.ALLIES)
 			Context.MONSTERS:
 				change_panel(BottomPanel.MONSTERS)
+				selected_selectable = selected_hero.memory.get("monster", monster_list.get_children()[0])
 			Context.ACTS:
 				change_panel(BottomPanel.ACTS)
 			Context.MAGICS:
@@ -62,9 +73,29 @@ var selected_button: ActionButton:
 		if new_button:
 			new_button.texture = new_button.hover_texture
 		selected_button = new_button
+var selected_selectable: Selectable:
+	set(new_select):
+		if selected_selectable:
+			selected_selectable.focused = false
+		if new_select:
+			new_select.focused = true
+		selected_selectable = new_select
+
+var attacker_index: int = 0
 
 @onready var battle: Battle = Battle.current
 @onready var bottom_panel: Control = $BattleMenu/BottomPanel
+@onready var monster_list: VBoxContainer = $BattleMenu/BottomPanel/Monsters/MonsterList
+@onready var attack_row_holder: VBoxContainer = $BattleMenu/BottomPanel/Attack/AttackRowHolder
+
+
+func _ready() -> void:
+	UI.soul_ui = TextureRect.new()
+	UI.soul_ui.texture = preload("uid://de0ojh375qrh0")
+	UI.soul_ui.hide()
+	if Global.chapter == 1:
+		var mercy: Label = $BattleMenu/BottomPanel/Monsters/MERCY
+		mercy.hide()
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -91,7 +122,14 @@ func _unhandled_key_input(event: InputEvent) -> void:
 				selected_hero.play_animation("defend")
 				selected_hero.char_tab.icon = CharacterTab.Icon.DEFEND
 				selected_hero.memory["tp"] = battle.add_tp(40)
+				selected_hero.action.type = Hero.ActionType.DEFEND
 				next_hero()
+		elif context == Context.MONSTERS:
+			SoundManager.create_audio(MENU_SELECT)
+			selected_hero.play_animation("attack_ready")
+			selected_hero.char_tab.icon = CharacterTab.Icon.ATTACK
+			selected_hero.action.type = Hero.ActionType.FIGHT
+			next_hero()
 	elif event.is_action_pressed("Cancel"):
 		if context == Context.ACTIONS:
 			previous_hero()
@@ -109,9 +147,13 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			selected_button = selected_button.next_button
 			SoundManager.create_audio(MENU_MOVE)
 	elif event.is_action_pressed("Up"):
-		pass
+		match context:
+			Context.MONSTERS:
+				shift_monster(-1)
 	elif event.is_action_pressed("Down"):
-		pass
+		match context:
+			Context.MONSTERS:
+				shift_monster(1)
 	else:
 		return
 
@@ -126,11 +168,12 @@ func previous_hero() -> void:
 			new_hero.play_animation("idle")
 			new_hero.char_tab.icon = CharacterTab.Icon.NORMAL
 			SoundManager.create_audio(MENU_MOVE)
-			var tp_used: float = new_hero.memory.get("tp", null)
+			var tp_used: float = new_hero.memory.get("tp", 0)
 			if tp_used:
 				new_hero.memory.erase("tp")
 				battle.add_tp(-tp_used)
 			selected_hero = new_hero
+			context = Context.ACTIONS
 			break
 
 func next_hero() -> void:
@@ -142,6 +185,7 @@ func next_hero() -> void:
 		var new_hero: Hero = battle.heroes.get(slot)
 		if new_hero and new_hero.hp > 0:
 			selected_hero = new_hero
+			context = Context.ACTIONS
 			break
 
 func finish_menu() -> void:
@@ -150,7 +194,47 @@ func finish_menu() -> void:
 	selected_hero = null
 	selected_button = null
 
+func start_hero_attack() -> void:
+	var global_offset: float = 0
+	attacker_index = 0
+	change_panel(BottomPanel.ATTACK)
+	battle.attackers[0].attack_row.active = true
+	for attacker: Hero in battle.attackers:
+		global_offset += attacker.attack_row.create_bolt(global_offset)
+	await attack_finish
+
+func check_next_bolt() -> void:
+	attacker_index += 1
+	if attacker_index >= battle.attackers.size():
+		await get_tree().create_timer(2.0).timeout
+		attack_finish.emit()
+		return
+	var attacker: Hero = battle.attackers[attacker_index]
+	attacker.attack_row.active = true
+	if attacker.attack_order == 0:
+		attacker.attack_row.trigger_attack()
+		
+
 func change_panel(panel_id: BottomPanel) -> void:
 	for panel: Control in bottom_panel.get_children():
 		panel.hide()
-	(bottom_panel.get_child(panel_id) as Control).show()
+	if panel_id != BottomPanel.NONE:
+		(bottom_panel.get_child(panel_id) as Control).show()
+
+func shift_monster(amount: int) -> void:
+	var monster_select: MonsterSelect = selected_selectable
+	var monster_count: int = battle.monsters.size()
+	if monster_count > 1:
+		selected_selectable = monster_list.get_children() \
+		[wrapi(monster_select.monster.slot + amount, 0, monster_count)]
+		SoundManager.create_audio(MENU_MOVE)
+
+
+
+
+
+
+
+
+
+#

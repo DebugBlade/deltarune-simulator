@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://qa62ttsvb87g"]
+
+[ext_resource type="FontFile" uid="uid://dmkl06dfd8qup" path="res://Fonts/8BitOperatorJVE.ttf" id="1_2bu41"]
+[ext_resource type="Script" uid="uid://c0ridqros2kxo" path="res://Scripts/monster_select.gd" id="1_2fpp6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6jpx"]
+bg_color = Color(0.5019608, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1fef"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fpp6"]
+bg_color = Color(1, 0.3137255, 0.1254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48ru5"]
+bg_color = Color(1, 1, 0, 1)
+
+[node name="MonsterSelect" type="Control" unique_id=1634118442 node_paths=PackedStringArray("label", "soul_marker")]
+custom_minimum_size = Vector2(560, 26)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 560.0
+offset_bottom = 26.0
+script = ExtResource("1_2fpp6")
+label = NodePath("Name")
+soul_marker = NodePath("SoulMarker")
+metadata/_custom_type_script = "uid://c0ridqros2kxo"
+
+[node name="SoulMarker" type="Control" parent="." unique_id=2109571383]
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 1
+anchor_left = 0.011000001
+anchor_top = 0.231
+anchor_right = 0.011000001
+anchor_bottom = 0.231
+offset_left = -0.16000032
+offset_top = -0.006000042
+offset_right = 15.84
+offset_bottom = 15.9939995
+
+[node name="Name" type="Label" parent="." unique_id=1692563576]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -4.0
+offset_right = 129.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_2bu41")
+theme_override_font_sizes/font_size = 32
+text = "Pippins"
+
+[node name="HPBar" type="ProgressBar" parent="." unique_id=361902740]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 1.0
+offset_right = 452.0
+offset_bottom = 17.0
+theme_override_styles/background = SubResource("StyleBoxFlat_x6jpx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s1fef")
+step = 0.0
+value = 75.0
+show_percentage = false
+
+[node name="HPPercent" type="Label" parent="HPBar" unique_id=1963439223]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 39.0
+offset_bottom = 16.0
+scale = Vector2(2, 1)
+theme_override_fonts/font = ExtResource("1_2bu41")
+theme_override_font_sizes/font_size = 16
+text = "100%"
+
+[node name="MercyBar" type="ProgressBar" parent="." unique_id=1890013439]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 1.0
+offset_right = 552.0
+offset_bottom = 17.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2fpp6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_48ru5")
+step = 0.0
+value = 75.0
+show_percentage = false
+
+[node name="MercyPercent" type="Label" parent="MercyBar" unique_id=1959132906]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 37.0
+offset_bottom = 16.0
+scale = Vector2(2, 1)
+theme_override_colors/font_color = Color(0.5019608, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_2bu41")
+theme_override_font_sizes/font_size = 16
+text = "0%"
