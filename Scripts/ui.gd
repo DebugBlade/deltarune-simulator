@@ -204,15 +204,15 @@ func start_hero_attack() -> void:
 		global_offset += attacker.attack_row.create_bolt(global_offset)
 	await attack_finish
 
-func check_next_bolt() -> void:
+func check_next_bolt(prev_row: AttackRow) -> void:
 	attacker_index += 1
 	if attacker_index >= battle.attackers.size():
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.75).timeout
 		attack_finish.emit()
 		return
 	var attacker: Hero = battle.attackers[attacker_index]
 	attacker.attack_row.active = true
-	if attacker.attack_order == 0:
+	if attacker.attack_order == 0 and not prev_row.miss:
 		attacker.attack_row.trigger_attack()
 		
 
@@ -229,13 +229,3 @@ func shift_monster(amount: int) -> void:
 		selected_selectable = monster_list.get_children() \
 		[wrapi(monster_select.monster.slot + amount, 0, monster_count)]
 		SoundManager.create_audio(MENU_MOVE)
-
-
-
-
-
-
-
-
-
-#

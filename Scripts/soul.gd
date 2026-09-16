@@ -117,14 +117,3 @@ func disable() -> void:
 func enable() -> void:
 	enabled = true
 	show()
-
-
-
-
-
-
-
-
-
-
-#

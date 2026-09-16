@@ -27,10 +27,3 @@ func dissapear() -> void:
 	await animated_sprite_2d.animation_finished
 	if animated_sprite_2d.animation == "End":
 		hide()
-
-
-
-
-
-
-#

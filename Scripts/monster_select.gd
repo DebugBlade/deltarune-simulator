@@ -32,9 +32,3 @@ func update_values() -> void:
 	mercy_bar.max_value = monster.MAX_MERCY
 	mercy_bar.value = monster.mercy
 	mercy_percent.text = str(roundi((float(monster.mercy) / monster.MAX_MERCY) * 100.0)) + "%"
-
-
-
-
-
-#

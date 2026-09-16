@@ -71,8 +71,3 @@ func get_percent(value: float) -> float:
 
 func get_foam_position(percent: float) -> float:
 	return 187 - (percent * 187) - 2.0
-
-
-
-
-#

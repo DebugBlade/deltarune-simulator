@@ -129,8 +129,7 @@ func trigger_attack() -> void:
 		if accuracy >= 15: #unknown what this for
 			afterimage.modulate = hero.color
 	
-	if not miss:
-		Battle.current.ui.check_next_bolt()
+	Battle.current.ui.check_next_bolt(self)
 
 	while Battle.current.attack_delay:
 		await get_tree().process_frame
@@ -148,8 +147,3 @@ func calculate_accuracy() -> int:
 		return roundi( (bolt.position.x - bolt_crit_marker.position.x) / (BOLT_SPEED/30.0))
 	printerr("No Bolt Found")
 	return 0
-
-
-
-
-#

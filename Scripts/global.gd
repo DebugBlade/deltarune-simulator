@@ -65,14 +65,3 @@ func bankers_round(number: float) -> int:
 		return floored if floored % 2 == 0 else floored + 1
 	
 	return roundi(number)
-
-
-
-
-
-
-
-
-
-
-#

@@ -169,16 +169,3 @@ func last_hero_alive() -> Hero:
 			last_alive = hero
 			break
 	return last_alive
-
-
-
-
-
-
-
-
-
-
-
-
-#

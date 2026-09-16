@@ -113,12 +113,3 @@ func update_borders_color(color: Color) -> void:
 	border_stylebox.border_color = color
 	line_spawn_left.modulate = color
 	line_spawn_right.modulate = color
-
-
-
-
-
-
-
-
-#

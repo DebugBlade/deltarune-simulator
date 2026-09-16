@@ -39,12 +39,3 @@ func get_center() -> Vector2:
 	var size: Vector2 = texture.get_size() * scale
 	var real_offset: Vector2 = sprite.offset * scale
 	return (global_position + real_offset) + (size / 2.0)
-
-
-
-
-
-
-
-
-#
