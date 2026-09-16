@@ -22,6 +22,8 @@ var border_color: Color:
 var active: bool = false
 var bolt: Control
 var bolt_moving: bool = true
+var accuracy: int
+var miss: bool = false
 var afterimage_cooldown: float = 0
 
 var custom_process: float
@@ -66,14 +68,17 @@ func _process(delta: float) -> void:
 func _process_30fps(delta: float) -> void:
 	if bolt and bolt_moving:
 		bolt.position.x -= BOLT_SPEED * delta
+		accuracy = calculate_accuracy()
 		
-		if calculate_accuracy() <= -1:
+		if accuracy <= -1:
 			bolt.modulate.a = 0
 		
-		if calculate_accuracy() <= -5:
+		if accuracy <= -5:
+			miss = true
 			trigger_attack()
 
 func create_bolt(global_offset: float) -> float:
+	miss = false
 	bolt = BOLT_SCENE.instantiate()
 	add_child(bolt)
 	bolt.add_to_group("Bolts")
@@ -96,8 +101,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func trigger_attack() -> void:
 	var target: Monster = hero.action.targets[0]
-	var accuracy: int = calculate_accuracy()
-	
 	
 	active = false
 	bolt_moving = false
@@ -109,7 +112,7 @@ func trigger_attack() -> void:
 	afterimage.position = bolt.position
 	bolt.queue_free()
 	
-	if accuracy <= -5:
+	if miss:
 		hero.accuracy_points = 0
 		afterimage.queue_free()
 	else:
@@ -126,11 +129,13 @@ func trigger_attack() -> void:
 		if accuracy >= 15: #unknown what this for
 			afterimage.modulate = hero.color
 	
-	Battle.current.ui.check_next_bolt()
+	if not miss:
+		Battle.current.ui.check_next_bolt()
 
 	while Battle.current.attack_delay:
 		await get_tree().process_frame
 
+	
 	Battle.current.attack_delay = true
 	get_tree().create_timer(1/30.0).timeout.connect(func()-> void:
 		Battle.current.attack_delay = false)
@@ -140,10 +145,9 @@ func trigger_attack() -> void:
 	
 func calculate_accuracy() -> int:
 	if bolt:
-		print(roundi( abs(bolt.position.x - bolt_crit_marker.position.x) / (BOLT_SPEED/30.0)))
 		return roundi( (bolt.position.x - bolt_crit_marker.position.x) / (BOLT_SPEED/30.0))
+	printerr("No Bolt Found")
 	return 0
-
 
 
 

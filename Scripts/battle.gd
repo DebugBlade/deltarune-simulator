@@ -98,15 +98,10 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Debug Spawn"):
-		#var bullet: BasicBullet = DIAMOND_BULLET.instantiate()
-		#add_child(bullet)
-		#bullet.global_position = get_global_mouse_position()
-		#bullet.look_at(Soul.current.position)
-		
-		var new: BattleMSG = preload("uid://dn4r03tci2qfb").instantiate()
-		new.delay = 0.2667
-		add_child(new)
-		new.global_position = get_global_mouse_position()
+		var bullet: BasicBullet = DIAMOND_BULLET.instantiate()
+		add_child(bullet)
+		bullet.global_position = get_global_mouse_position()
+		bullet.look_at(Soul.current.position)
 
 
 func execute_actions() -> void:
