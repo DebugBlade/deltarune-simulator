@@ -13,9 +13,13 @@ enum ActionType {
 	DEFEND,
 }
 
+const CRITICAL_POINTS = 150
+const CRITICAL_PARTICLE = preload("uid://ylljl0w7dfgu")
+
 @export var id: ID
 @export var color: Color = Color.WHITE
 @export var secondary_color: Color = Color.WHITE
+@export var can_use_magic: bool = true
 @export var icon_list: Dictionary[CharacterTab.Icon, Texture2D] = {
 	CharacterTab.Icon.NORMAL: null,
 	CharacterTab.Icon.ATTACK: null,
@@ -26,12 +30,12 @@ enum ActionType {
 	CharacterTab.Icon.DEFEND: null,
 	CharacterTab.Icon.HURT: null,
 }
-@export var can_use_magic: bool = true
-
+@export var attack_effect: SpriteFrames
+@export var attack_pitch: float = 1.0
 var defending: bool = false
 var action := Action.new()
 var attack_order: int
-var attacking_frames: int
+var accuracy_points: float
 #var targets: Array[Character]
 
 var attack_row: AttackRow
@@ -39,6 +43,8 @@ var char_tab: CharacterTab
 var buttons: Dictionary[Hero.ActionType, ActionButton]
 var memory: Dictionary
 var pos_tween: Tween
+
+@onready var crit_spawn: Node2D = $CritSpawn
 
 func _init() -> void:
 	add_to_group("Heroes")
@@ -52,7 +58,8 @@ func set_hp(new_hp: int) -> void:
 	if char_tab:
 		char_tab.update_hp()
 
-func take_damage(damage: int) -> void:
+func take_damage(damage: int, character: Character) -> void:
+	var monster: Monster = character
 	if Global.chapter == 1:
 		damage = ceili(damage - (defense * 3))
 	else:
@@ -107,6 +114,57 @@ func _on_animation_finished() -> void:
 			char_tab.icon = CharacterTab.Icon.NORMAL
 			#deal damage
 
+func attack_enemy() -> void:
+	const ATTACK_SWING = preload("uid://v0umdylodrtd")
+	const ATTACK_CRITICAL_SWING = preload("uid://c6o0tlpbhhtpa")
+	var target: Monster = action.targets[0]
+	
+	SoundManager.create_audio_interrupt(ATTACK_SWING, 1.0, attack_pitch)
+	if accuracy_points == CRITICAL_POINTS:
+		SoundManager.create_audio_interrupt(ATTACK_CRITICAL_SWING, 1.0, attack_pitch)
+		for i in 3:
+			var sparkle: AnimatedAfterimage = CRITICAL_PARTICLE.instantiate()
+			Battle.current.add_child(sparkle)
+			sparkle.move_speed.x = (2 + randf_range(0, 4.0)) * 30.0
+			sparkle.acceleration.x = 0.25 * (30 * 30) # double because that's how acceleration works with delta time? this took me hours to figure out sob
+			sparkle.position = crit_spawn.global_position + Vector2(randf_range(0, 50.0), randf_range(0, 30.0))
+	
+	play_animation("attack")
+	await get_tree().create_timer(0.334).timeout
+	
+	var new_effect := AnimatedSprite2D.new()
+	new_effect.sprite_frames = attack_effect
+	new_effect.scale = Vector2(2.0, 2.0)
+	new_effect.play()
+	new_effect.animation_finished.connect(new_effect.queue_free)
+	Battle.current.add_child(new_effect)
+	new_effect.global_position = target.get_center()
+	if accuracy_points == CRITICAL_POINTS:
+		new_effect.scale = Vector2(2.5, 2.5)
+	
+	if id == ID.SUSIE:
+		ShakeCamera.current.shake()
+
+	var damage: int = Global.bankers_round( (accuracy_points * attack) / 20.0)
+	target.take_damage(damage, self)
+	
+	if damage > 0:
+		if target.id == Monster.IDS.JEVIL:
+			Battle.current.add_tp(accuracy_points / 15.0)
+		else:
+			Battle.current.add_tp(accuracy_points / 10.0)
+
+	
+func get_size() -> Vector2:
+	var texture: Texture2D = sprite.sprite_frames.get_frame_texture(sprite.animation, sprite.frame)
+	return texture.get_size() * scale
+
+func get_top_left() -> Vector2:
+	if sprite.centered:
+		return sprite.global_position - (get_size() / 2) + sprite.offset * sprite.global_scale
+	else:
+		return sprite.global_position + (sprite.offset * sprite.global_scale)
+	
 class Action:
 	var type: ActionType
 	var targets: Array[Character]

@@ -7,7 +7,7 @@ class_name Bullet
 @export var graze_timepoints: float = 1.0
 
 var grazed: bool
-
+var monster: Monster
 
 func _ready() -> void:
 	var destroyer:= VisibleOnScreenNotifier2D.new()

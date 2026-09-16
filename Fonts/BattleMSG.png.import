@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://8l1ddc2nraku"
+path="res://.godot/imported/BattleMSG.png-ffed5a6900009d40febd32655d1c7012.fontdata"
+
+[deps]
+
+source_file="res://Fonts/BattleMSG.png"
+dest_files=["res://.godot/imported/BattleMSG.png-ffed5a6900009d40febd32655d1c7012.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("\'0\'-\'9\'", "\'+\'", "\'-\'", "\'%\'", "\' \'")
+kerning_pairs=PackedStringArray()
+columns=14
+rows=1
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(0, 0, 0, 0)
+ascent=0
+descent=0
+fallbacks=[]
+compress=true
+scaling_mode=2

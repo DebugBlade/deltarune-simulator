@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dn4r03tci2qfb"]
+
+[ext_resource type="FontFile" uid="uid://8l1ddc2nraku" path="res://Fonts/BattleMSG.png" id="1_evr8m"]
+[ext_resource type="Script" uid="uid://pfa8yugolciv" path="res://Scripts/battle_msg.gd" id="2_ouwk3"]
+[ext_resource type="Texture2D" uid="uid://br0b1m5gjkb1j" path="res://Assets/UI/Battle/BattleMSG/battle_msg_miss.png" id="3_a2jtn"]
+
+[node name="BattleMSG" type="Control" unique_id=1502875790]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 36.0
+offset_bottom = 26.0
+script = ExtResource("2_ouwk3")
+
+[node name="Label" type="Label" parent="." unique_id=1740017089]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("1_evr8m")
+theme_override_font_sizes/font_size = 20
+text = "234"
+horizontal_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1452744634]
+visible = false
+layout_mode = 0
+offset_left = -40.0
+offset_top = -10.0
+offset_right = 34.0
+offset_bottom = 10.0
+texture = ExtResource("3_a2jtn")

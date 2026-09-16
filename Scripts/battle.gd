@@ -43,8 +43,9 @@ var tp: float = 0.0:
 var attack_timer: float = 0.0
 var heroes: Array[Hero] = []
 var monsters: Array[Monster] = []
-var targets: Array[Character]
+var targets: Array[Hero]
 var attackers: Array[Hero] = []
+var attack_delay: bool
 
 @onready var ui: UI = $UI
 @onready var character_tab_holder: HBoxContainer = $UI/BattleMenu/Characters
@@ -53,6 +54,7 @@ var attackers: Array[Hero] = []
 
 func _init() -> void:
 	Battle.current = self
+	BattleMSG.damage_type_count = 0
 
 func _ready() -> void:
 	($Reference as CanvasLayer).hide()
@@ -96,10 +98,15 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Debug Spawn"):
-		var bullet: BasicBullet = DIAMOND_BULLET.instantiate()
-		add_child(bullet)
-		bullet.global_position = get_global_mouse_position()
-		bullet.look_at(Soul.current.position)
+		#var bullet: BasicBullet = DIAMOND_BULLET.instantiate()
+		#add_child(bullet)
+		#bullet.global_position = get_global_mouse_position()
+		#bullet.look_at(Soul.current.position)
+		
+		var new: BattleMSG = preload("uid://dn4r03tci2qfb").instantiate()
+		new.delay = 0.2667
+		add_child(new)
+		new.global_position = get_global_mouse_position()
 
 
 func execute_actions() -> void:

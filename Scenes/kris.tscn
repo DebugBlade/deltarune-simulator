@@ -21,8 +21,11 @@
 [ext_resource type="Texture2D" uid="uid://tmx5em0hol4e" path="res://Assets/Battle/Kris/Idle/spr_krisb_idle_5.png" id="6_83gku"]
 [ext_resource type="Texture2D" uid="uid://6ajfch5sa5ut" path="res://Assets/Battle/Kris/ACTs/spr_krisb_act_5.png" id="6_qopei"]
 [ext_resource type="Texture2D" uid="uid://bn0tn2o2pjhm5" path="res://Assets/Battle/Kris/ACTs/spr_krisb_act_6.png" id="7_kmpkf"]
+[ext_resource type="Texture2D" uid="uid://cqwug54vsfad0" path="res://Assets/Battle/Effects/kris_attack1.png" id="8_hx6a5"]
 [ext_resource type="Texture2D" uid="uid://d1msiyrsie7w4" path="res://Assets/Battle/Kris/ACTs/spr_krisb_act_7.png" id="8_qhfks"]
+[ext_resource type="Texture2D" uid="uid://divkm5chq5i8i" path="res://Assets/Battle/Effects/kris_attack2.png" id="9_a2t2l"]
 [ext_resource type="Texture2D" uid="uid://bku1fvn01kvom" path="res://Assets/Battle/Kris/ACTs/spr_krisb_act_8.png" id="9_j8s87"]
+[ext_resource type="Texture2D" uid="uid://fsspmewj3gdl" path="res://Assets/Battle/Effects/kris_attack3.png" id="10_50ufe"]
 [ext_resource type="Texture2D" uid="uid://b0we4cqf0ehfa" path="res://Assets/Battle/Kris/ACTs/spr_krisb_act_9.png" id="10_vuga2"]
 [ext_resource type="Texture2D" uid="uid://bccnmrsk6yv3c" path="res://Assets/Battle/Kris/ACTs/spr_krisb_act_10.png" id="11_1x4i3"]
 [ext_resource type="Texture2D" uid="uid://wdvtiwp4xrjd" path="res://Assets/Battle/Kris/Attack/spr_krisb_attackready_0.png" id="14_ncc2w"]
@@ -65,6 +68,23 @@
 [ext_resource type="Texture2D" uid="uid://ctbn7xniwfdl7" path="res://Assets/UI/Battle/Kris/kris_item.png" id="76_5hpis"]
 [ext_resource type="Texture2D" uid="uid://ree2opj38ssl" path="res://Assets/UI/Battle/Kris/kris_spare.png" id="77_varmq"]
 [ext_resource type="Texture2D" uid="uid://4dtna0lh260a" path="res://Assets/UI/Battle/Kris/kris_defend.png" id="78_c2bx8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1q8yf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_hx6a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a2t2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_50ufe")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="Animation" id="Animation_pkwaf"]
 length = 0.001
@@ -548,9 +568,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_ncc2w")
-}, {
-"duration": 1.0,
 "texture": ExtResource("15_3fdvm")
 }, {
 "duration": 1.0,
@@ -765,10 +782,12 @@ animations = [{
 }]
 
 [node name="Kris" type="Node2D" unique_id=1419149841]
+scale = Vector2(2, 2)
 script = ExtResource("71_ncc2w")
 id = 1
 color = Color(0, 1, 1, 1)
 secondary_color = Color(0, 0, 1, 1)
+can_use_magic = false
 icon_list = Dictionary[int, Texture2D]({
 0: ExtResource("72_7ex5k"),
 1: ExtResource("73_653f6"),
@@ -779,7 +798,7 @@ icon_list = Dictionary[int, Texture2D]({
 6: ExtResource("78_c2bx8"),
 7: ExtResource("72_7ex5k")
 })
-can_use_magic = false
+attack_effect = SubResource("SpriteFrames_1q8yf")
 char_name = "Kris"
 max_hp = 90
 metadata/_custom_type_script = "uid://clisitchkxafw"
@@ -790,8 +809,10 @@ libraries/ = SubResource("AnimationLibrary_4rk4a")
 autoplay = &"idle"
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1684145832]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_x6cgy")
 animation = &"idle"
 autoplay = "idle"
 offset = Vector2(6, -19)
+
+[node name="CritSpawn" type="Node2D" parent="." unique_id=2115742959]
+position = Vector2(25, -23)

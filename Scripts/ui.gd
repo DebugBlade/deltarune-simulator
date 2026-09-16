@@ -129,6 +129,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			selected_hero.play_animation("attack_ready")
 			selected_hero.char_tab.icon = CharacterTab.Icon.ATTACK
 			selected_hero.action.type = Hero.ActionType.FIGHT
+			selected_hero.action.targets = [(selected_selectable as MonsterSelect).monster]
 			next_hero()
 	elif event.is_action_pressed("Cancel"):
 		if context == Context.ACTIONS:

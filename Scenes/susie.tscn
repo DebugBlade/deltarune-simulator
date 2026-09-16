@@ -10,9 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://bsng45130hn52" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_7.png" id="8_tx3ac"]
 [ext_resource type="Texture2D" uid="uid://ce6ylfefnce3n" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_8.png" id="9_mrmyf"]
 [ext_resource type="Texture2D" uid="uid://ba4imji8jc868" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_9.png" id="10_ac7ss"]
+[ext_resource type="Texture2D" uid="uid://c682r5qy0j1a7" path="res://Assets/Battle/Effects/susie_attack1.png" id="10_uu3bs"]
+[ext_resource type="Texture2D" uid="uid://bis4w1jgydsk6" path="res://Assets/Battle/Effects/susie_attack2.png" id="11_7iljm"]
 [ext_resource type="Texture2D" uid="uid://cfi2okx52t15p" path="res://Assets/Battle/Susie/ACTs/spr_susieb_act_10.png" id="11_tg2bk"]
+[ext_resource type="Texture2D" uid="uid://cqxx0wiy21700" path="res://Assets/Battle/Effects/susie_attack3.png" id="12_nfc81"]
 [ext_resource type="Texture2D" uid="uid://ct4opfcdg13ue" path="res://Assets/Battle/Susie/ACTs/spr_susieb_actready_0.png" id="12_qg1ct"]
 [ext_resource type="Texture2D" uid="uid://b64wbscky3ehh" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_0.png" id="13_itphc"]
+[ext_resource type="Texture2D" uid="uid://di47uij84pe37" path="res://Assets/Battle/Effects/susie_attack4.png" id="13_wwjoi"]
 [ext_resource type="Texture2D" uid="uid://063mvyxj2oxx" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_1.png" id="14_tuvdy"]
 [ext_resource type="Texture2D" uid="uid://dm1dlml1pxqvq" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_2.png" id="15_dkk7l"]
 [ext_resource type="Texture2D" uid="uid://b7peit0rbxb8t" path="res://Assets/Battle/Susie/Attack/spr_susieb_attack_3.png" id="16_vmp32"]
@@ -86,6 +90,26 @@
 [ext_resource type="Texture2D" uid="uid://chovyxdmus4dh" path="res://Assets/UI/Battle/Susie/susie_spare.png" id="77_blfru"]
 [ext_resource type="Texture2D" uid="uid://bavxes5swr0p6" path="res://Assets/UI/Battle/Susie/susie_defend.png" id="78_jqxed"]
 [ext_resource type="Texture2D" uid="uid://bnftaf4qvidtn" path="res://Assets/UI/Battle/Susie/susie_hurt.png" id="79_b14m2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ddyvx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_uu3bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7iljm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nfc81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wwjoi")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
 
 [sub_resource type="Animation" id="Animation_pkwaf"]
 length = 0.001
@@ -867,6 +891,7 @@ animations = [{
 }]
 
 [node name="Hero" type="Node2D" unique_id=743459486]
+scale = Vector2(2, 2)
 script = ExtResource("71_g5dpo")
 id = 2
 color = Color(1, 0, 1, 1)
@@ -881,6 +906,8 @@ icon_list = Dictionary[int, Texture2D]({
 6: ExtResource("78_jqxed"),
 7: ExtResource("79_b14m2")
 })
+attack_effect = SubResource("SpriteFrames_ddyvx")
+attack_pitch = 0.9
 char_name = "Susie"
 max_hp = 110
 metadata/_custom_type_script = "uid://clisitchkxafw"
@@ -891,9 +918,11 @@ libraries/ = SubResource("AnimationLibrary_4rk4a")
 autoplay = &"idle"
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=773453305]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_x6cgy")
 animation = &"idle"
 autoplay = "idle"
 centered = false
 offset = Vector2(-36, -44)
+
+[node name="CritSpawn" type="Node2D" parent="." unique_id=950366002]
+position = Vector2(24, -29)

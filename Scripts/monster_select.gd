@@ -20,8 +20,9 @@ func _ready() -> void:
 	label.text = monster.char_name
 	update_values()
 	if Global.chapter == 1:
-			hp_percent.hide()
-			mercy_bar.hide()
+		hp_percent.hide()
+		mercy_bar.hide()
+	monster.hp_changed.connect(update_values)
 
 func update_values() -> void:
 	hp_bar.max_value = monster.max_hp

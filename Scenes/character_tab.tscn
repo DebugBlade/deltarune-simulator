@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://85xkxflbxeij" path="res://Assets/UI/Battle/Kris/kris_name.png" id="3_ryy6n"]
 [ext_resource type="Texture2D" uid="uid://ckakx1ll5yt07" path="res://Assets/UI/Battle/HP.png" id="4_6kiww"]
 [ext_resource type="Texture2D" uid="uid://cdtb11h25ncfc" path="res://Assets/UI/Battle/HP_Slash.png" id="5_qaw6v"]
-[ext_resource type="FontFile" uid="uid://cigcaiw474ud8" path="res://Assets/UI/Battle/hp_numbers.png" id="6_eu80j"]
+[ext_resource type="FontFile" uid="uid://cigcaiw474ud8" path="res://Fonts/hp_numbers.png" id="6_eu80j"]
 [ext_resource type="Texture2D" uid="uid://c6autmdlngqlf" path="res://Assets/UI/Battle/Actions/FightHover.png" id="7_6kiww"]
 [ext_resource type="Script" uid="uid://onquynnkqx5e" path="res://Scripts/action_button.gd" id="8_qaw6v"]
 [ext_resource type="Texture2D" uid="uid://bov72anjdgqdb" path="res://Assets/UI/Battle/Actions/Fight.png" id="9_eu80j"]

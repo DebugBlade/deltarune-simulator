@@ -103,7 +103,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		bullet.on_player_hit(true if invincibility_timer > 0 else false)
 		if invincibility_timer <= 0:
 			for target in battle.targets:
-				target.take_damage(bullet.damage)
+				target.take_damage(bullet.damage, bullet.monster)
 			invincibility_timer = invincibility_time
 			animated_sprite_2d.play("hurt")
 			SoundManager.create_audio(preload("uid://c4pg4iqvx3ofl"))

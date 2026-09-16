@@ -9,10 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://dct067uwlnewl" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_6.png" id="7_uukoc"]
 [ext_resource type="Texture2D" uid="uid://dcrp1v4v438yl" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_7.png" id="8_ibqyf"]
 [ext_resource type="Texture2D" uid="uid://clcisklxgmp2y" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_8.png" id="9_vtwp7"]
+[ext_resource type="Texture2D" uid="uid://bpj84hdwnu3ob" path="res://Assets/Battle/Effects/ralsei_attack1.png" id="10_0hph3"]
 [ext_resource type="Texture2D" uid="uid://nxnb5r5jvimi" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_9.png" id="10_p3s0w"]
 [ext_resource type="Texture2D" uid="uid://daskkiowj13xt" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_act_10.png" id="11_0hph3"]
+[ext_resource type="Texture2D" uid="uid://dkks7qt5mht7i" path="res://Assets/Battle/Effects/ralsei_attack2.png" id="11_sw6dw"]
+[ext_resource type="Texture2D" uid="uid://b7r63aqud8swc" path="res://Assets/Battle/Effects/ralsei_attack3.png" id="12_7dhjh"]
 [ext_resource type="Texture2D" uid="uid://1gae5ij2nye1" path="res://Assets/Battle/Ralsei/ACTs/spr_ralseib_actready_0.png" id="12_vtwp7"]
 [ext_resource type="Texture2D" uid="uid://ci0uc15iosviw" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_0.png" id="13_p3s0w"]
+[ext_resource type="Texture2D" uid="uid://rwdwnidaj6ge" path="res://Assets/Battle/Effects/ralsei_attack4.png" id="13_ymopn"]
 [ext_resource type="Texture2D" uid="uid://bhqk8dwapjr48" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_1.png" id="14_0hph3"]
 [ext_resource type="Texture2D" uid="uid://vfj7afmaq7xd" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_2.png" id="15_sw6dw"]
 [ext_resource type="Texture2D" uid="uid://4u4j54fwm0be" path="res://Assets/Battle/Ralsei/Attack/spr_ralseib_attack_3.png" id="16_7dhjh"]
@@ -92,6 +96,26 @@
 [ext_resource type="Texture2D" uid="uid://dnjyhyh5e0olx" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_14.png" id="86_ue1tb"]
 [ext_resource type="Texture2D" uid="uid://c4gv710e7q1kj" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_15.png" id="87_xfxbw"]
 [ext_resource type="Texture2D" uid="uid://docb4duwb17fx" path="res://Assets/Battle/Ralsei/Victory/spr_ralseib_victory_16.png" id="88_olpvf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wkise"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_0hph3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sw6dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7dhjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ymopn")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
 
 [sub_resource type="Animation" id="Animation_pkwaf"]
 length = 0.001
@@ -873,6 +897,7 @@ animations = [{
 }]
 
 [node name="Ralsei" type="Node2D" unique_id=1447970183]
+scale = Vector2(2, 2)
 script = ExtResource("78_r7hov")
 id = 3
 color = Color(0, 1, 0, 1)
@@ -887,6 +912,8 @@ icon_list = Dictionary[int, Texture2D]({
 6: ExtResource("85_uukoc"),
 7: ExtResource("86_ibqyf")
 })
+attack_effect = SubResource("SpriteFrames_wkise")
+attack_pitch = 1.1
 char_name = "Ralsei"
 max_hp = 70
 metadata/_custom_type_script = "uid://clisitchkxafw"
@@ -897,9 +924,11 @@ libraries/ = SubResource("AnimationLibrary_4rk4a")
 autoplay = &"idle"
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=229786631]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_x6cgy")
 animation = &"idle"
 autoplay = "idle"
 centered = false
 offset = Vector2(-20, -45)
+
+[node name="CritSpawn" type="Node2D" parent="." unique_id=506319323]
+position = Vector2(10, -31)
