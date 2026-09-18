@@ -13,7 +13,11 @@ config_version=5
 config/name="Deltarune Simulator"
 run/main_scene="uid://bqye07crvblhg"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Misc/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://Misc/default_bus_layout.tres"
 
 [autoload]
 

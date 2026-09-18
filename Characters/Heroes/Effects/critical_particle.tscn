@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ylljl0w7dfgu"]
+
+[ext_resource type="Texture2D" uid="uid://l8ljfiu1ufgv" path="res://Characters/Heroes/Effects/critical_particle_0.png" id="1_goaeh"]
+[ext_resource type="Texture2D" uid="uid://d0yfaxvyeldh" path="res://Characters/Heroes/Effects/critical_particle_1.png" id="2_4dbw2"]
+[ext_resource type="Texture2D" uid="uid://cycau6j77cluo" path="res://Characters/Heroes/Effects/critical_particle_2.png" id="3_bvf5w"]
+[ext_resource type="Texture2D" uid="uid://bs8dcumafq8xn" path="res://Characters/Heroes/Effects/critical_particle_3.png" id="4_bdodv"]
+[ext_resource type="Texture2D" uid="uid://sothtiytwcsb" path="res://Characters/Heroes/Effects/critical_particle_4.png" id="5_dv20c"]
+[ext_resource type="Script" uid="uid://bmbt4qjs2hufa" path="res://Misc/Afterimages/animated_afterimage.gd" id="6_4dbw2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1fef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_goaeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4dbw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bvf5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bdodv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dv20c")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 7.5
+}]
+
+[node name="CriticalSparkles" type="AnimatedSprite2D" unique_id=1692458632]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_s1fef")
+autoplay = "default"
+script = ExtResource("6_4dbw2")
+metadata/_custom_type_script = "uid://bmbt4qjs2hufa"

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ddev2u3k5e816"]
+
+[ext_resource type="Script" uid="uid://belhruolwvger" path="res://Characters/Bosses/Bullets/basic_bullet.gd" id="1_hannv"]
+[ext_resource type="Texture2D" uid="uid://b2ygdhebde57l" path="res://Characters/Bosses/Jevil/Bullets/Sprites/spr_diamondbullet_0.png" id="2_dmif5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khhxn"]
+size = Vector2(14, 4)
+
+[node name="DiamondBullet" type="Area2D" unique_id=1172669552]
+collision_layer = 2
+script = ExtResource("1_hannv")
+speed = 240.0
+damage = 30
+graze_points = 5.0
+metadata/_custom_type_script = "uid://belhruolwvger"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=567906714]
+texture = ExtResource("2_dmif5")
+centered = false
+offset = Vector2(-16, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1408279045]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_khhxn")
