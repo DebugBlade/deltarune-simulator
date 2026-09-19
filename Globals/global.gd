@@ -11,7 +11,7 @@ var custom_process_frames: int
 var custom_process_max_steps: int = 8
 
 func _ready() -> void:
-	#window integer scaling
+	# window integer scaling
 	var margin := Vector2(200,200)
 	var screen_size := Vector2(DisplayServer.screen_get_size())
 	var target_size := (screen_size - margin)

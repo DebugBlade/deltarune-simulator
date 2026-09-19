@@ -727,6 +727,8 @@ text = "M
  A
   X"
 
+[node name="Bullets" type="CanvasLayer" parent="." unique_id=1485572537]
+
 [node name="Reference" type="CanvasLayer" parent="." unique_id=121419541]
 
 [node name="Text" type="Sprite2D" parent="Reference" unique_id=1268999433]

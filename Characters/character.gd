@@ -15,7 +15,7 @@ var defense: int = 4
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 func _ready() -> void:
-	hp = roundi(max_hp * 0.75)
+	hp = max_hp
 	sprite.animation_changed.connect(_animation_changed)
 
 func set_hp(new_hp: int) -> void:

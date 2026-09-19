@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b28giqx42grev"
-path="res://.godot/imported/Soul.png-af5cf77073bb0bc0eeb269626ef9649f.ctex"
+uid="uid://55x5g8ttdji8"
+path="res://.godot/imported/graze_dark.png-95a7d980293a3c1eab55ccdb57186791.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Soul/Sprites/Soul.png"
-dest_files=["res://.godot/imported/Soul.png-af5cf77073bb0bc0eeb269626ef9649f.ctex"]
+source_file="res://Soul/Sprites/graze_dark.png"
+dest_files=["res://.godot/imported/graze_dark.png-95a7d980293a3c1eab55ccdb57186791.ctex"]
 
 [params]
 

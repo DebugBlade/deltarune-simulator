@@ -9,6 +9,8 @@ const COLOR_MAX = Color(1.639, 1.639, 0.814)
 
 var battle: Battle = Battle.current
 var tween: Tween
+var target_tp: float
+var slow_bar: TextureProgressBar
 
 @onready var fill: TextureProgressBar = $Fill
 @onready var update_fill: TextureProgressBar = $UpdateFill
@@ -41,8 +43,9 @@ func _process(delta: float) -> void:
 	else:
 		foam.show()
 
-	if tween and abs(fill.value - update_fill.value) < 0.01 and tween.get_total_elapsed_time() > 0.4:
-		tween.set_speed_scale(100.0)
+	if tween and tween.is_valid() and abs(target_tp - slow_bar.value) < 0.03:
+		tween.custom_step(999) # snap if within 3%
+		tween.kill()
 
 func update_bar(old_value: float, new_value: float) -> void:
 	var max_value: float = battle.MAX_TP
@@ -55,12 +58,15 @@ func update_bar(old_value: float, new_value: float) -> void:
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_OUT)
 
+	target_tp = percent
 	if new_value > old_value:
+		slow_bar = fill
 		update_fill.texture_progress = FILL_POSITIVE
 		tween.tween_property(fill, "value", percent, 0.65)
 		tween.tween_property(update_fill, "value", percent, 0.25)
 		tween.tween_property(foam, "position:y", get_foam_position(percent), 0.25)
 	else:
+		slow_bar = update_fill
 		update_fill.texture_progress = FILL_NEGATIVE
 		tween.tween_property(fill, "value", percent, 0.25)
 		tween.tween_property(update_fill, "value", percent, 0.65)

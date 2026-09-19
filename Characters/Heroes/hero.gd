@@ -73,8 +73,8 @@ func take_damage(damage: int, character: Character) -> void:
 				damage -= 1
 	if defending:
 		damage = ceili((2 * damage) / 3.0)
-	#calculate elemental reduction from:
-	#tdamage = ceil(tdamage * scr_element_damage_reduction(__element, global.char[target]));
+	# calculate elemental reduction from:
+	# tdamage = ceil(tdamage * scr_element_damage_reduction(__element, global.char[target]));
 	
 	ShakeCamera.current.shake()
 	if pos_tween:
@@ -96,7 +96,7 @@ func take_damage(damage: int, character: Character) -> void:
 		play_animation("defeated")
 		hp = round(-max_hp/2.0)
 		if Battle.current.first_hero_alive() == null:
-			Global.restart() #gameover
+			Global.restart() # TODO: gameover
 
 func reset() -> void:
 	memory.clear()
@@ -111,7 +111,6 @@ func _on_animation_finished() -> void:
 	match animation:
 		"attack":
 			char_tab.icon = CharacterTab.Icon.NORMAL
-			#deal damage
 
 func attack_enemy() -> void:
 	const ATTACK_SWING = preload("uid://v0umdylodrtd")

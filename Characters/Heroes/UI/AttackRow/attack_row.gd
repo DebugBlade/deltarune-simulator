@@ -1,6 +1,7 @@
 class_name AttackRow
 extends Control
 
+const ATTACK_ROW = preload("uid://d0ctleeb86jl7")
 const BOLT_SPEED: int = 240
 const BOLT_SCENE = preload("uid://dmprekd2uij8s")
 const HIT_MARKERS: Dictionary[Hero.ID, Texture2D] = {
@@ -9,6 +10,8 @@ const HIT_MARKERS: Dictionary[Hero.ID, Texture2D] = {
 	Hero.ID.RALSEI: preload("uid://n8u7rxn4oc8d"),
 }
 const BOLT_TEXTURE = preload("uid://dmrdjupbu1hot")
+
+static var attack_delay: bool
 
 var hero: Hero
 var icon: TextureRect
@@ -32,8 +35,12 @@ var custom_process_rate: float = (1 / 30.0)
 @onready var hit_area: Panel = $HitArea
 @onready var hit_area_box: StyleBoxFlat = hit_area.get_theme_stylebox("panel")
 
-func setup(_hero: Hero) -> void:
-	hero = _hero
+static func create(_hero: Hero) -> AttackRow:
+	var attack_row: AttackRow = ATTACK_ROW.instantiate()
+	attack_row.hero = _hero
+	return attack_row
+
+func _ready() -> void:
 	hero.attack_row = self
 	icon = $Icon
 	bolt_crit_marker = $BoltCritMarker
@@ -79,6 +86,7 @@ func _process_30fps(delta: float) -> void:
 
 func create_bolt(global_offset: float) -> float:
 	miss = false
+	
 	bolt = BOLT_SCENE.instantiate()
 	add_child(bolt)
 	bolt.add_to_group("Bolts")
@@ -126,18 +134,16 @@ func trigger_attack() -> void:
 		elif accuracy >= 3:
 			hero.accuracy_points = 100 - (accuracy * 2)
 			afterimage.modulate = hero.color.lerp(Color.WHITE, 0.5)
-		if accuracy >= 15: #unknown what this for
-			afterimage.modulate = hero.color
 	
 	Battle.current.ui.check_next_bolt(self)
 
-	while Battle.current.attack_delay:
+	while attack_delay:
 		await get_tree().process_frame
 
 	
-	Battle.current.attack_delay = true
+	attack_delay = true
 	get_tree().create_timer(1/30.0).timeout.connect(func()-> void:
-		Battle.current.attack_delay = false)
+		attack_delay = false)
 	
 	hero.attack_enemy()
 	

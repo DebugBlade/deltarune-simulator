@@ -5,11 +5,10 @@ enum Context {
 	INTRO,
 	MENU,
 	ACTIONS,
+	DIALOGUE,
 	SOUL_MODE,
 }
 
-const CHARACTER_TAB = preload("uid://d2r7lkujy7hml")
-const ATTACK_ROW = preload("uid://d0ctleeb86jl7")
 const DIAMOND_BULLET = preload("uid://ddev2u3k5e816")
 const MAX_TP := 250.0
 
@@ -40,16 +39,17 @@ var tp: float = 0.0:
 		if TPBar.current:
 			TPBar.current.update_bar(tp, value)
 		tp = value
+
 var attack_timer: float = 0.0
 var heroes: Array[Hero] = []
 var monsters: Array[Monster] = []
 var targets: Array[Hero]
 var attackers: Array[Hero] = []
-var attack_delay: bool
 
 @onready var ui: UI = $UI
 @onready var character_tab_holder: HBoxContainer = $UI/BattleMenu/Characters
 @onready var attack_row_holder: VBoxContainer = $UI/BattleMenu/BottomPanel/Attack/AttackRowHolder
+@onready var bullets: CanvasLayer = $Bullets
 
 
 func _init() -> void:
@@ -62,23 +62,26 @@ func _ready() -> void:
 	
 	var i := 0
 	for hero: Hero in get_tree().get_nodes_in_group("Heroes"):
-		targets.append(hero)
+		targets.append(hero) # TODO: remove after coding targetting
 		heroes.append(hero)
 		hero.slot = i
-		var tab: CharacterTab = CHARACTER_TAB.instantiate()
+		
+		var tab := CharacterTab.create(hero)
 		character_tab_holder.add_child(tab)
-		tab.setup(hero)
-		var attack_row: AttackRow = ATTACK_ROW.instantiate()
+		
+		var attack_row := AttackRow.create(hero)
 		attack_row_holder.add_child(attack_row)
-		attack_row.setup(hero)
+		
 		i += 1
 	
 	i = 0
 	for monster: Monster in get_tree().get_nodes_in_group("Monsters"):
 		monsters.append(monster)
 		monster.slot = i
+		
 		var new_select := MonsterSelect.create(monster)
 		ui.monster_list.add_child(new_select)
+		
 		i += 1
 		
 	ui.context = ui.Context.ACTIONS
@@ -109,18 +112,20 @@ func execute_actions() -> void:
 	for hero in heroes:
 		hero_actions[hero] = hero.action
 		hero.memory.clear()
-	#acts/spells
+	# acts/spells
 	for hero in hero_actions:
 		var action: Hero.Action = hero_actions[hero]
 		if action.type == Hero.ActionType.ACT:
 			pass
-	#items
-	#spare
-	#attack
+	# items
+	# spare
+	# attack
 	for hero in hero_actions:
 		var action: Hero.Action = hero_actions[hero]
+		hero.attack_row.modulate.a = 0
 		if action.type == Hero.ActionType.FIGHT:
 			attackers.append(hero)
+			hero.attack_row.modulate.a = 1
 	if attackers:
 		var order_array: Array[int] = [0]
 		var old_attackers: Array[Hero] = attackers.duplicate()
@@ -138,16 +143,16 @@ func execute_actions() -> void:
 	for attacker in attackers: 
 		attacker.play_animation("idle")
 	attackers.clear()
-	#defend
+	# defend
 	for hero in hero_actions:
 		var action: Hero.Action = hero_actions[hero]
 		if action.type == Hero.ActionType.DEFEND:
 			hero.defending = true
 	
 	context = Context.SOUL_MODE
-	attack_timer = 4.0 #TODO replace with custom attack
+	attack_timer = 4.0 # TODO: replace with custom attack
 
-##Adds (or subtracs if negative) TP amount and returns the TP change
+## Adds (or subtracs if negative) TP amount and returns the TP change
 func add_tp(plus_tp: float) -> float:
 	var old_tp := tp
 	tp = clampf(tp + plus_tp, 0, MAX_TP)

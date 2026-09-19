@@ -5,7 +5,7 @@ static var current: Soul
 var battle: Battle = Battle.current
 
 const SPEED: float = 120.0
-var CHAPTER_1_FACTOR: float:
+var CHAPTER_1_FACTOR: float: ## Grazing was nerfed in Chapter 2. Returns 10 if chapter is 1, otherwise 0
 	get(): return 10.0 if Global.chapter == 1 else 0.0
 
 var hp: int = 100

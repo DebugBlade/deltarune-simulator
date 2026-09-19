@@ -20,6 +20,7 @@ const NAME_TEXT: Dictionary[Hero.ID, Texture2D] = {
 	Hero.ID.RALSEI: preload("uid://c4i2ftanqvfr1"),
 }
 
+const CHARACTER_TAB = preload("uid://d2r7lkujy7hml")
 const LINE_EFFECT = preload("uid://dfeykbd1g1w48")
 const MAGIC = preload("uid://b2kjaolvm6h73")
 const MAGIC_HOVER = preload("uid://cj7lbby0kawbr")
@@ -63,12 +64,15 @@ var focused: bool:
 @onready var name_text: TextureRect = $Cover/Name
 @onready var top_border_texture: Panel = $TopBorderMask/Texture
 
+static func create(_hero: Hero) -> CharacterTab:
+	var character_tab: CharacterTab = CHARACTER_TAB.instantiate()
+	character_tab.hero = _hero
+	return character_tab
 
-
-func setup(p_hero: Hero) -> void:
-	hero = p_hero
+func _ready() -> void:
 	hero.char_tab = self
 	update_hp(true)
+	
 	for action: ActionButton in action_container.get_children():
 		action.setup(hero)
 	
