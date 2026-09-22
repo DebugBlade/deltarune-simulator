@@ -34,6 +34,9 @@ var previous_context := Context.DISABLED
 var context := Context.DISABLED:
 	set(new_context):
 		previous_context = context
+		match previous_context:
+			Context.MONSTERS:
+				selected_selectable = null
 		match new_context:
 			Context.DISABLED:
 				change_panel(BottomPanel.NONE)

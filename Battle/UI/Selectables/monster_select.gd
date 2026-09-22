@@ -32,3 +32,9 @@ func update_values() -> void:
 	mercy_bar.max_value = monster.MAX_MERCY
 	mercy_bar.value = monster.mercy
 	mercy_percent.text = str(roundi((float(monster.mercy) / monster.MAX_MERCY) * 100.0)) + "%"
+
+func _process(delta: float) -> void:
+	pass
+
+func changed_focused(state: bool) -> void:
+	monster.highlighted = state

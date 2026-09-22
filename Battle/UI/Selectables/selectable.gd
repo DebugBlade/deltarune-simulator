@@ -13,6 +13,10 @@ var focused: bool:
 			UI.soul_ui.global_position = soul_marker.global_position
 			UI.soul_ui.show()
 		focused = state
+		changed_focused(focused)
 
 func update_values() -> void:
+	pass
+
+func changed_focused(state: bool) -> void:
 	pass
